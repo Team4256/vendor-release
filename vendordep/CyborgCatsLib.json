@@ -1,0 +1,54 @@
+{
+    "fileName": "CyborgCatsLib.json",
+    "name": "CyborgCatsLib",
+    "version": "0.0.1",
+    "frcYear": "2026",
+    "uuid": "296f44c4-6d46-4889-a371-96f869983139",
+    "mavenUrls": [
+        "https://team4256.github.io/vendor-release/maven"
+    ],
+    "jsonUrl": "https://team4256.github.io/vendor-release/vendordep/CyborgCatsLib.json",
+    "javaDependencies": [
+        {
+            "groupId": "org.cyborgcats.frc",
+            "artifactId": "CyborgCatsLib-java",
+            "version": "0.0.1"
+        }
+    ],
+    "jniDependencies": [
+        {
+            "groupId": "org.cyborgcats.frc",
+            "artifactId": "CyborgCatsLib-cpp",
+            "version": "0.0.1",
+            "skipInvalidPlatforms": true,
+            "isJar": false,
+            "validPlatforms": [
+                "windowsx86-64",
+                "linuxarm64",
+                "linuxx86-64",
+                "linuxathena",
+                "linuxarm32",
+                "osxuniversal"
+            ]
+        }
+    ],
+    "cppDependencies": [
+        {
+            "groupId": "org.cyborgcats.frc",
+            "artifactId": "CyborgCatsLib-cpp",
+            "version": "0.0.1",
+            "libName": "vision",
+            "headerClassifier": "headers",
+            "sharedLibrary": false,
+            "skipInvalidPlatforms": true,
+            "binaryPlatforms": [
+                "windowsx86-64",
+                "linuxarm64",
+                "linuxx86-64",
+                "linuxathena",
+                "linuxarm32",
+                "osxuniversal"
+            ]
+        }
+    ]
+}
