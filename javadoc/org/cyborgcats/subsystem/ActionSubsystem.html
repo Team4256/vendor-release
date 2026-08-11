@@ -156,9 +156,11 @@ loadScripts(document, 'script');</script>
 <div class="block">Builds an <a href="../component/Encoder.html" title="class in org.cyborgcats.component"><code>Encoder</code></a> and registers it with this subsystem.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../component/Flywheel.html" title="class in org.cyborgcats.component">Flywheel</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#flywheel(java.lang.String,double,double,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)" class="member-name-link">flywheel</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#flywheel(java.lang.String,double,double,double,org.cyborgcats.component.Setpoint.Mode,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)" class="member-name-link">flywheel</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  double&nbsp;threshold,
+ double&nbsp;bangbangThreshold,
  double&nbsp;debounceTime,
+ <a href="../component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a>&nbsp;mode,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>&nbsp;leader,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>...&nbsp;followers)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -469,11 +471,13 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="flywheel(java.lang.String,double,double,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)">
+<section class="detail" id="flywheel(java.lang.String,double,double,double,org.cyborgcats.component.Setpoint.Mode,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)">
 <h3>flywheel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../component/Flywheel.html" title="class in org.cyborgcats.component">Flywheel</a></span>&nbsp;<span class="element-name">flywheel</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  double&nbsp;threshold,
+ double&nbsp;bangbangThreshold,
  double&nbsp;debounceTime,
+ <a href="../component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a>&nbsp;mode,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>&nbsp;leader,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>...&nbsp;followers)</span></div>
 <div class="block">Builds a <a href="../component/Flywheel.html" title="class in org.cyborgcats.component"><code>Flywheel</code></a> and registers it with this subsystem.</div>
@@ -481,11 +485,14 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>name</code> - unique name used as the AdvantageKit logging key under "mechanisms/"</dd>
 <dd><code>threshold</code> - velocity tolerance used to determine whether the shooter is at a target speed</dd>
+<dd><code>bangbangThreshold</code> - velocity tolerance used to decide when to switch from open-loop
+                          spin-up to closed-loop velocity holding</dd>
 <dd><code>debounceTime</code> - how long (in seconds) the shooter must continuously be within threshold
-                     before the at-velocity check returns <code>true</code></dd>
+                          before the at-velocity check returns <code>true</code></dd>
+<dd><code>mode</code> - control mode used to hold velocity once the wheel is at speed</dd>
 <dd><code>leader</code> - configuration used to build the hardware interface for this motor</dd>
 <dd><code>followers</code> - configurations for hardware interfaces driven with the same control request as
-                     the leader; may be omitted for a single-motor shooter</dd>
+                          the leader; may be omitted for a single-motor shooter</dd>
 <dt>Returns:</dt>
 <dd>the newly created and registered <a href="../component/Flywheel.html" title="class in org.cyborgcats.component"><code>Flywheel</code></a></dd>
 </dl>

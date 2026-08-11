@@ -132,9 +132,11 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,double,double,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)" class="member-name-link">Flywheel</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- double&nbsp;epsilon,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,double,double,double,org.cyborgcats.component.Setpoint.Mode,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)" class="member-name-link">Flywheel</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ double&nbsp;threshold,
+ double&nbsp;bangbangThreshold,
  double&nbsp;debounceTime,
+ <a href="Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a>&nbsp;mode,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>&nbsp;leader,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>...&nbsp;followers)</code></div>
 <div class="col-last even-row-color">
@@ -167,7 +169,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Flywheel.ControlType.html" title="enum class in org.cyborgcats.component">Flywheel.ControlType</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getControlType(double,double)" class="member-name-link">getControlType</a><wbr>(double&nbsp;target,
- double&nbsp;epsilon)</code></div>
+ double&nbsp;bangbangThreshold)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Chooses the control strategy for the current loop.</div>
 </div>
@@ -207,23 +209,29 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(java.lang.String,double,double,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)">
+<section class="detail" id="&lt;init&gt;(java.lang.String,double,double,double,org.cyborgcats.component.Setpoint.Mode,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)">
 <h3>Flywheel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Flywheel</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- double&nbsp;epsilon,
+ double&nbsp;threshold,
+ double&nbsp;bangbangThreshold,
  double&nbsp;debounceTime,
+ <a href="Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a>&nbsp;mode,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>&nbsp;leader,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>...&nbsp;followers)</span></div>
 <div class="block">Constructs a Flywheel.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>name</code> - unique name used as the AdvantageKit logging key under "mechanisms/"</dd>
-<dd><code>epsilon</code> - velocity tolerance used to determine whether the shooter is at a target speed</dd>
-<dd><code>debounceTime</code> - how long (in seconds) the shooter must continuously be within epsilon before
-                     the at-velocity check returns <code>true</code></dd>
+<dd><code>threshold</code> - velocity tolerance used to determine whether the shooter is at a target speed</dd>
+<dd><code>bangbangThreshold</code> - velocity tolerance used to decide when to switch from open-loop
+                          spin-up to closed-loop velocity holding; see
+                          <a href="#getControlType(double,double)"><code>getControlType(double, double)</code></a></dd>
+<dd><code>debounceTime</code> - how long (in seconds) the shooter must continuously be within threshold
+                          before the at-velocity check returns <code>true</code></dd>
+<dd><code>mode</code> - control mode used to hold velocity once the wheel is at speed</dd>
 <dd><code>leader</code> - hardware interface for this motor</dd>
 <dd><code>followers</code> - hardware interfaces driven with the same control request as the leader; may be
-                     omitted for a single-motor shooter</dd>
+                          omitted for a single-motor shooter</dd>
 </dl>
 </section>
 </li>
@@ -239,7 +247,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getControlType(double,double)">
 <h3>getControlType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Flywheel.ControlType.html" title="enum class in org.cyborgcats.component">Flywheel.ControlType</a></span>&nbsp;<span class="element-name">getControlType</span><wbr><span class="parameters">(double&nbsp;target,
- double&nbsp;epsilon)</span></div>
+ double&nbsp;bangbangThreshold)</span></div>
 <div class="block">Chooses the control strategy for the current loop.
 
  <p>Returns <a href="Flywheel.ControlType.html#VELOCITY"><code>Flywheel.ControlType.VELOCITY</code></a> when the shooter is already debounced-at-setpoint, or
@@ -252,7 +260,7 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>target</code> - intended target velocity</dd>
-<dd><code>epsilon</code> - velocity tolerance used for the at-setpoint check</dd>
+<dd><code>bangbangThreshold</code> - velocity tolerance used for the at-setpoint check</dd>
 <dt>Returns:</dt>
 <dd>the control type to use this loop</dd>
 </dl>

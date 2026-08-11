@@ -195,6 +195,12 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates a one-shot <a href="org/cyborgcats/ssm/State.html" title="class in org.cyborgcats.ssm"><code>State</code></a> that applies the setpoint for the given velocity when
  scheduled.</div>
 </dd>
+<dt><a href="org/cyborgcats/io/motor/MotorIO.html#applyVelocityMotionProfile(double)" class="member-name-link">applyVelocityMotionProfile(double)</a> - Method in interface org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIO.html" title="interface in org.cyborgcats.io.motor">MotorIO</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org/cyborgcats/io/motor/MotorIOSim.html#applyVelocityMotionProfile(double)" class="member-name-link">applyVelocityMotionProfile(double)</a> - Method in class org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIOSim.html" title="class in org.cyborgcats.io.motor">MotorIOSim</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org/cyborgcats/io/motor/MotorIOTalonFX.html#applyVelocityMotionProfile(double)" class="member-name-link">applyVelocityMotionProfile(double)</a> - Method in class org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIOTalonFX.html" title="class in org.cyborgcats.io.motor">MotorIOTalonFX</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/io/motor/MotorIO.html#applyVelocitySetpoint(double)" class="member-name-link">applyVelocitySetpoint(double)</a> - Method in interface org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIO.html" title="interface in org.cyborgcats.io.motor">MotorIO</a></dt>
 <dd>
 <div class="block">Commands the motor to closed-loop control to an angular velocity.</div>
@@ -432,7 +438,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Creates an instance of a <code>DriveState</code> record class.</div>
 </dd>
-<dt><a href="org/cyborgcats/component/Setpoint.Mode.html#DUTYCYCLE" class="member-name-link">DUTYCYCLE</a> - Enum constant in enum class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></dt>
+<dt><a href="org/cyborgcats/component/Setpoint.Mode.html#DutyCycle" class="member-name-link">DutyCycle</a> - Enum constant in enum class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></dt>
 <dd>
 <div class="block">Motor is controlled by a duty-cycle percentage.</div>
 </dd>
@@ -600,7 +606,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Flips a Y distance to the red-alliance side when <a href="org/cyborgcats/util/AllianceUtil.html#shouldFlip()"><code>AllianceUtil.shouldFlip()</code></a> is <code>true</code>.</div>
 </dd>
-<dt><a href="org/cyborgcats/subsystem/ActionSubsystem.html#flywheel(java.lang.String,double,double,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)" class="member-name-link">flywheel(String, double, double, MotorIOConfiguration, MotorIOConfiguration...)</a> - Method in class org.cyborgcats.subsystem.<a href="org/cyborgcats/subsystem/ActionSubsystem.html" title="class in org.cyborgcats.subsystem">ActionSubsystem</a></dt>
+<dt><a href="org/cyborgcats/subsystem/ActionSubsystem.html#flywheel(java.lang.String,double,double,double,org.cyborgcats.component.Setpoint.Mode,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)" class="member-name-link">flywheel(String, double, double, double, Setpoint.Mode, MotorIOConfiguration, MotorIOConfiguration...)</a> - Method in class org.cyborgcats.subsystem.<a href="org/cyborgcats/subsystem/ActionSubsystem.html" title="class in org.cyborgcats.subsystem">ActionSubsystem</a></dt>
 <dd>
 <div class="block">Builds a <a href="org/cyborgcats/component/Flywheel.html" title="class in org.cyborgcats.component"><code>Flywheel</code></a> and registers it with this subsystem.</div>
 </dd>
@@ -609,7 +615,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Extension of <a href="org/cyborgcats/component/VelocityComponent.html" title="class in org.cyborgcats.component"><code>VelocityComponent</code></a> for flywheel-style shooters that blends open-loop spin-up
  with closed-loop velocity holding.</div>
 </dd>
-<dt><a href="org/cyborgcats/component/Flywheel.html#%3Cinit%3E(java.lang.String,double,double,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)" class="member-name-link">Flywheel(String, double, double, MotorIOConfiguration, MotorIOConfiguration...)</a> - Constructor for class org.cyborgcats.component.<a href="org/cyborgcats/component/Flywheel.html" title="class in org.cyborgcats.component">Flywheel</a></dt>
+<dt><a href="org/cyborgcats/component/Flywheel.html#%3Cinit%3E(java.lang.String,double,double,double,org.cyborgcats.component.Setpoint.Mode,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)" class="member-name-link">Flywheel(String, double, double, double, Setpoint.Mode, MotorIOConfiguration, MotorIOConfiguration...)</a> - Constructor for class org.cyborgcats.component.<a href="org/cyborgcats/component/Flywheel.html" title="class in org.cyborgcats.component">Flywheel</a></dt>
 <dd>
 <div class="block">Constructs a Flywheel.</div>
 </dd>
@@ -1136,7 +1142,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Creates a neutral (coast/brake) setpoint that commands the motor to output nothing.</div>
 </dd>
-<dt><a href="org/cyborgcats/component/Setpoint.Mode.html#NEUTRAL" class="member-name-link">NEUTRAL</a> - Enum constant in enum class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></dt>
+<dt><a href="org/cyborgcats/component/Setpoint.Mode.html#Neutral" class="member-name-link">Neutral</a> - Enum constant in enum class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></dt>
 <dd>
 <div class="block">Motor is commanded to output nothing (coast or brake).</div>
 </dd>
@@ -1292,7 +1298,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Relative position of the encoder shaft (in rotations).</div>
 </dd>
-<dt><a href="org/cyborgcats/component/Setpoint.Mode.html#POSITION" class="member-name-link">POSITION</a> - Enum constant in enum class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></dt>
+<dt><a href="org/cyborgcats/component/Setpoint.Mode.html#Position" class="member-name-link">Position</a> - Enum constant in enum class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></dt>
 <dd>
 <div class="block">Motor is controlled by a closed-loop position target.</div>
 </dd>
@@ -1308,7 +1314,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Constructs a PositionComponent.</div>
 </dd>
-<dt><a href="org/cyborgcats/component/Setpoint.Mode.html#POSITIONMOTIONPROFILE" class="member-name-link">POSITIONMOTIONPROFILE</a> - Enum constant in enum class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></dt>
+<dt><a href="org/cyborgcats/component/Setpoint.Mode.html#PositionMotionProfile" class="member-name-link">PositionMotionProfile</a> - Enum constant in enum class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></dt>
 <dd>
 <div class="block">Motor is controlled by a motion-profiled (Motion Magic) closed-loop position target.</div>
 </dd>
@@ -1845,13 +1851,13 @@ the order they are declared.</div>
 <dd>
 <div class="block">Measured rotor velocity.</div>
 </dd>
+<dt><a href="org/cyborgcats/component/Setpoint.Mode.html#Velocity" class="member-name-link">Velocity</a> - Enum constant in enum class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></dt>
+<dd>
+<div class="block">Motor is controlled by a closed-loop velocity target.</div>
+</dd>
 <dt><a href="org/cyborgcats/component/Flywheel.ControlType.html#VELOCITY" class="member-name-link">VELOCITY</a> - Enum constant in enum class org.cyborgcats.component.<a href="org/cyborgcats/component/Flywheel.ControlType.html" title="enum class in org.cyborgcats.component">Flywheel.ControlType</a></dt>
 <dd>
 <div class="block">Closed-loop velocity control, used to hold the wheel at speed.</div>
-</dd>
-<dt><a href="org/cyborgcats/component/Setpoint.Mode.html#VELOCITY" class="member-name-link">VELOCITY</a> - Enum constant in enum class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></dt>
-<dd>
-<div class="block">Motor is controlled by a closed-loop velocity target.</div>
 </dd>
 <dt><a href="org/cyborgcats/subsystem/ActionSubsystem.html#velocityComponent(java.lang.String,double,double,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)" class="member-name-link">velocityComponent(String, double, double, MotorIOConfiguration, MotorIOConfiguration...)</a> - Method in class org.cyborgcats.subsystem.<a href="org/cyborgcats/subsystem/ActionSubsystem.html" title="class in org.cyborgcats.subsystem">ActionSubsystem</a></dt>
 <dd>
@@ -1865,6 +1871,8 @@ the order they are declared.</div>
 <dd>
 <div class="block">Constructs a VelocityComponent.</div>
 </dd>
+<dt><a href="org/cyborgcats/component/Setpoint.Mode.html#VelocityMotionProfile" class="member-name-link">VelocityMotionProfile</a> - Enum constant in enum class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/component/Setpoint.Mode.html#VelocityTorqueCurrent" class="member-name-link">VelocityTorqueCurrent</a> - Enum constant in enum class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/component/Turret.TurretOutput.html#virtualTarget()" class="member-name-link">virtualTarget()</a> - Method in record class org.cyborgcats.component.<a href="org/cyborgcats/component/Turret.TurretOutput.html" title="class in org.cyborgcats.component">Turret.TurretOutput</a></dt>
@@ -1941,7 +1949,7 @@ the order they are declared.</div>
 <dd>
 <div class="block">Constructs a VisionSubsystem managing the provided cameras.</div>
 </dd>
-<dt><a href="org/cyborgcats/component/Setpoint.Mode.html#VOLTAGE" class="member-name-link">VOLTAGE</a> - Enum constant in enum class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></dt>
+<dt><a href="org/cyborgcats/component/Setpoint.Mode.html#Voltage" class="member-name-link">Voltage</a> - Enum constant in enum class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></dt>
 <dd>
 <div class="block">Motor is controlled by a direct voltage command.</div>
 </dd>
@@ -1977,6 +1985,10 @@ the order they are declared.</div>
 <dd>
 <div class="block">Sets whether this state keeps running while the robot is disabled.</div>
 </dd>
+<dt><a href="org/cyborgcats/component/Setpoint.html#withMode(double,org.cyborgcats.component.Setpoint.Mode)" class="member-name-link">withMode(double, Setpoint.Mode)</a> - Static method in class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></dt>
+<dd>
+<div class="block">Creates a setpoint for the given mode, dispatching to the matching <code>with*</code> factory.</div>
+</dd>
 <dt><a href="org/cyborgcats/ssm/State.html#withName(java.lang.String)" class="member-name-link">withName(String)</a> - Method in class org.cyborgcats.ssm.<a href="org/cyborgcats/ssm/State.html" title="class in org.cyborgcats.ssm">State</a></dt>
 <dd>
 <div class="block">Assigns a human-readable name to this state used in telemetry logging.</div>
@@ -2003,6 +2015,8 @@ the order they are declared.</div>
 <dd>
 <div class="block">Creates a velocity-control setpoint.</div>
 </dd>
+<dt><a href="org/cyborgcats/component/Setpoint.html#withVelocityMotionProfile(double)" class="member-name-link">withVelocityMotionProfile(double)</a> - Static method in class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/component/Setpoint.html#withVelocityTorqueCurrent(double)" class="member-name-link">withVelocityTorqueCurrent(double)</a> - Static method in class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/component/Setpoint.html#withVoltage(double)" class="member-name-link">withVoltage(double)</a> - Static method in class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></dt>

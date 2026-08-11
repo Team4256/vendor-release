@@ -154,21 +154,30 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates a duty-cycle setpoint, clamping the value between -1.0 and 1.0.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withPosition(double)" class="member-name-link">withPosition</a><wbr>(double&nbsp;position)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withMode(double,org.cyborgcats.component.Setpoint.Mode)" class="member-name-link">withMode</a><wbr>(double&nbsp;setpoint,
+ <a href="Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a>&nbsp;mode)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Creates a position-control setpoint targeting an angular position.</div>
+<div class="block">Creates a setpoint for the given mode, dispatching to the matching <code>with*</code> factory.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withPositionMotionProfile(double)" class="member-name-link">withPositionMotionProfile</a><wbr>(double&nbsp;position)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withPosition(double)" class="member-name-link">withPosition</a><wbr>(double&nbsp;position)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Creates a position-control setpoint targeting an angular position.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withPositionMotionProfile(double)" class="member-name-link">withPositionMotionProfile</a><wbr>(double&nbsp;position)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Creates a motion-profiled (Motion Magic) position-control setpoint targeting an angular
  position.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withVelocity(double)" class="member-name-link">withVelocity</a><wbr>(double&nbsp;velocity)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withVelocity(double)" class="member-name-link">withVelocity</a><wbr>(double&nbsp;velocity)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Creates a velocity-control setpoint.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withVelocityMotionProfile(double)" class="member-name-link">withVelocityMotionProfile</a><wbr>(double&nbsp;velocity)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withVelocityTorqueCurrent(double)" class="member-name-link">withVelocityTorqueCurrent</a><wbr>(double&nbsp;velocity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
@@ -302,6 +311,28 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>velocity</code> - </dd>
 <dt>Returns:</dt>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withVelocityMotionProfile(double)">
+<h3>withVelocityMotionProfile</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></span>&nbsp;<span class="element-name">withVelocityMotionProfile</span><wbr><span class="parameters">(double&nbsp;velocity)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="withMode(double,org.cyborgcats.component.Setpoint.Mode)">
+<h3>withMode</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></span>&nbsp;<span class="element-name">withMode</span><wbr><span class="parameters">(double&nbsp;setpoint,
+ <a href="Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a>&nbsp;mode)</span></div>
+<div class="block">Creates a setpoint for the given mode, dispatching to the matching <code>with*</code> factory.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>setpoint</code> - desired magnitude, in the SI base unit for the given mode; ignored for
+                 <a href="Setpoint.Mode.html#Neutral"><code>Setpoint.Mode.Neutral</code></a></dd>
+<dd><code>mode</code> - the control mode to create a setpoint for</dd>
+<dt>Returns:</dt>
+<dd>a new <a href="Setpoint.html" title="class in org.cyborgcats.component"><code>Setpoint</code></a> in the given mode</dd>
 </dl>
 </section>
 </li>
