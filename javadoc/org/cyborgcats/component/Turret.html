@@ -137,13 +137,14 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,double,double,org.cyborgcats.component.Encoder,org.cyborgcats.component.Encoder,org.cyborgcats.util.Range,double,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Pose3d,org.cyborgcats.io.motor.MotorIOConfiguration)" class="member-name-link">Turret</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,double,double,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.util.Range,double,int,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Pose3d,org.cyborgcats.io.motor.MotorIOConfiguration)" class="member-name-link">Turret</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  double&nbsp;threshold,
  double&nbsp;debounceTime,
- <a href="Encoder.html" title="class in org.cyborgcats.component">Encoder</a>&nbsp;encoderOne,
- <a href="Encoder.html" title="class in org.cyborgcats.component">Encoder</a>&nbsp;encoderTwo,
+ <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;encoderOneConf,
+ <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;encoderTwoConf,
  <a href="../util/Range.html" title="class in org.cyborgcats.util">Range</a>&nbsp;range,
  double&nbsp;tolerance,
+ int&nbsp;turretToothCount,
  <a href="DriveState.html" title="class in org.cyborgcats.component">DriveState</a>&nbsp;driveState,
  <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&nbsp;turretOffset,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>&nbsp;leader)</code></div>
@@ -171,33 +172,37 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns both the turret setpoint and the shot distance for the given target, so callers that
  also drive a hood or flywheel do not have to recompute the aiming solution.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTurretPose()" class="member-name-link">getTurretPose</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyPositionOffset()" class="member-name-link">applyPositionOffset</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTurretPose()" class="member-name-link">getTurretPose</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the field-relative pose of the turret's rotation axis, composing the robot's current
  pose with the turret's mounting offset.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Translation2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Translation2d</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getVirtualTarget2D(edu.wpi.first.math.geometry.Pose2d,edu.wpi.first.math.kinematics.ChassisSpeeds,double)" class="member-name-link">getVirtualTarget2D</a><wbr>(<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose2d</a>&nbsp;targetPose,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Translation2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Translation2d</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getVirtualTarget2D(edu.wpi.first.math.geometry.Pose2d,edu.wpi.first.math.kinematics.ChassisSpeeds,double)" class="member-name-link">getVirtualTarget2D</a><wbr>(<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose2d</a>&nbsp;targetPose,
  <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/kinematics/ChassisSpeeds.html" title="class or interface in edu.wpi.first.math.kinematics" class="external-link">ChassisSpeeds</a>&nbsp;speeds,
  double&nbsp;tof)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Returns the field position to aim at so that a projectile still reaches the target despite the
  robot's own motion.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#solveChineaseRemainderTherom(double,double,double,double,double)" class="member-name-link">solveChineaseRemainderTherom</a><wbr>(double&nbsp;a,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#solveChineaseRemainderTherom(double,double,int,int,double,int)" class="member-name-link">solveChineaseRemainderTherom</a><wbr>(double&nbsp;a,
  double&nbsp;b,
- double&nbsp;e1ToothCount,
- double&nbsp;e2TootCount,
- double&nbsp;tolerance)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Attempts to find the unique absolute turret angle (in degrees) that satisfies the readings
- from two encoders with different tooth counts relative to a 90-tooth turret gear.</div>
+ int&nbsp;e1ToothCount,
+ int&nbsp;e2ToothCount,
+ double&nbsp;tolerance,
+ int&nbsp;turretToothCount)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Attempts to find the unique absolute turret position (in rotations) that satisfies the
+ readings from two encoders with different tooth counts relative to the turret gear.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateInputs()" class="member-name-link">updateInputs</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateInputs()" class="member-name-link">updateInputs</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Reads and logs the turret motor inputs along with both encoders.</div>
 </div>
 </div>
@@ -224,15 +229,16 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(java.lang.String,double,double,org.cyborgcats.component.Encoder,org.cyborgcats.component.Encoder,org.cyborgcats.util.Range,double,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Pose3d,org.cyborgcats.io.motor.MotorIOConfiguration)">
+<section class="detail" id="&lt;init&gt;(java.lang.String,double,double,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.util.Range,double,int,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Pose3d,org.cyborgcats.io.motor.MotorIOConfiguration)">
 <h3>Turret</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Turret</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  double&nbsp;threshold,
  double&nbsp;debounceTime,
- <a href="Encoder.html" title="class in org.cyborgcats.component">Encoder</a>&nbsp;encoderOne,
- <a href="Encoder.html" title="class in org.cyborgcats.component">Encoder</a>&nbsp;encoderTwo,
+ <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;encoderOneConf,
+ <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;encoderTwoConf,
  <a href="../util/Range.html" title="class in org.cyborgcats.util">Range</a>&nbsp;range,
  double&nbsp;tolerance,
+ int&nbsp;turretToothCount,
  <a href="DriveState.html" title="class in org.cyborgcats.component">DriveState</a>&nbsp;driveState,
  <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&nbsp;turretOffset,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>&nbsp;leader)</span></div>
@@ -244,12 +250,16 @@ loadScripts(document, 'script');</script>
                             target position</dd>
 <dd><code>debounceTime</code> - how long (in seconds) the turret must continuously be within threshold
                             before the at-position check returns <code>true</code></dd>
-<dd><code>encoderOne</code> - encoder on the first reduction gear</dd>
-<dd><code>encoderTwo</code> - encoder on the second reduction gear; must have a different tooth
-                            count than <code>encoderOne</code> for the CRT solve to be unique</dd>
+<dd><code>encoderOneConf</code> - configuration for the encoder on the first reduction gear; its sim
+                            implementation is driven off the turret's own rotation automatically</dd>
+<dd><code>encoderTwoConf</code> - configuration for the encoder on the second reduction gear; must
+                            have a different tooth count than encoder one for the CRT solve to
+                            be unique</dd>
 <dd><code>range</code> - minimum and maximum angle the turret can rotate to</dd>
-<dd><code>tolerance</code> - how close (in degrees) a CRT candidate must be to encoder two's
+<dd><code>tolerance</code> - how close (in rotations) a CRT candidate must be to encoder two's
                             reading to be accepted; size to the encoders' combined noise</dd>
+<dd><code>turretToothCount</code> - tooth count of the gear fixed to the turret that both encoder
+                            gears mesh with</dd>
 <dd><code>driveState</code> - suppliers of the robot's field-relative chassis speeds and pose</dd>
 <dd><code>turretOffset</code> - pose of the turret's rotation axis relative to the robot origin</dd>
 <dd><code>leader</code> - configuration used to build the hardware interface for the turret motor</dd>
@@ -311,6 +321,12 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="applyPositionOffset()">
+<h3>applyPositionOffset</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyPositionOffset</span>()</div>
+</section>
+</li>
+<li>
 <section class="detail" id="getVirtualTarget2D(edu.wpi.first.math.geometry.Pose2d,edu.wpi.first.math.kinematics.ChassisSpeeds,double)">
 <h3>getVirtualTarget2D</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Translation2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Translation2d</a></span>&nbsp;<span class="element-name">getVirtualTarget2D</span><wbr><span class="parameters">(<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose2d</a>&nbsp;targetPose,
@@ -338,25 +354,32 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="solveChineaseRemainderTherom(double,double,double,double,double)">
+<section class="detail" id="solveChineaseRemainderTherom(double,double,int,int,double,int)">
 <h3>solveChineaseRemainderTherom</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;</span>&nbsp;<span class="element-name">solveChineaseRemainderTherom</span><wbr><span class="parameters">(double&nbsp;a,
  double&nbsp;b,
- double&nbsp;e1ToothCount,
- double&nbsp;e2TootCount,
- double&nbsp;tolerance)</span></div>
-<div class="block">Attempts to find the unique absolute turret angle (in degrees) that satisfies the readings
- from two encoders with different tooth counts relative to a 90-tooth turret gear.</div>
+ int&nbsp;e1ToothCount,
+ int&nbsp;e2ToothCount,
+ double&nbsp;tolerance,
+ int&nbsp;turretToothCount)</span></div>
+<div class="block">Attempts to find the unique absolute turret position (in rotations) that satisfies the
+ readings from two encoders with different tooth counts relative to the turret gear.
+
+ <p>The two encoder gear tooth counts must be coprime for the solution to be unique; the
+ unambiguous range this can resolve over is <code>lcm(e1ToothCount, e2ToothCount) /
+ turretToothCount</code> rotations, centered on zero.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>a</code> - normalised position reading from encoder 1 (range [0, 1))</dd>
 <dd><code>b</code> - normalised position reading from encoder 2 (range [0, 1))</dd>
 <dd><code>e1ToothCount</code> - tooth count of the first encoder gear</dd>
-<dd><code>e2TootCount</code> - tooth count of the second encoder gear</dd>
+<dd><code>e2ToothCount</code> - tooth count of the second encoder gear</dd>
 <dd><code>tolerance</code> - how close the CRT candidate must be to encoder 2's effective reading
-                     (in degrees) to be accepted as a solution</dd>
+                         (in rotations) to be accepted as a solution</dd>
+<dd><code>turretToothCount</code> - tooth count of the gear fixed to the turret that both encoder gears
+                         mesh with</dd>
 <dt>Returns:</dt>
-<dd>an <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link"><code>Optional</code></a> containing the resolved angle in degrees, or empty if no
+<dd>an <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link"><code>Optional</code></a> containing the resolved position in rotations, or empty if no
  solution was found within the search range</dd>
 </dl>
 </section>

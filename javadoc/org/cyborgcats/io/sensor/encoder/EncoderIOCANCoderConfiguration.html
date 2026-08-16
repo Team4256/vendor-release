@@ -94,11 +94,17 @@ implements <a href="EncoderIOConfiguration.html" title="interface in org.cyborgc
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,com.ctre.phoenix6.configs.CANcoderConfiguration)" class="member-name-link">EncoderIOCANCoderConfiguration</a><wbr>(int&nbsp;canID,
- com.ctre.phoenix6.configs.CANcoderConfiguration&nbsp;conf)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,com.ctre.phoenix6.configs.CANcoderConfiguration,int)" class="member-name-link">EncoderIOCANCoderConfiguration</a><wbr>(int&nbsp;canID,
+ com.ctre.phoenix6.configs.CANcoderConfiguration&nbsp;conf,
+ int&nbsp;toothCount)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Constructs an EncoderIOCANCoderConfiguration.</div>
 </div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(int,com.ctre.phoenix6.configs.CANcoderConfiguration,int,java.util.function.DoubleSupplier)" class="member-name-link">EncoderIOCANCoderConfiguration</a><wbr>(int&nbsp;canID,
+ com.ctre.phoenix6.configs.CANcoderConfiguration&nbsp;conf,
+ int&nbsp;toothCount,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;rotations)</code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -118,15 +124,24 @@ implements <a href="EncoderIOConfiguration.html" title="interface in org.cyborgc
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Builds the real hardware IO implementation for this configuration.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="EncoderIO.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIO</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildSim()" class="member-name-link">buildSim</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Builds the simulated IO implementation for this configuration.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withRotations(java.util.function.DoubleSupplier)" class="member-name-link">withRotations</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;rotations)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a copy of this configuration whose simulated implementation is driven by the given
+ rotation source, for encoders geared off another mechanism rather than reading their own
+ motor.</div>
+</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
-<div class="inherited-list">
-<h3 id="methods-inherited-from-class-org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration">Methods inherited from interface&nbsp;org.cyborgcats.io.sensor.encoder.<a href="EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a></h3>
-<code><a href="EncoderIOConfiguration.html#buildSim()">buildSim</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-org.cyborgcats.io.IOConfiguration">Methods inherited from interface&nbsp;org.cyborgcats.io.<a href="../../IOConfiguration.html" title="interface in org.cyborgcats.io">IOConfiguration</a></h3>
 <code><a href="../../IOConfiguration.html#build()">build</a></code></div>
@@ -142,16 +157,27 @@ implements <a href="EncoderIOConfiguration.html" title="interface in org.cyborgc
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(int,com.ctre.phoenix6.configs.CANcoderConfiguration)">
+<section class="detail" id="&lt;init&gt;(int,com.ctre.phoenix6.configs.CANcoderConfiguration,int)">
 <h3>EncoderIOCANCoderConfiguration</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">EncoderIOCANCoderConfiguration</span><wbr><span class="parameters">(int&nbsp;canID,
- com.ctre.phoenix6.configs.CANcoderConfiguration&nbsp;conf)</span></div>
+ com.ctre.phoenix6.configs.CANcoderConfiguration&nbsp;conf,
+ int&nbsp;toothCount)</span></div>
 <div class="block">Constructs an EncoderIOCANCoderConfiguration.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>canID</code> - device ID of the CANcoder</dd>
 <dd><code>conf</code> - configuration applied to the CANcoder</dd>
+<dd><code>toothCount</code> - tooth count of the gear this encoder rides on</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(int,com.ctre.phoenix6.configs.CANcoderConfiguration,int,java.util.function.DoubleSupplier)">
+<h3>EncoderIOCANCoderConfiguration</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">EncoderIOCANCoderConfiguration</span><wbr><span class="parameters">(int&nbsp;canID,
+ com.ctre.phoenix6.configs.CANcoderConfiguration&nbsp;conf,
+ int&nbsp;toothCount,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;rotations)</span></div>
 </section>
 </li>
 </ul>
@@ -163,6 +189,25 @@ implements <a href="EncoderIOConfiguration.html" title="interface in org.cyborgc
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="withRotations(java.util.function.DoubleSupplier)">
+<h3>withRotations</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a></span>&nbsp;<span class="element-name">withRotations</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html" title="class or interface in java.util.function" class="external-link">DoubleSupplier</a>&nbsp;rotations)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="EncoderIOConfiguration.html#withRotations(java.util.function.DoubleSupplier)">EncoderIOConfiguration</a></code></span></div>
+<div class="block">Returns a copy of this configuration whose simulated implementation is driven by the given
+ rotation source, for encoders geared off another mechanism rather than reading their own
+ motor. Configurations that don't need this (e.g. an encoder simulated independently) may
+ leave the default no-op in place.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="EncoderIOConfiguration.html#withRotations(java.util.function.DoubleSupplier)">withRotations</a></code>&nbsp;in interface&nbsp;<code><a href="EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>rotations</code> - supplies the driving mechanism's rotation count, used only in simulation</dd>
+<dt>Returns:</dt>
+<dd>a configuration wired to the given rotation source</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="buildReal()">
 <h3>buildReal</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="EncoderIO.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIO</a></span>&nbsp;<span class="element-name">buildReal</span>()</div>
@@ -173,6 +218,20 @@ implements <a href="EncoderIOConfiguration.html" title="interface in org.cyborgc
 <dd><code><a href="../../IOConfiguration.html#buildReal()">buildReal</a></code>&nbsp;in interface&nbsp;<code><a href="../../IOConfiguration.html" title="interface in org.cyborgcats.io">IOConfiguration</a>&lt;<a href="EncoderIO.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIO</a>&gt;</code></dd>
 <dt>Returns:</dt>
 <dd>the real IO implementation</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="buildSim()">
+<h3>buildSim</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="EncoderIO.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIO</a></span>&nbsp;<span class="element-name">buildSim</span>()</div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../IOConfiguration.html#buildSim()">IOConfiguration</a></code></span></div>
+<div class="block">Builds the simulated IO implementation for this configuration.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../IOConfiguration.html#buildSim()">buildSim</a></code>&nbsp;in interface&nbsp;<code><a href="../../IOConfiguration.html" title="interface in org.cyborgcats.io">IOConfiguration</a>&lt;<a href="EncoderIO.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIO</a>&gt;</code></dd>
+<dt>Returns:</dt>
+<dd>the simulated IO implementation</dd>
 </dl>
 </section>
 </li>

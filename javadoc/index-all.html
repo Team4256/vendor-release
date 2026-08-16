@@ -170,6 +170,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/io/motor/MotorIOTalonFX.html#applyPositionMotionProfile(double)" class="member-name-link">applyPositionMotionProfile(double)</a> - Method in class org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIOTalonFX.html" title="class in org.cyborgcats.io.motor">MotorIOTalonFX</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="org/cyborgcats/component/Turret.html#applyPositionOffset()" class="member-name-link">applyPositionOffset()</a> - Method in class org.cyborgcats.component.<a href="org/cyborgcats/component/Turret.html" title="class in org.cyborgcats.component">Turret</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/io/motor/MotorIO.html#applyPositionSetpoint(double)" class="member-name-link">applyPositionSetpoint(double)</a> - Method in interface org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIO.html" title="interface in org.cyborgcats.io.motor">MotorIO</a></dt>
 <dd>
 <div class="block">Commands the motor to closed-loop control to an angular position.</div>
@@ -326,7 +328,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="org/cyborgcats/io/motor/MotorIOTalonFXConfiguration.html#buildSim()" class="member-name-link">buildSim()</a> - Method in class org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIOTalonFXConfiguration.html" title="class in org.cyborgcats.io.motor">MotorIOTalonFXConfiguration</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="org/cyborgcats/io/sensor/encoder/EncoderIOConfiguration.html#buildSim()" class="member-name-link">buildSim()</a> - Method in interface org.cyborgcats.io.sensor.encoder.<a href="org/cyborgcats/io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a></dt>
+<dt><a href="org/cyborgcats/io/sensor/encoder/EncoderIOCANCoderConfiguration.html#buildSim()" class="member-name-link">buildSim()</a> - Method in class org.cyborgcats.io.sensor.encoder.<a href="org/cyborgcats/io/sensor/encoder/EncoderIOCANCoderConfiguration.html" title="class in org.cyborgcats.io.sensor.encoder">EncoderIOCANCoderConfiguration</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/io/sensor/gyro/GyroIOPigeon2Configuration.html#buildSim()" class="member-name-link">buildSim()</a> - Method in class org.cyborgcats.io.sensor.gyro.<a href="org/cyborgcats/io/sensor/gyro/GyroIOPigeon2Configuration.html" title="class in org.cyborgcats.io.sensor.gyro">GyroIOPigeon2Configuration</a></dt>
 <dd>&nbsp;</dd>
@@ -445,7 +447,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:E">E</h2>
 <dl class="index">
-<dt><a href="org/cyborgcats/subsystem/ActionSubsystem.html#encoder(java.lang.String,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,int)" class="member-name-link">encoder(String, EncoderIOConfiguration, int)</a> - Method in class org.cyborgcats.subsystem.<a href="org/cyborgcats/subsystem/ActionSubsystem.html" title="class in org.cyborgcats.subsystem">ActionSubsystem</a></dt>
+<dt><a href="org/cyborgcats/subsystem/ActionSubsystem.html#encoder(java.lang.String,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration)" class="member-name-link">encoder(String, EncoderIOConfiguration)</a> - Method in class org.cyborgcats.subsystem.<a href="org/cyborgcats/subsystem/ActionSubsystem.html" title="class in org.cyborgcats.subsystem">ActionSubsystem</a></dt>
 <dd>
 <div class="block">Builds an <a href="org/cyborgcats/component/Encoder.html" title="class in org.cyborgcats.component"><code>Encoder</code></a> and registers it with this subsystem.</div>
 </dd>
@@ -453,7 +455,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Component wrapper for an encoder hardware interface, handling input updates and AdvantageKit logging.</div>
 </dd>
-<dt><a href="org/cyborgcats/component/Encoder.html#%3Cinit%3E(java.lang.String,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,int)" class="member-name-link">Encoder(String, EncoderIOConfiguration, int)</a> - Constructor for class org.cyborgcats.component.<a href="org/cyborgcats/component/Encoder.html" title="class in org.cyborgcats.component">Encoder</a></dt>
+<dt><a href="org/cyborgcats/component/Encoder.html#%3Cinit%3E(java.lang.String,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration)" class="member-name-link">Encoder(String, EncoderIOConfiguration)</a> - Constructor for class org.cyborgcats.component.<a href="org/cyborgcats/component/Encoder.html" title="class in org.cyborgcats.component">Encoder</a></dt>
 <dd>
 <div class="block">Constructs an Encoder component.</div>
 </dd>
@@ -471,7 +473,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block"><a href="org/cyborgcats/io/sensor/encoder/EncoderIO.html" title="interface in org.cyborgcats.io.sensor.encoder"><code>EncoderIO</code></a> implementation backed by a CTRE CANcoder absolute magnetic encoder.</div>
 </dd>
-<dt><a href="org/cyborgcats/io/sensor/encoder/EncoderIOCANCoder.html#%3Cinit%3E(int,com.ctre.phoenix6.configs.CANcoderConfiguration)" class="member-name-link">EncoderIOCANCoder(int, CANcoderConfiguration)</a> - Constructor for class org.cyborgcats.io.sensor.encoder.<a href="org/cyborgcats/io/sensor/encoder/EncoderIOCANCoder.html" title="class in org.cyborgcats.io.sensor.encoder">EncoderIOCANCoder</a></dt>
+<dt><a href="org/cyborgcats/io/sensor/encoder/EncoderIOCANCoder.html#%3Cinit%3E(int,int,com.ctre.phoenix6.configs.CANcoderConfiguration)" class="member-name-link">EncoderIOCANCoder(int, int, CANcoderConfiguration)</a> - Constructor for class org.cyborgcats.io.sensor.encoder.<a href="org/cyborgcats/io/sensor/encoder/EncoderIOCANCoder.html" title="class in org.cyborgcats.io.sensor.encoder">EncoderIOCANCoder</a></dt>
 <dd>
 <div class="block">Constructs an EncoderIOCANCoder and caches the position status signals.</div>
 </dd>
@@ -479,10 +481,12 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Configuration for a CANcoder-backed <a href="org/cyborgcats/io/sensor/encoder/EncoderIO.html" title="interface in org.cyborgcats.io.sensor.encoder"><code>EncoderIO</code></a>.</div>
 </dd>
-<dt><a href="org/cyborgcats/io/sensor/encoder/EncoderIOCANCoderConfiguration.html#%3Cinit%3E(int,com.ctre.phoenix6.configs.CANcoderConfiguration)" class="member-name-link">EncoderIOCANCoderConfiguration(int, CANcoderConfiguration)</a> - Constructor for class org.cyborgcats.io.sensor.encoder.<a href="org/cyborgcats/io/sensor/encoder/EncoderIOCANCoderConfiguration.html" title="class in org.cyborgcats.io.sensor.encoder">EncoderIOCANCoderConfiguration</a></dt>
+<dt><a href="org/cyborgcats/io/sensor/encoder/EncoderIOCANCoderConfiguration.html#%3Cinit%3E(int,com.ctre.phoenix6.configs.CANcoderConfiguration,int)" class="member-name-link">EncoderIOCANCoderConfiguration(int, CANcoderConfiguration, int)</a> - Constructor for class org.cyborgcats.io.sensor.encoder.<a href="org/cyborgcats/io/sensor/encoder/EncoderIOCANCoderConfiguration.html" title="class in org.cyborgcats.io.sensor.encoder">EncoderIOCANCoderConfiguration</a></dt>
 <dd>
 <div class="block">Constructs an EncoderIOCANCoderConfiguration.</div>
 </dd>
+<dt><a href="org/cyborgcats/io/sensor/encoder/EncoderIOCANCoderConfiguration.html#%3Cinit%3E(int,com.ctre.phoenix6.configs.CANcoderConfiguration,int,java.util.function.DoubleSupplier)" class="member-name-link">EncoderIOCANCoderConfiguration(int, CANcoderConfiguration, int, DoubleSupplier)</a> - Constructor for class org.cyborgcats.io.sensor.encoder.<a href="org/cyborgcats/io/sensor/encoder/EncoderIOCANCoderConfiguration.html" title="class in org.cyborgcats.io.sensor.encoder">EncoderIOCANCoderConfiguration</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/io/sensor/encoder/EncoderIOConfiguration.html" class="type-name-link" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a> - Interface in <a href="org/cyborgcats/io/sensor/encoder/package-summary.html">org.cyborgcats.io.sensor.encoder</a></dt>
 <dd>
 <div class="block">Shared shape for configs that build an <a href="org/cyborgcats/io/sensor/encoder/EncoderIO.html" title="interface in org.cyborgcats.io.sensor.encoder"><code>EncoderIO</code></a>; defaults to <a href="org/cyborgcats/io/sensor/encoder/EncoderIOSim.html" title="class in org.cyborgcats.io.sensor.encoder"><code>EncoderIOSim</code></a> in
@@ -492,7 +496,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block"><a href="org/cyborgcats/io/sensor/encoder/EncoderIO.html" title="interface in org.cyborgcats.io.sensor.encoder"><code>EncoderIO</code></a> implementation for simulation; reports a stationary, connected encoder.</div>
 </dd>
-<dt><a href="org/cyborgcats/io/sensor/encoder/EncoderIOSim.html#%3Cinit%3E()" class="member-name-link">EncoderIOSim()</a> - Constructor for class org.cyborgcats.io.sensor.encoder.<a href="org/cyborgcats/io/sensor/encoder/EncoderIOSim.html" title="class in org.cyborgcats.io.sensor.encoder">EncoderIOSim</a></dt>
+<dt><a href="org/cyborgcats/io/sensor/encoder/EncoderIOSim.html#%3Cinit%3E(java.util.function.DoubleSupplier,int)" class="member-name-link">EncoderIOSim(DoubleSupplier, int)</a> - Constructor for class org.cyborgcats.io.sensor.encoder.<a href="org/cyborgcats/io/sensor/encoder/EncoderIOSim.html" title="class in org.cyborgcats.io.sensor.encoder">EncoderIOSim</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/ssm/State.html#end()" class="member-name-link">end()</a> - Method in class org.cyborgcats.ssm.<a href="org/cyborgcats/ssm/State.html" title="class in org.cyborgcats.ssm">State</a></dt>
 <dd>
@@ -773,6 +777,12 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the tooth count of the gear this encoder rides on.</div>
 </dd>
+<dt><a href="org/cyborgcats/io/sensor/encoder/EncoderIO.html#getToothCount()" class="member-name-link">getToothCount()</a> - Method in interface org.cyborgcats.io.sensor.encoder.<a href="org/cyborgcats/io/sensor/encoder/EncoderIO.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIO</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org/cyborgcats/io/sensor/encoder/EncoderIOCANCoder.html#getToothCount()" class="member-name-link">getToothCount()</a> - Method in class org.cyborgcats.io.sensor.encoder.<a href="org/cyborgcats/io/sensor/encoder/EncoderIOCANCoder.html" title="class in org.cyborgcats.io.sensor.encoder">EncoderIOCANCoder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org/cyborgcats/io/sensor/encoder/EncoderIOSim.html#getToothCount()" class="member-name-link">getToothCount()</a> - Method in class org.cyborgcats.io.sensor.encoder.<a href="org/cyborgcats/io/sensor/encoder/EncoderIOSim.html" title="class in org.cyborgcats.io.sensor.encoder">EncoderIOSim</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/component/Turret.html#getTurretPose()" class="member-name-link">getTurretPose()</a> - Method in class org.cyborgcats.component.<a href="org/cyborgcats/component/Turret.html" title="class in org.cyborgcats.component">Turret</a></dt>
 <dd>
 <div class="block">Returns the field-relative pose of the turret's rotation axis, composing the robot's current
@@ -1526,10 +1536,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the value of the <a href="./org/cyborgcats/jni/AprilTagEstimator.Target.html#param-skew"><code>skew</code></a> record component.</div>
 </dd>
-<dt><a href="org/cyborgcats/component/Turret.html#solveChineaseRemainderTherom(double,double,double,double,double)" class="member-name-link">solveChineaseRemainderTherom(double, double, double, double, double)</a> - Static method in class org.cyborgcats.component.<a href="org/cyborgcats/component/Turret.html" title="class in org.cyborgcats.component">Turret</a></dt>
+<dt><a href="org/cyborgcats/component/Turret.html#solveChineaseRemainderTherom(double,double,int,int,double,int)" class="member-name-link">solveChineaseRemainderTherom(double, double, int, int, double, int)</a> - Static method in class org.cyborgcats.component.<a href="org/cyborgcats/component/Turret.html" title="class in org.cyborgcats.component">Turret</a></dt>
 <dd>
-<div class="block">Attempts to find the unique absolute turret angle (in degrees) that satisfies the readings
- from two encoders with different tooth counts relative to a 90-tooth turret gear.</div>
+<div class="block">Attempts to find the unique absolute turret position (in rotations) that satisfies the
+ readings from two encoders with different tooth counts relative to the turret gear.</div>
 </dd>
 <dt><a href="org/cyborgcats/jni/AprilTagEstimator.html#solvePnP(int%5B%5D,float%5B%5D,int)" class="member-name-link">solvePnP(int[], float[], int)</a> - Method in class org.cyborgcats.jni.<a href="org/cyborgcats/jni/AprilTagEstimator.html" title="class in org.cyborgcats.jni">AprilTagEstimator</a></dt>
 <dd>
@@ -1729,7 +1739,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Creates a tunable with the given default value.</div>
 </dd>
-<dt><a href="org/cyborgcats/subsystem/ActionSubsystem.html#turret(java.lang.String,double,double,org.cyborgcats.component.Encoder,org.cyborgcats.component.Encoder,org.cyborgcats.util.Range,double,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Pose3d,org.cyborgcats.io.motor.MotorIOConfiguration)" class="member-name-link">turret(String, double, double, Encoder, Encoder, Range, double, DriveState, Pose3d, MotorIOConfiguration)</a> - Method in class org.cyborgcats.subsystem.<a href="org/cyborgcats/subsystem/ActionSubsystem.html" title="class in org.cyborgcats.subsystem">ActionSubsystem</a></dt>
+<dt><a href="org/cyborgcats/subsystem/ActionSubsystem.html#turret(java.lang.String,double,double,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.util.Range,double,int,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Pose3d,org.cyborgcats.io.motor.MotorIOConfiguration)" class="member-name-link">turret(String, double, double, EncoderIOConfiguration, EncoderIOConfiguration, Range, double, int, DriveState, Pose3d, MotorIOConfiguration)</a> - Method in class org.cyborgcats.subsystem.<a href="org/cyborgcats/subsystem/ActionSubsystem.html" title="class in org.cyborgcats.subsystem">ActionSubsystem</a></dt>
 <dd>
 <div class="block">Builds a <a href="org/cyborgcats/component/Turret.html" title="class in org.cyborgcats.component"><code>Turret</code></a> and registers it with this subsystem.</div>
 </dd>
@@ -1738,7 +1748,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Position component for a turret, adding absolute-position resolution from a pair of encoders and
  aiming helpers that compensate for robot motion.</div>
 </dd>
-<dt><a href="org/cyborgcats/component/Turret.html#%3Cinit%3E(java.lang.String,double,double,org.cyborgcats.component.Encoder,org.cyborgcats.component.Encoder,org.cyborgcats.util.Range,double,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Pose3d,org.cyborgcats.io.motor.MotorIOConfiguration)" class="member-name-link">Turret(String, double, double, Encoder, Encoder, Range, double, DriveState, Pose3d, MotorIOConfiguration)</a> - Constructor for class org.cyborgcats.component.<a href="org/cyborgcats/component/Turret.html" title="class in org.cyborgcats.component">Turret</a></dt>
+<dt><a href="org/cyborgcats/component/Turret.html#%3Cinit%3E(java.lang.String,double,double,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.util.Range,double,int,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Pose3d,org.cyborgcats.io.motor.MotorIOConfiguration)" class="member-name-link">Turret(String, double, double, EncoderIOConfiguration, EncoderIOConfiguration, Range, double, int, DriveState, Pose3d, MotorIOConfiguration)</a> - Constructor for class org.cyborgcats.component.<a href="org/cyborgcats/component/Turret.html" title="class in org.cyborgcats.component">Turret</a></dt>
 <dd>
 <div class="block">Constructs a Turret component and resolves its absolute starting position from both encoders.</div>
 </dd>
@@ -2006,6 +2016,14 @@ the order they are declared.</div>
 <dd>
 <div class="block">Declares the subsystems this state requires, enabling the scheduler to detect conflicts with
  other states.</div>
+</dd>
+<dt><a href="org/cyborgcats/io/sensor/encoder/EncoderIOCANCoderConfiguration.html#withRotations(java.util.function.DoubleSupplier)" class="member-name-link">withRotations(DoubleSupplier)</a> - Method in class org.cyborgcats.io.sensor.encoder.<a href="org/cyborgcats/io/sensor/encoder/EncoderIOCANCoderConfiguration.html" title="class in org.cyborgcats.io.sensor.encoder">EncoderIOCANCoderConfiguration</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org/cyborgcats/io/sensor/encoder/EncoderIOConfiguration.html#withRotations(java.util.function.DoubleSupplier)" class="member-name-link">withRotations(DoubleSupplier)</a> - Method in interface org.cyborgcats.io.sensor.encoder.<a href="org/cyborgcats/io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a></dt>
+<dd>
+<div class="block">Returns a copy of this configuration whose simulated implementation is driven by the given
+ rotation source, for encoders geared off another mechanism rather than reading their own
+ motor.</div>
 </dd>
 <dt><a href="org/cyborgcats/ssm/State.html#withStep(org.cyborgcats.ssm.Step.CheckedRunnable)" class="member-name-link">withStep(Step.CheckedRunnable)</a> - Static method in class org.cyborgcats.ssm.<a href="org/cyborgcats/ssm/State.html" title="class in org.cyborgcats.ssm">State</a></dt>
 <dd>

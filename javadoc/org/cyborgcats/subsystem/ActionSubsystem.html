@@ -149,9 +149,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Disables the action subsystem, applying the disabled action.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../component/Encoder.html" title="class in org.cyborgcats.component">Encoder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#encoder(java.lang.String,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,int)" class="member-name-link">encoder</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;conf,
- int&nbsp;toothCount)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#encoder(java.lang.String,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration)" class="member-name-link">encoder</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;conf)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Builds an <a href="../component/Encoder.html" title="class in org.cyborgcats.component"><code>Encoder</code></a> and registers it with this subsystem.</div>
 </div>
@@ -208,13 +207,14 @@ loadScripts(document, 'script');</script>
 <div class="block">sets a new action to be the disabled action that runs on <a href="Subsystem.html#disable()"><code>Subsystem.disable()</code></a></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../component/Turret.html" title="class in org.cyborgcats.component">Turret</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#turret(java.lang.String,double,double,org.cyborgcats.component.Encoder,org.cyborgcats.component.Encoder,org.cyborgcats.util.Range,double,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Pose3d,org.cyborgcats.io.motor.MotorIOConfiguration)" class="member-name-link">turret</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#turret(java.lang.String,double,double,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.util.Range,double,int,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Pose3d,org.cyborgcats.io.motor.MotorIOConfiguration)" class="member-name-link">turret</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  double&nbsp;threshold,
  double&nbsp;debounceTime,
- <a href="../component/Encoder.html" title="class in org.cyborgcats.component">Encoder</a>&nbsp;encoderOne,
- <a href="../component/Encoder.html" title="class in org.cyborgcats.component">Encoder</a>&nbsp;encoderTwo,
+ <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;encoderOneConf,
+ <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;encoderTwoConf,
  <a href="../util/Range.html" title="class in org.cyborgcats.util">Range</a>&nbsp;range,
  double&nbsp;tolerance,
+ int&nbsp;turretToothCount,
  <a href="../component/DriveState.html" title="class in org.cyborgcats.component">DriveState</a>&nbsp;driveState,
  <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&nbsp;turretOffset,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>&nbsp;leader)</code></div>
@@ -436,15 +436,16 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="turret(java.lang.String,double,double,org.cyborgcats.component.Encoder,org.cyborgcats.component.Encoder,org.cyborgcats.util.Range,double,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Pose3d,org.cyborgcats.io.motor.MotorIOConfiguration)">
+<section class="detail" id="turret(java.lang.String,double,double,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.util.Range,double,int,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Pose3d,org.cyborgcats.io.motor.MotorIOConfiguration)">
 <h3>turret</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../component/Turret.html" title="class in org.cyborgcats.component">Turret</a></span>&nbsp;<span class="element-name">turret</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  double&nbsp;threshold,
  double&nbsp;debounceTime,
- <a href="../component/Encoder.html" title="class in org.cyborgcats.component">Encoder</a>&nbsp;encoderOne,
- <a href="../component/Encoder.html" title="class in org.cyborgcats.component">Encoder</a>&nbsp;encoderTwo,
+ <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;encoderOneConf,
+ <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;encoderTwoConf,
  <a href="../util/Range.html" title="class in org.cyborgcats.util">Range</a>&nbsp;range,
  double&nbsp;tolerance,
+ int&nbsp;turretToothCount,
  <a href="../component/DriveState.html" title="class in org.cyborgcats.component">DriveState</a>&nbsp;driveState,
  <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&nbsp;turretOffset,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>&nbsp;leader)</span></div>
@@ -456,12 +457,15 @@ loadScripts(document, 'script');</script>
                      position</dd>
 <dd><code>debounceTime</code> - how long (in seconds) the turret must continuously be within threshold
                      before the at-position check returns <code>true</code></dd>
-<dd><code>encoderOne</code> - encoder on the first reduction gear</dd>
-<dd><code>encoderTwo</code> - encoder on the second reduction gear; must have a different tooth count
-                     than <code>encoderOne</code> for the CRT solve to be unique</dd>
+<dd><code>encoderOneConf</code> - configuration for the encoder on the first reduction gear; its sim
+                         implementation is driven off the turret's own rotation automatically</dd>
+<dd><code>encoderTwoConf</code> - configuration for the encoder on the second reduction gear; must have
+                         a different tooth count than encoder one for the CRT solve to be unique</dd>
 <dd><code>range</code> - minimum and maximum angle the turret can rotate to</dd>
-<dd><code>tolerance</code> - how close (in degrees) a CRT candidate must be to encoder two's reading to
-                     be accepted; size to the encoders' combined noise</dd>
+<dd><code>tolerance</code> - how close (in rotations) a CRT candidate must be to encoder two's
+                         reading to be accepted; size to the encoders' combined noise</dd>
+<dd><code>turretToothCount</code> - tooth count of the gear fixed to the turret that both encoder gears
+                         mesh with</dd>
 <dd><code>driveState</code> - suppliers of the robot's field-relative chassis speeds and pose</dd>
 <dd><code>turretOffset</code> - pose of the turret's rotation axis relative to the robot origin</dd>
 <dd><code>leader</code> - configuration used to build the hardware interface for the turret motor</dd>
@@ -499,17 +503,15 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="encoder(java.lang.String,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,int)">
+<section class="detail" id="encoder(java.lang.String,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration)">
 <h3>encoder</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../component/Encoder.html" title="class in org.cyborgcats.component">Encoder</a></span>&nbsp;<span class="element-name">encoder</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;conf,
- int&nbsp;toothCount)</span></div>
+ <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;conf)</span></div>
 <div class="block">Builds an <a href="../component/Encoder.html" title="class in org.cyborgcats.component"><code>Encoder</code></a> and registers it with this subsystem.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>name</code> - unique name used as the AdvantageKit logging key under "Sensors/"</dd>
 <dd><code>conf</code> - configuration used to build this encoder's hardware interface</dd>
-<dd><code>toothCount</code> - tooth count of the gear this encoder rides on</dd>
 <dt>Returns:</dt>
 <dd>the newly created and registered <a href="../component/Encoder.html" title="class in org.cyborgcats.component"><code>Encoder</code></a></dd>
 </dl>
