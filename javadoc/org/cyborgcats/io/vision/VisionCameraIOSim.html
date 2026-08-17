@@ -92,7 +92,7 @@ implements <a href="VisionCameraIO.html" title="interface in org.cyborgcats.io.v
 <h2>Nested Class Summary</h2>
 <div class="inherited-list">
 <h2 id="nested-classes-inherited-from-class-org.cyborgcats.io.vision.VisionCameraIO">Nested classes/interfaces inherited from interface&nbsp;org.cyborgcats.io.vision.<a href="VisionCameraIO.html" title="interface in org.cyborgcats.io.vision">VisionCameraIO</a></h2>
-<code><a href="VisionCameraIO.VisionCameraInputs.html" title="class in org.cyborgcats.io.vision">VisionCameraIO.VisionCameraInputs</a>, <a href="VisionCameraIO.VisionCfg.html" title="class in org.cyborgcats.io.vision">VisionCameraIO.VisionCfg</a>, <a href="VisionCameraIO.VisionMeasurement.html" title="class in org.cyborgcats.io.vision">VisionCameraIO.VisionMeasurement</a>, <a href="VisionCameraIO.VisionObservation.html" title="class in org.cyborgcats.io.vision">VisionCameraIO.VisionObservation</a></code></div>
+<code><a href="VisionCameraIO.VisionCameraInputs.html" title="class in org.cyborgcats.io.vision">VisionCameraIO.VisionCameraInputs</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -103,7 +103,13 @@ implements <a href="VisionCameraIO.html" title="interface in org.cyborgcats.io.v
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(org.cyborgcats.io.vision.VisionCameraIO.VisionCfg,java.util.function.Supplier)" class="member-name-link">VisionCameraIOSim</a><wbr>(<a href="VisionCameraIO.VisionCfg.html" title="class in org.cyborgcats.io.vision">VisionCameraIO.VisionCfg</a>&nbsp;cfg,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,org.cyborgcats.vision.CameraMatrix,org.cyborgcats.vision.DistortionCoefficients,org.cyborgcats.vision.CameraResolution,org.cyborgcats.vision.VisionStdDevs,org.cyborgcats.vision.VisionStdDevs,java.util.function.Supplier,java.util.function.Supplier)" class="member-name-link">VisionCameraIOSim</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="../../vision/CameraMatrix.html" title="class in org.cyborgcats.vision">CameraMatrix</a>&nbsp;matrix,
+ <a href="../../vision/DistortionCoefficients.html" title="class in org.cyborgcats.vision">DistortionCoefficients</a>&nbsp;distCoeffs,
+ <a href="../../vision/CameraResolution.html" title="class in org.cyborgcats.vision">CameraResolution</a>&nbsp;resolution,
+ <a href="../../vision/VisionStdDevs.html" title="class in org.cyborgcats.vision">VisionStdDevs</a>&nbsp;singleTagDevs,
+ <a href="../../vision/VisionStdDevs.html" title="class in org.cyborgcats.vision">VisionStdDevs</a>&nbsp;multiTagDevs,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform3d</a>&gt;&nbsp;robotToCamera,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&gt;&nbsp;robotPose)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Constructs a VisionCameraIOSim, setting up a PhotonVision simulation camera with the
@@ -123,6 +129,12 @@ implements <a href="VisionCameraIO.html" title="interface in org.cyborgcats.io.v
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../vision/AprilTagEstimate.html" title="class in org.cyborgcats.vision">AprilTagEstimate</a>[]</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAllUnreadVisionEstimates()" class="member-name-link">getAllUnreadVisionEstimates</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../vision/VisionResult.html" title="class in org.cyborgcats.vision">VisionResult</a>[]</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVisionResults()" class="member-name-link">getVisionResults</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateInputs(org.cyborgcats.io.vision.VisionCameraIO.VisionCameraInputs)" class="member-name-link">updateInputs</a><wbr>(<a href="VisionCameraIO.VisionCameraInputs.html" title="class in org.cyborgcats.io.vision">VisionCameraIO.VisionCameraInputs</a>&nbsp;inputs)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -146,15 +158,27 @@ implements <a href="VisionCameraIO.html" title="interface in org.cyborgcats.io.v
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(org.cyborgcats.io.vision.VisionCameraIO.VisionCfg,java.util.function.Supplier)">
+<section class="detail" id="&lt;init&gt;(java.lang.String,org.cyborgcats.vision.CameraMatrix,org.cyborgcats.vision.DistortionCoefficients,org.cyborgcats.vision.CameraResolution,org.cyborgcats.vision.VisionStdDevs,org.cyborgcats.vision.VisionStdDevs,java.util.function.Supplier,java.util.function.Supplier)">
 <h3>VisionCameraIOSim</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">VisionCameraIOSim</span><wbr><span class="parameters">(<a href="VisionCameraIO.VisionCfg.html" title="class in org.cyborgcats.io.vision">VisionCameraIO.VisionCfg</a>&nbsp;cfg,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">VisionCameraIOSim</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="../../vision/CameraMatrix.html" title="class in org.cyborgcats.vision">CameraMatrix</a>&nbsp;matrix,
+ <a href="../../vision/DistortionCoefficients.html" title="class in org.cyborgcats.vision">DistortionCoefficients</a>&nbsp;distCoeffs,
+ <a href="../../vision/CameraResolution.html" title="class in org.cyborgcats.vision">CameraResolution</a>&nbsp;resolution,
+ <a href="../../vision/VisionStdDevs.html" title="class in org.cyborgcats.vision">VisionStdDevs</a>&nbsp;singleTagDevs,
+ <a href="../../vision/VisionStdDevs.html" title="class in org.cyborgcats.vision">VisionStdDevs</a>&nbsp;multiTagDevs,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform3d</a>&gt;&nbsp;robotToCamera,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&gt;&nbsp;robotPose)</span></div>
 <div class="block">Constructs a VisionCameraIOSim, setting up a PhotonVision simulation camera with the
  provided intrinsics and attaching it to the shared <code>VisionSystemSim</code>.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>cfg</code> - camera configuration (name, resolution, intrinsics, robot-to-camera transform)</dd>
+<dd><code>name</code> - unique camera name (must match the PhotonVision camera name)</dd>
+<dd><code>matrix</code> - camera intrinsics</dd>
+<dd><code>distCoeffs</code> - lens distortion coefficients</dd>
+<dd><code>resolution</code> - image resolution</dd>
+<dd><code>singleTagDevs</code> - standard deviations to use when a single tag contributes to an estimate</dd>
+<dd><code>multiTagDevs</code> - standard deviations to use when multiple tags contribute to an estimate</dd>
+<dd><code>robotToCamera</code> - supplier returning the transform from robot origin to camera lens</dd>
 <dd><code>robotPose</code> - supplier returning the current simulated robot pose</dd>
 </dl>
 </section>
@@ -178,6 +202,30 @@ implements <a href="VisionCameraIO.html" title="interface in org.cyborgcats.io.v
 <dd><code><a href="VisionCameraIO.html#updateInputs(org.cyborgcats.io.vision.VisionCameraIO.VisionCameraInputs)">updateInputs</a></code>&nbsp;in interface&nbsp;<code><a href="VisionCameraIO.html" title="interface in org.cyborgcats.io.vision">VisionCameraIO</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>inputs</code> - loggable vision camera inputs</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getAllUnreadVisionEstimates()">
+<h3>getAllUnreadVisionEstimates</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../vision/AprilTagEstimate.html" title="class in org.cyborgcats.vision">AprilTagEstimate</a>[]</span>&nbsp;<span class="element-name">getAllUnreadVisionEstimates</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="VisionCameraIO.html#getAllUnreadVisionEstimates()">getAllUnreadVisionEstimates</a></code>&nbsp;in interface&nbsp;<code><a href="VisionCameraIO.html" title="interface in org.cyborgcats.io.vision">VisionCameraIO</a></code></dd>
+<dt>Returns:</dt>
+<dd>all vision pose estimates accumulated since the last call, in capture order</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVisionResults()">
+<h3>getVisionResults</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../vision/VisionResult.html" title="class in org.cyborgcats.vision">VisionResult</a>[]</span>&nbsp;<span class="element-name">getVisionResults</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="VisionCameraIO.html#getVisionResults()">getVisionResults</a></code>&nbsp;in interface&nbsp;<code><a href="VisionCameraIO.html" title="interface in org.cyborgcats.io.vision">VisionCameraIO</a></code></dd>
+<dt>Returns:</dt>
+<dd>all vision pose measurements accumulated since the last call, in capture order</dd>
 </dl>
 </section>
 </li>

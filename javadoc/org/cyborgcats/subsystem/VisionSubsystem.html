@@ -77,7 +77,7 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="class-description" id="class-description">
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">VisionSubsystem</span>
+<div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">VisionSubsystem</span>
 <span class="extends-implements">extends <a href="Subsystem.html" title="class in org.cyborgcats.subsystem">Subsystem</a></span></div>
 <div class="block">Subsystem that owns one or more <a href="../component/VisionCamera.html" title="class in org.cyborgcats.component"><code>VisionCamera</code></a> components and calls
  <a href="../component/VisionCamera.html#updateInputs()"><code>VisionCamera.updateInputs()</code></a> on each every loop iteration.</div>
@@ -92,9 +92,9 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(org.cyborgcats.component.VisionCamera...)" class="member-name-link">VisionSubsystem</a><wbr>(<a href="../component/VisionCamera.html" title="class in org.cyborgcats.component">VisionCamera</a>...&nbsp;visionCameras)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">VisionSubsystem</a>()</code></div>
 <div class="col-last even-row-color">
-<div class="block">Constructs a VisionSubsystem managing the provided cameras.</div>
+<div class="block">Constructs an empty <code>VisionSubsystem</code> with no cameras registered.</div>
 </div>
 </div>
 </section>
@@ -104,16 +104,38 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#periodic()" class="member-name-link">periodic</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addCameras(org.cyborgcats.component.VisionCamera...)" class="member-name-link">addCameras</a><wbr>(<a href="../component/VisionCamera.html" title="class in org.cyborgcats.component">VisionCamera</a>...&nbsp;cameras)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Registers cameras to be updated every <a href="#periodic()"><code>periodic()</code></a> call.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#periodic()" class="member-name-link">periodic</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Reads and logs inputs from all registered vision cameras.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#processMultiTagMesurment(org.cyborgcats.vision.VisionMeasurment)" class="member-name-link">processMultiTagMesurment</a><wbr>(<a href="../vision/VisionMeasurment.html" title="class in org.cyborgcats.vision">VisionMeasurment</a>&nbsp;measurment)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Called for each measurement that came from multiple AprilTags.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#processSingleTagMesurment(org.cyborgcats.vision.VisionMeasurment)" class="member-name-link">processSingleTagMesurment</a><wbr>(<a href="../vision/VisionMeasurment.html" title="class in org.cyborgcats.vision">VisionMeasurment</a>&nbsp;measurment)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Called for each measurement that came from a single AprilTag.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../component/VisionCamera.html" title="class in org.cyborgcats.component">VisionCamera</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#visionCamera(java.lang.String,org.cyborgcats.io.vision.VisionCameraIOConfiguration)" class="member-name-link">visionCamera</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="../io/vision/VisionCameraIOConfiguration.html" title="interface in org.cyborgcats.io.vision">VisionCameraIOConfiguration</a>&nbsp;conf)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Builds a <a href="../component/VisionCamera.html" title="class in org.cyborgcats.component"><code>VisionCamera</code></a> from the given configuration and registers it to be updated
+ every <a href="#periodic()"><code>periodic()</code></a> call.</div>
 </div>
 </div>
 </div>
@@ -136,14 +158,10 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(org.cyborgcats.component.VisionCamera...)">
+<section class="detail" id="&lt;init&gt;()">
 <h3>VisionSubsystem</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">VisionSubsystem</span><wbr><span class="parameters">(<a href="../component/VisionCamera.html" title="class in org.cyborgcats.component">VisionCamera</a>...&nbsp;visionCameras)</span></div>
-<div class="block">Constructs a VisionSubsystem managing the provided cameras.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>visionCameras</code> - one or more cameras to update each periodic cycle</dd>
-</dl>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">VisionSubsystem</span>()</div>
+<div class="block">Constructs an empty <code>VisionSubsystem</code> with no cameras registered.</div>
 </section>
 </li>
 </ul>
@@ -155,6 +173,33 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="addCameras(org.cyborgcats.component.VisionCamera...)">
+<h3>addCameras</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addCameras</span><wbr><span class="parameters">(<a href="../component/VisionCamera.html" title="class in org.cyborgcats.component">VisionCamera</a>...&nbsp;cameras)</span></div>
+<div class="block">Registers cameras to be updated every <a href="#periodic()"><code>periodic()</code></a> call.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>cameras</code> - cameras to add</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="visionCamera(java.lang.String,org.cyborgcats.io.vision.VisionCameraIOConfiguration)">
+<h3>visionCamera</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../component/VisionCamera.html" title="class in org.cyborgcats.component">VisionCamera</a></span>&nbsp;<span class="element-name">visionCamera</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="../io/vision/VisionCameraIOConfiguration.html" title="interface in org.cyborgcats.io.vision">VisionCameraIOConfiguration</a>&nbsp;conf)</span></div>
+<div class="block">Builds a <a href="../component/VisionCamera.html" title="class in org.cyborgcats.component"><code>VisionCamera</code></a> from the given configuration and registers it to be updated
+ every <a href="#periodic()"><code>periodic()</code></a> call.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - unique name used as the AdvantageKit logging key under "Vision/"</dd>
+<dd><code>conf</code> - configuration used to build the underlying <a href="../io/vision/VisionCameraIOConfiguration.html" title="interface in org.cyborgcats.io.vision"><code>VisionCameraIOConfiguration</code></a></dd>
+<dt>Returns:</dt>
+<dd>the newly built and registered camera</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="periodic()">
 <h3>periodic</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">periodic</span>()</div>
@@ -162,6 +207,28 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="Subsystem.html#periodic()">periodic</a></code>&nbsp;in class&nbsp;<code><a href="Subsystem.html" title="class in org.cyborgcats.subsystem">Subsystem</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="processSingleTagMesurment(org.cyborgcats.vision.VisionMeasurment)">
+<h3>processSingleTagMesurment</h3>
+<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">processSingleTagMesurment</span><wbr><span class="parameters">(<a href="../vision/VisionMeasurment.html" title="class in org.cyborgcats.vision">VisionMeasurment</a>&nbsp;measurment)</span></div>
+<div class="block">Called for each measurement that came from a single AprilTag.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>measurment</code> - the vision pose measurement to process</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="processMultiTagMesurment(org.cyborgcats.vision.VisionMeasurment)">
+<h3>processMultiTagMesurment</h3>
+<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">processMultiTagMesurment</span><wbr><span class="parameters">(<a href="../vision/VisionMeasurment.html" title="class in org.cyborgcats.vision">VisionMeasurment</a>&nbsp;measurment)</span></div>
+<div class="block">Called for each measurement that came from multiple AprilTags.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>measurment</code> - the vision pose measurement to process</dd>
 </dl>
 </section>
 </li>

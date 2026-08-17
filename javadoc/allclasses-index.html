@@ -77,35 +77,97 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Utility class for alliance-aware coordinate transformations.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/jni/AprilTagEstimator.html" title="class in org.cyborgcats.jni">AprilTagEstimator</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/vision/AprilTag.html" title="class in org.cyborgcats.vision">AprilTag</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
+<div class="block">A single AprilTag's fiducial ID and its known field-relative pose, as defined by the current
+ <a href="org/cyborgcats/vision/AprilTagField.html" title="class in org.cyborgcats.vision"><code>AprilTagField</code></a> layout.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/vision/AprilTagDetection.html" title="class in org.cyborgcats.vision">AprilTagDetection</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
+<div class="block">A single AprilTag detection: fiducial ID and its four corner points in image space, ordered as
+ PhotonVision/AprilTag reports them (starting at the corner nearest the tag's bottom-left,
+ counter-clockwise).</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/vision/AprilTagDetections.html" title="class in org.cyborgcats.vision">AprilTagDetections</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
+<div class="block">A batch of <a href="org/cyborgcats/vision/AprilTagDetection.html" title="class in org.cyborgcats.vision"><code>AprilTagDetection</code></a>s from a single camera frame, with the ability to flatten
+ itself into the raw <code>int[]</code>/<code>float[]</code> arrays the native <code>solvePnP</code>/<code>
+ solveTrig</code> JNI calls expect.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/vision/AprilTagEstimate.html" title="class in org.cyborgcats.vision">AprilTagEstimate</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
+<div class="block">A resolved AprilTag pose estimate from a single native solve: the best (and, when ambiguous,
+ alternate) camera pose candidate, associated reprojection errors, and the tags that
+ contributed to it.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/vision/AprilTagEstimator.html" title="class in org.cyborgcats.vision">AprilTagEstimator</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Wraps the native AprilTag pose-solve JNI bindings, translating between this package's Java
+ types and <a href="org/cyborgcats/jni/AprilTagEstimatorJNI.html" title="class in org.cyborgcats.jni"><code>AprilTagEstimatorJNI</code></a>.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/jni/AprilTagEstimatorJNI.html" title="class in org.cyborgcats.jni">AprilTagEstimatorJNI</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Java handle to the native <code>vision</code> AprilTag estimator.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/jni/AprilTagEstimator.AprilTagEstimate.html" title="class in org.cyborgcats.jni">AprilTagEstimator.AprilTagEstimate</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/jni/AprilTagEstimatorJNI.AprilTagEstimate.html" title="class in org.cyborgcats.jni">AprilTagEstimatorJNI.AprilTagEstimate</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
 <div class="block">Decoded AprilTag pose estimate.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/jni/AprilTagEstimator.Target.html" title="class in org.cyborgcats.jni">AprilTagEstimator.Target</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
-<div class="block">Per-tag detection data carried within an <a href="org/cyborgcats/jni/AprilTagEstimator.AprilTagEstimate.html" title="class in org.cyborgcats.jni"><code>AprilTagEstimator.AprilTagEstimate</code></a>.</div>
-</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/field/Bounds.html" title="class in org.cyborgcats.field">Bounds</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/jni/AprilTagEstimatorJNI.Target.html" title="class in org.cyborgcats.jni">AprilTagEstimatorJNI.Target</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab4">
+<div class="block">Per-tag detection data carried within an <a href="org/cyborgcats/jni/AprilTagEstimatorJNI.AprilTagEstimate.html" title="class in org.cyborgcats.jni"><code>AprilTagEstimatorJNI.AprilTagEstimate</code></a>.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/vision/AprilTagField.html" title="class in org.cyborgcats.vision">AprilTagField</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Global holder for the game's <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/apriltag/AprilTagFieldLayout.html" title="class or interface in edu.wpi.first.apriltag" class="external-link"><code>AprilTagFieldLayout</code></a>.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/vision/AprilTagTarget.html" title="class in org.cyborgcats.vision">AprilTagTarget</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
+<div class="block">Per-tag detail for a single AprilTag that contributed to an <a href="org/cyborgcats/vision/AprilTagEstimate.html" title="class in org.cyborgcats.vision"><code>AprilTagEstimate</code></a>: its
+ known field pose, detected image corners, angular offsets, and both pose-solve candidates for
+ this tag alone.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/vision/AtlasVisionTarget.html" title="class in org.cyborgcats.vision">AtlasVisionTarget</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
+<div class="block">Raw wire-format mirror of Atlas's <code>VisionTarget</code> struct (one AprilTag detection: a
+ fiducial id and its four image-space corners, flattened to 8 floats).</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/vision/AtlasVisionTargets.html" title="class in org.cyborgcats.vision">AtlasVisionTargets</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
+<div class="block">Raw wire-format mirror of Atlas's <code>VisionTargets</code> struct (one camera frame's worth of
+ detections): a capture timestamp and up to <code>AtlasVisionTargets.kMaxTargets</code> <a href="org/cyborgcats/vision/AtlasVisionTarget.html" title="class in org.cyborgcats.vision"><code>AtlasVisionTarget</code></a>
+ slots, with <code>count</code> recording how many are actually populated.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/field/Bounds.html" title="class in org.cyborgcats.field">Bounds</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
 <div class="block">An axis-aligned 2D bounding rectangle defined by minimum and maximum X and Y distances.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="org/cyborgcats/component/Component.html" title="interface in org.cyborgcats.component">Component</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/vision/CameraMatrix.html" title="class in org.cyborgcats.vision">CameraMatrix</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
+<div class="block">Pinhole camera intrinsics: focal lengths and principal point, in pixels.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/vision/CameraResolution.html" title="class in org.cyborgcats.vision">CameraResolution</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
+<div class="block">Camera image resolution, in pixels.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="org/cyborgcats/component/Component.html" title="interface in org.cyborgcats.component">Component</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Base interface for all robot components that wrap hardware IO objects.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/componentViz/ComponentViz.html" title="class in org.cyborgcats.componentViz">ComponentViz</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/componentViz/ComponentViz.html" title="class in org.cyborgcats.componentViz">ComponentViz</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Represents a single visualizable robot component, encapsulating its name, 3D pose supplier,
  optional parent component (for kinematic chaining), and rendering order.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/componentViz/ComponentVizRegistry.html" title="class in org.cyborgcats.componentViz">ComponentVizRegistry</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/componentViz/ComponentVizRegistry.html" title="class in org.cyborgcats.componentViz">ComponentVizRegistry</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Global registry that collects <a href="org/cyborgcats/componentViz/ComponentViz.html" title="class in org.cyborgcats.componentViz"><code>ComponentViz</code></a> instances, sorts them by render order,
  and publishes their poses to AdvantageKit each loop iteration.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/vision/DistortionCoefficients.html" title="class in org.cyborgcats.vision">DistortionCoefficients</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
+<div class="block">OpenCV rational-model lens distortion coefficients: <code>k1</code>-<code>k6</code> are radial
+ distortion terms and <code>p1</code>/<code>p2</code> are tangential distortion terms.</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/component/DriveState.html" title="class in org.cyborgcats.component">DriveState</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab4">
@@ -344,24 +406,37 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">AdvantageKit-loggable container of vision camera telemetry fields.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/io/vision/VisionCameraIO.VisionCfg.html" title="class in org.cyborgcats.io.vision">VisionCameraIO.VisionCfg</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
-<div class="block">Configuration record for a vision camera instance.</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/io/vision/VisionCameraIOAtlas.html" title="class in org.cyborgcats.io.vision">VisionCameraIOAtlas</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Vision camera IO implementation for the Atlas coprocessor.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/io/vision/VisionCameraIO.VisionMeasurement.html" title="class in org.cyborgcats.io.vision">VisionCameraIO.VisionMeasurement</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
-<div class="block">A raw vision measurement before standard deviation weighting is applied.</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/io/vision/VisionCameraIOAtlasConfiguration.html" title="class in org.cyborgcats.io.vision">VisionCameraIOAtlasConfiguration</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block"><a href="org/cyborgcats/io/vision/VisionCameraIOConfiguration.html" title="interface in org.cyborgcats.io.vision"><code>VisionCameraIOConfiguration</code></a> for an Atlas-based vision camera.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/io/vision/VisionCameraIO.VisionObservation.html" title="class in org.cyborgcats.io.vision">VisionCameraIO.VisionObservation</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
-<div class="block">A vision measurement paired with its measurement standard deviations for pose estimation.</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="org/cyborgcats/io/vision/VisionCameraIOConfiguration.html" title="interface in org.cyborgcats.io.vision">VisionCameraIOConfiguration</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Shared shape for vision camera configs that can build either a real or simulated
+ <a href="org/cyborgcats/io/vision/VisionCameraIO.html" title="interface in org.cyborgcats.io.vision"><code>VisionCameraIO</code></a> implementation.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/io/vision/VisionCameraIOSim.html" title="class in org.cyborgcats.io.vision">VisionCameraIOSim</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Vision camera IO implementation using PhotonVision simulation.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/subsystem/VisionSubsystem.html" title="class in org.cyborgcats.subsystem">VisionSubsystem</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/vision/VisionMeasurment.html" title="class in org.cyborgcats.vision">VisionMeasurment</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
+<div class="block">A single vision-based robot pose measurement, ready to feed into a pose estimator.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/vision/VisionResult.html" title="class in org.cyborgcats.vision">VisionResult</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
+<div class="block">A vision measurement paired with the number of tags that contributed to it.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/vision/VisionStdDevs.html" title="class in org.cyborgcats.vision">VisionStdDevs</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Interpolated vision measurement standard deviations, keyed by total tag area.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/subsystem/VisionSubsystem.html" title="class in org.cyborgcats.subsystem">VisionSubsystem</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Subsystem that owns one or more <a href="org/cyborgcats/component/VisionCamera.html" title="class in org.cyborgcats.component"><code>VisionCamera</code></a> components and calls
  <a href="org/cyborgcats/component/VisionCamera.html#updateInputs()"><code>VisionCamera.updateInputs()</code></a> on each every loop iteration.</div>
 </div>

@@ -116,25 +116,25 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Fiducial IDs of all detected AprilTags.</div>
 </div>
-<div class="col-first odd-row-color"><code>boolean</code></div>
-<div class="col-second odd-row-color"><code><a href="#isValid" class="member-name-link">isValid</a></code></div>
+<div class="col-first odd-row-color"><code>double</code></div>
+<div class="col-second odd-row-color"><code><a href="#reprojectionError" class="member-name-link">reprojectionError</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">Whether the current frame produced a valid pose estimate.</div>
-</div>
-<div class="col-first even-row-color"><code>double</code></div>
-<div class="col-second even-row-color"><code><a href="#reprojectionError" class="member-name-link">reprojectionError</a></code></div>
-<div class="col-last even-row-color">
 <div class="block">Mean reprojection error of the pose solve (pixels).</div>
 </div>
-<div class="col-first odd-row-color"><code>double</code></div>
-<div class="col-second odd-row-color"><code><a href="#tagArea" class="member-name-link">tagArea</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>double</code></div>
+<div class="col-second even-row-color"><code><a href="#tagArea" class="member-name-link">tagArea</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Total on-screen area of detected tags as a fraction of the image area.</div>
 </div>
-<div class="col-first even-row-color"><code>int</code></div>
-<div class="col-second even-row-color"><code><a href="#tagCount" class="member-name-link">tagCount</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>int</code></div>
+<div class="col-second odd-row-color"><code><a href="#tagCount" class="member-name-link">tagCount</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Number of AprilTags used in the pose estimate.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>[]</code></div>
+<div class="col-second even-row-color"><code><a href="#tagTargets" class="member-name-link">tagTargets</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">Field poses of the tags that contributed to the most recent valid estimate.</div>
 </div>
 </div>
 </section>
@@ -186,13 +186,6 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="isValid">
-<h3>isValid</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isValid</span></div>
-<div class="block">Whether the current frame produced a valid pose estimate.</div>
-</section>
-</li>
-<li>
 <section class="detail" id="reprojectionError">
 <h3>reprojectionError</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">reprojectionError</span></div>
@@ -232,6 +225,13 @@ loadScripts(document, 'script');</script>
 <h3>estimate</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a></span>&nbsp;<span class="element-name">estimate</span></div>
 <div class="block">Camera-space pose estimate for the most recent valid frame.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="tagTargets">
+<h3>tagTargets</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>[]</span>&nbsp;<span class="element-name">tagTargets</span></div>
+<div class="block">Field poses of the tags that contributed to the most recent valid estimate.</div>
 </section>
 </li>
 </ul>

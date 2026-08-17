@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="VisionCameraIOSim.html" title="class in org.cyborgcats.io.vision">VisionCameraIOSim</a></code></dd>
+<dd><code><a href="VisionCameraIOAtlas.html" title="class in org.cyborgcats.io.vision">VisionCameraIOAtlas</a></code>, <code><a href="VisionCameraIOSim.html" title="class in org.cyborgcats.io.vision">VisionCameraIOSim</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">VisionCameraIO</span></div>
@@ -96,21 +96,6 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">AdvantageKit-loggable container of vision camera telemetry fields.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final record&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="VisionCameraIO.VisionCfg.html" class="type-name-link" title="class in org.cyborgcats.io.vision">VisionCameraIO.VisionCfg</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">Configuration record for a vision camera instance.</div>
-</div>
-<div class="col-first even-row-color"><code>static final record&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="VisionCameraIO.VisionMeasurement.html" class="type-name-link" title="class in org.cyborgcats.io.vision">VisionCameraIO.VisionMeasurement</a></code></div>
-<div class="col-last even-row-color">
-<div class="block">A raw vision measurement before standard deviation weighting is applied.</div>
-</div>
-<div class="col-first odd-row-color"><code>static final record&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="VisionCameraIO.VisionObservation.html" class="type-name-link" title="class in org.cyborgcats.io.vision">VisionCameraIO.VisionObservation</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">A vision measurement paired with its measurement standard deviations for pose estimation.</div>
-</div>
 </div>
 </section>
 </li>
@@ -125,6 +110,12 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../vision/AprilTagEstimate.html" title="class in org.cyborgcats.vision">AprilTagEstimate</a>[]</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAllUnreadVisionEstimates()" class="member-name-link">getAllUnreadVisionEstimates</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../vision/VisionResult.html" title="class in org.cyborgcats.vision">VisionResult</a>[]</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVisionResults()" class="member-name-link">getVisionResults</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#updateInputs(org.cyborgcats.io.vision.VisionCameraIO.VisionCameraInputs)" class="member-name-link">updateInputs</a><wbr>(<a href="VisionCameraIO.VisionCameraInputs.html" title="class in org.cyborgcats.io.vision">VisionCameraIO.VisionCameraInputs</a>&nbsp;inputs)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -152,6 +143,26 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>inputs</code> - loggable vision camera inputs</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getAllUnreadVisionEstimates()">
+<h3>getAllUnreadVisionEstimates</h3>
+<div class="member-signature"><span class="return-type"><a href="../../vision/AprilTagEstimate.html" title="class in org.cyborgcats.vision">AprilTagEstimate</a>[]</span>&nbsp;<span class="element-name">getAllUnreadVisionEstimates</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>all vision pose estimates accumulated since the last call, in capture order</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVisionResults()">
+<h3>getVisionResults</h3>
+<div class="member-signature"><span class="return-type"><a href="../../vision/VisionResult.html" title="class in org.cyborgcats.vision">VisionResult</a>[]</span>&nbsp;<span class="element-name">getVisionResults</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>all vision pose measurements accumulated since the last call, in capture order</dd>
 </dl>
 </section>
 </li>

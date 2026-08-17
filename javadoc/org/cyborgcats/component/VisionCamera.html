@@ -90,8 +90,8 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,org.cyborgcats.io.vision.VisionCameraIO)" class="member-name-link">VisionCamera</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="../io/vision/VisionCameraIO.html" title="interface in org.cyborgcats.io.vision">VisionCameraIO</a>&nbsp;io)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,org.cyborgcats.io.vision.VisionCameraIOConfiguration)" class="member-name-link">VisionCamera</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="../io/vision/VisionCameraIOConfiguration.html" title="interface in org.cyborgcats.io.vision">VisionCameraIOConfiguration</a>&nbsp;conf)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Constructs a VisionCamera component.</div>
 </div>
@@ -114,9 +114,12 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Refreshes and returns this camera's inputs, logging them as a side effect.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateInputs()" class="member-name-link">updateInputs</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../vision/VisionResult.html" title="class in org.cyborgcats.vision">VisionResult</a>[]</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUnreadResults()" class="member-name-link">getUnreadResults</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateInputs()" class="member-name-link">updateInputs</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Reads and logs vision camera data via AdvantageKit.</div>
 </div>
 </div>
@@ -137,15 +140,15 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(java.lang.String,org.cyborgcats.io.vision.VisionCameraIO)">
+<section class="detail" id="&lt;init&gt;(java.lang.String,org.cyborgcats.io.vision.VisionCameraIOConfiguration)">
 <h3>VisionCamera</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">VisionCamera</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="../io/vision/VisionCameraIO.html" title="interface in org.cyborgcats.io.vision">VisionCameraIO</a>&nbsp;io)</span></div>
+ <a href="../io/vision/VisionCameraIOConfiguration.html" title="interface in org.cyborgcats.io.vision">VisionCameraIOConfiguration</a>&nbsp;conf)</span></div>
 <div class="block">Constructs a VisionCamera component.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>name</code> - unique name used as the AdvantageKit logging key under "Vision/"</dd>
-<dd><code>io</code> - hardware interface providing camera readings</dd>
+<dd><code>conf</code> - configuration used to build the underlying <a href="../io/vision/VisionCameraIO.html" title="interface in org.cyborgcats.io.vision"><code>VisionCameraIO</code></a> implementation</dd>
 </dl>
 </section>
 </li>
@@ -163,6 +166,16 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">updateInputs</span>()</div>
 <div class="block">Reads and logs vision camera data via AdvantageKit.
  Inputs are logged under <code>"Vision/&lt;name&gt;"</code>.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getUnreadResults()">
+<h3>getUnreadResults</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../vision/VisionResult.html" title="class in org.cyborgcats.vision">VisionResult</a>[]</span>&nbsp;<span class="element-name">getUnreadResults</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>all vision pose measurements accumulated since the last call, in capture order</dd>
+</dl>
 </section>
 </li>
 <li>
