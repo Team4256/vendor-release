@@ -1565,6 +1565,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Sets the proportional gain.</div>
 </dd>
+<dt><a href="org/cyborgcats/component/Turret.html#setLowPassFilterK(double)" class="member-name-link">setLowPassFilterK(double)</a> - Method in class org.cyborgcats.component.<a href="org/cyborgcats/component/Turret.html" title="class in org.cyborgcats.component">Turret</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/component/MotorComponent.html#setpoint" class="member-name-link">setpoint</a> - Variable in class org.cyborgcats.component.<a href="org/cyborgcats/component/MotorComponent.html" title="class in org.cyborgcats.component">MotorComponent</a></dt>
 <dd>
 <div class="block">Setpoint most recently passed to <a href="org/cyborgcats/component/MotorComponent.html#applySetpoint(org.cyborgcats.component.Setpoint)"><code>MotorComponent.applySetpoint(Setpoint)</code></a>.</div>
@@ -1805,7 +1807,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Creates a tunable with the given default value.</div>
 </dd>
-<dt><a href="org/cyborgcats/subsystem/ActionSubsystem.html#turret(java.lang.String,double,double,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.util.Range,double,int,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Pose3d,org.cyborgcats.io.motor.MotorIOConfiguration)" class="member-name-link">turret(String, double, double, EncoderIOConfiguration, EncoderIOConfiguration, Range, double, int, DriveState, Pose3d, MotorIOConfiguration)</a> - Method in class org.cyborgcats.subsystem.<a href="org/cyborgcats/subsystem/ActionSubsystem.html" title="class in org.cyborgcats.subsystem">ActionSubsystem</a></dt>
+<dt><a href="org/cyborgcats/subsystem/ActionSubsystem.html#turret(java.lang.String,double,double,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.util.Range,double,int,double,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Pose3d,org.cyborgcats.io.motor.MotorIOConfiguration)" class="member-name-link">turret(String, double, double, EncoderIOConfiguration, EncoderIOConfiguration, Range, double, int, double, DriveState, Pose3d, MotorIOConfiguration)</a> - Method in class org.cyborgcats.subsystem.<a href="org/cyborgcats/subsystem/ActionSubsystem.html" title="class in org.cyborgcats.subsystem">ActionSubsystem</a></dt>
 <dd>
 <div class="block">Builds a <a href="org/cyborgcats/component/Turret.html" title="class in org.cyborgcats.component"><code>Turret</code></a> and registers it with this subsystem.</div>
 </dd>
@@ -1814,15 +1816,21 @@ loadScripts(document, 'script');</script>
 <div class="block">Position component for a turret, adding absolute-position resolution from a pair of encoders and
  aiming helpers that compensate for robot motion.</div>
 </dd>
-<dt><a href="org/cyborgcats/component/Turret.html#%3Cinit%3E(java.lang.String,double,double,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.util.Range,double,int,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Pose3d,org.cyborgcats.io.motor.MotorIOConfiguration)" class="member-name-link">Turret(String, double, double, EncoderIOConfiguration, EncoderIOConfiguration, Range, double, int, DriveState, Pose3d, MotorIOConfiguration)</a> - Constructor for class org.cyborgcats.component.<a href="org/cyborgcats/component/Turret.html" title="class in org.cyborgcats.component">Turret</a></dt>
+<dt><a href="org/cyborgcats/component/Turret.html#%3Cinit%3E(java.lang.String,double,double,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.util.Range,double,int,double,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Pose3d,org.cyborgcats.io.motor.MotorIOConfiguration)" class="member-name-link">Turret(String, double, double, EncoderIOConfiguration, EncoderIOConfiguration, Range, double, int, double, DriveState, Pose3d, MotorIOConfiguration)</a> - Constructor for class org.cyborgcats.component.<a href="org/cyborgcats/component/Turret.html" title="class in org.cyborgcats.component">Turret</a></dt>
 <dd>
 <div class="block">Constructs a Turret component and resolves its absolute starting position from both encoders.</div>
+</dd>
+<dt><a href="org/cyborgcats/component/Turret.TurretInputs.html" class="type-name-link" title="class in org.cyborgcats.component">Turret.TurretInputs</a> - Class in <a href="org/cyborgcats/component/package-summary.html">org.cyborgcats.component</a></dt>
+<dd>
+<div class="block">Pre-filter turret setpoint, logged alongside the motor inputs rather than as an output.</div>
 </dd>
 <dt><a href="org/cyborgcats/component/Turret.TurretOutput.html" class="type-name-link" title="class in org.cyborgcats.component">Turret.TurretOutput</a> - Record Class in <a href="org/cyborgcats/component/package-summary.html">org.cyborgcats.component</a></dt>
 <dd>
 <div class="block">Aiming solution for a single target, pairing the turret setpoint with the shot distance that
  downstream mechanisms (hood angle, flywheel speed) interpolate against.</div>
 </dd>
+<dt><a href="org/cyborgcats/component/Turret.TurretInputs.html#%3Cinit%3E()" class="member-name-link">TurretInputs()</a> - Constructor for class org.cyborgcats.component.<a href="org/cyborgcats/component/Turret.TurretInputs.html" title="class in org.cyborgcats.component">Turret.TurretInputs</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/component/Turret.TurretOutput.html#%3Cinit%3E(edu.wpi.first.math.geometry.Pose2d,edu.wpi.first.units.measure.Distance)" class="member-name-link">TurretOutput(Pose2d, Distance)</a> - Constructor for record class org.cyborgcats.component.<a href="org/cyborgcats/component/Turret.TurretOutput.html" title="class in org.cyborgcats.component">Turret.TurretOutput</a></dt>
 <dd>
 <div class="block">Creates an instance of a <code>TurretOutput</code> record class.</div>
@@ -2107,6 +2115,8 @@ the order they are declared.</div>
 <dd>
 <div class="block">Creates a voltage-control setpoint.</div>
 </dd>
+<dt><a href="org/cyborgcats/component/Turret.TurretInputs.html#wrappedSetpoint" class="member-name-link">wrappedSetpoint</a> - Variable in class org.cyborgcats.component.<a href="org/cyborgcats/component/Turret.TurretInputs.html" title="class in org.cyborgcats.component">Turret.TurretInputs</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:X">X</h2>
 <dl class="index">

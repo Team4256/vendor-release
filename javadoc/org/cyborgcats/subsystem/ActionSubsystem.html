@@ -207,7 +207,7 @@ loadScripts(document, 'script');</script>
 <div class="block">sets a new action to be the disabled action that runs on <a href="Subsystem.html#disable()"><code>Subsystem.disable()</code></a></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../component/Turret.html" title="class in org.cyborgcats.component">Turret</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#turret(java.lang.String,double,double,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.util.Range,double,int,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Pose3d,org.cyborgcats.io.motor.MotorIOConfiguration)" class="member-name-link">turret</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#turret(java.lang.String,double,double,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.util.Range,double,int,double,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Pose3d,org.cyborgcats.io.motor.MotorIOConfiguration)" class="member-name-link">turret</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  double&nbsp;threshold,
  double&nbsp;debounceTime,
  <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;encoderOneConf,
@@ -215,6 +215,7 @@ loadScripts(document, 'script');</script>
  <a href="../util/Range.html" title="class in org.cyborgcats.util">Range</a>&nbsp;range,
  double&nbsp;tolerance,
  int&nbsp;turretToothCount,
+ double&nbsp;k,
  <a href="../component/DriveState.html" title="class in org.cyborgcats.component">DriveState</a>&nbsp;driveState,
  <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&nbsp;turretOffset,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>&nbsp;leader)</code></div>
@@ -436,7 +437,7 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="turret(java.lang.String,double,double,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.util.Range,double,int,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Pose3d,org.cyborgcats.io.motor.MotorIOConfiguration)">
+<section class="detail" id="turret(java.lang.String,double,double,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.util.Range,double,int,double,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Pose3d,org.cyborgcats.io.motor.MotorIOConfiguration)">
 <h3>turret</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../component/Turret.html" title="class in org.cyborgcats.component">Turret</a></span>&nbsp;<span class="element-name">turret</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  double&nbsp;threshold,
@@ -446,6 +447,7 @@ loadScripts(document, 'script');</script>
  <a href="../util/Range.html" title="class in org.cyborgcats.util">Range</a>&nbsp;range,
  double&nbsp;tolerance,
  int&nbsp;turretToothCount,
+ double&nbsp;k,
  <a href="../component/DriveState.html" title="class in org.cyborgcats.component">DriveState</a>&nbsp;driveState,
  <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&nbsp;turretOffset,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>&nbsp;leader)</span></div>
