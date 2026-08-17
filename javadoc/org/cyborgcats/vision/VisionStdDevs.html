@@ -117,6 +117,21 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Registers a standard deviation breakpoint at the given tag area.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VisionStdDevs.html" title="class in org.cyborgcats.vision">VisionStdDevs</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addRotation(double,double)" class="member-name-link">addRotation</a><wbr>(double&nbsp;tagArea,
+ double&nbsp;rot)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Registers a rotation standard deviation breakpoint at the given tag area, leaving the
+ translation breakpoints at that tag area untouched.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VisionStdDevs.html" title="class in org.cyborgcats.vision">VisionStdDevs</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTranslation(double,double,double)" class="member-name-link">addTranslation</a><wbr>(double&nbsp;tagArea,
+ double&nbsp;x,
+ double&nbsp;y)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Registers a translation standard deviation breakpoint at the given tag area, leaving the
+ rotation breakpoints at that tag area untouched.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/Matrix.html" title="class or interface in edu.wpi.first.math" class="external-link">Matrix</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/numbers/N3.html" title="class or interface in edu.wpi.first.math.numbers" class="external-link">N3</a>,<wbr><a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/numbers/N1.html" title="class or interface in edu.wpi.first.math.numbers" class="external-link">N1</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#get(double)" class="member-name-link">get</a><wbr>(double&nbsp;tagArea)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -165,6 +180,40 @@ loadScripts(document, 'script');</script>
 <dd><code>tagArea</code> - total on-screen tag area, as a fraction of the image area</dd>
 <dd><code>x</code> - standard deviation of the x measurement, in meters</dd>
 <dd><code>y</code> - standard deviation of the y measurement, in meters</dd>
+<dd><code>rot</code> - standard deviation of the rotation measurement, in radians</dd>
+<dt>Returns:</dt>
+<dd>this, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addTranslation(double,double,double)">
+<h3>addTranslation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VisionStdDevs.html" title="class in org.cyborgcats.vision">VisionStdDevs</a></span>&nbsp;<span class="element-name">addTranslation</span><wbr><span class="parameters">(double&nbsp;tagArea,
+ double&nbsp;x,
+ double&nbsp;y)</span></div>
+<div class="block">Registers a translation standard deviation breakpoint at the given tag area, leaving the
+ rotation breakpoints at that tag area untouched.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>tagArea</code> - total on-screen tag area, as a fraction of the image area</dd>
+<dd><code>x</code> - standard deviation of the x measurement, in meters</dd>
+<dd><code>y</code> - standard deviation of the y measurement, in meters</dd>
+<dt>Returns:</dt>
+<dd>this, for chaining</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addRotation(double,double)">
+<h3>addRotation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VisionStdDevs.html" title="class in org.cyborgcats.vision">VisionStdDevs</a></span>&nbsp;<span class="element-name">addRotation</span><wbr><span class="parameters">(double&nbsp;tagArea,
+ double&nbsp;rot)</span></div>
+<div class="block">Registers a rotation standard deviation breakpoint at the given tag area, leaving the
+ translation breakpoints at that tag area untouched.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>tagArea</code> - total on-screen tag area, as a fraction of the image area</dd>
 <dd><code>rot</code> - standard deviation of the rotation measurement, in radians</dd>
 <dt>Returns:</dt>
 <dd>this, for chaining</dd>
