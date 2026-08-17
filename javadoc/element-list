@@ -1,5 +1,6 @@
 org.cyborgcats.component
 org.cyborgcats.componentViz
+org.cyborgcats.field
 org.cyborgcats.io
 org.cyborgcats.io.motor
 org.cyborgcats.io.sensor.encoder
