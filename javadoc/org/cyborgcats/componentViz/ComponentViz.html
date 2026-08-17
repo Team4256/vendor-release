@@ -94,14 +94,16 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&gt;&nbsp;pose,
  int&nbsp;order)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Constructs a root ComponentViz with no parent.</div>
+<div class="block">Constructs a root ComponentViz with no parent, and registers it with
+ <a href="ComponentVizRegistry.html" title="class in org.cyborgcats.componentViz"><code>ComponentVizRegistry</code></a> for inclusion in the next pose build.</div>
 </div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.lang.String,java.util.function.Supplier,org.cyborgcats.componentViz.ComponentViz,int)" class="member-name-link">ComponentViz</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&gt;&nbsp;pose,
  <a href="ComponentViz.html" title="class in org.cyborgcats.componentViz">ComponentViz</a>&nbsp;parent,
  int&nbsp;order)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">Constructs a ComponentViz with a parent for kinematic chaining.</div>
+<div class="block">Constructs a ComponentViz with a parent for kinematic chaining, and registers it with
+ <a href="ComponentVizRegistry.html" title="class in org.cyborgcats.componentViz"><code>ComponentVizRegistry</code></a> for inclusion in the next pose build.</div>
 </div>
 </div>
 </section>
@@ -111,7 +113,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -137,21 +139,6 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a supplier that evaluates this component's world-space <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link"><code>Pose3d</code></a>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ComponentViz.html" title="class in org.cyborgcats.componentViz">ComponentViz</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tunable(java.lang.String,int)" class="member-name-link">tunable</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- int&nbsp;order)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Creates a root ComponentViz whose pose is wired to live NetworkTable-tunable
- x/y/z/roll/pitch/yaw values, enabling adjustment without redeployment.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ComponentViz.html" title="class in org.cyborgcats.componentViz">ComponentViz</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tunable(java.lang.String,org.cyborgcats.componentViz.ComponentViz,int)" class="member-name-link">tunable</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="ComponentViz.html" title="class in org.cyborgcats.componentViz">ComponentViz</a>&nbsp;parent,
- int&nbsp;order)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Creates a ComponentViz with a parent whose pose is wired to live NetworkTable-tunable
- x/y/z/roll/pitch/yaw values, enabling adjustment without redeployment.</div>
-</div>
 </div>
 </div>
 </div>
@@ -176,7 +163,8 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&gt;&nbsp;pose,
  <a href="ComponentViz.html" title="class in org.cyborgcats.componentViz">ComponentViz</a>&nbsp;parent,
  int&nbsp;order)</span></div>
-<div class="block">Constructs a ComponentViz with a parent for kinematic chaining.</div>
+<div class="block">Constructs a ComponentViz with a parent for kinematic chaining, and registers it with
+ <a href="ComponentVizRegistry.html" title="class in org.cyborgcats.componentViz"><code>ComponentVizRegistry</code></a> for inclusion in the next pose build.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>name</code> - unique display name</dd>
@@ -192,7 +180,8 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ComponentViz</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&gt;&nbsp;pose,
  int&nbsp;order)</span></div>
-<div class="block">Constructs a root ComponentViz with no parent.</div>
+<div class="block">Constructs a root ComponentViz with no parent, and registers it with
+ <a href="ComponentVizRegistry.html" title="class in org.cyborgcats.componentViz"><code>ComponentVizRegistry</code></a> for inclusion in the next pose build.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>name</code> - unique display name</dd>
@@ -209,40 +198,6 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
-<li>
-<section class="detail" id="tunable(java.lang.String,org.cyborgcats.componentViz.ComponentViz,int)">
-<h3>tunable</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ComponentViz.html" title="class in org.cyborgcats.componentViz">ComponentViz</a></span>&nbsp;<span class="element-name">tunable</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="ComponentViz.html" title="class in org.cyborgcats.componentViz">ComponentViz</a>&nbsp;parent,
- int&nbsp;order)</span></div>
-<div class="block">Creates a ComponentViz with a parent whose pose is wired to live NetworkTable-tunable
- x/y/z/roll/pitch/yaw values, enabling adjustment without redeployment.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>name</code> - unique display name, also used as the NetworkTable key prefix</dd>
-<dd><code>parent</code> - the parent component this pose is expressed relative to</dd>
-<dd><code>order</code> - rendering order index used to sort components before logging</dd>
-<dt>Returns:</dt>
-<dd>the newly created ComponentViz</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="tunable(java.lang.String,int)">
-<h3>tunable</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ComponentViz.html" title="class in org.cyborgcats.componentViz">ComponentViz</a></span>&nbsp;<span class="element-name">tunable</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- int&nbsp;order)</span></div>
-<div class="block">Creates a root ComponentViz whose pose is wired to live NetworkTable-tunable
- x/y/z/roll/pitch/yaw values, enabling adjustment without redeployment.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>name</code> - unique display name, also used as the NetworkTable key prefix</dd>
-<dd><code>order</code> - rendering order index used to sort components before logging</dd>
-<dt>Returns:</dt>
-<dd>the newly created ComponentViz</dd>
-</dl>
-</section>
-</li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>

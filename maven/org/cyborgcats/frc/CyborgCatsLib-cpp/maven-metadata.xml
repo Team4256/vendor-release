@@ -3,11 +3,11 @@
   <groupId>org.cyborgcats.frc</groupId>
   <artifactId>CyborgCatsLib-cpp</artifactId>
   <versioning>
-    <latest>ef86d7b</latest>
-    <release>ef86d7b</release>
+    <latest>7c1a6ff</latest>
+    <release>7c1a6ff</release>
     <versions>
-      <version>ef86d7b</version>
+      <version>7c1a6ff</version>
     </versions>
-    <lastUpdated>20260816185746</lastUpdated>
+    <lastUpdated>20260817014536</lastUpdated>
   </versioning>
 </metadata>

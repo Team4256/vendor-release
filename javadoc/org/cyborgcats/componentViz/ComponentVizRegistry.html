@@ -45,13 +45,13 @@ loadScripts(document, 'script');</script>
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor-summary">Constr</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method-summary">Method</a></li>
 </ul>
 <ul class="sub-nav-list">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor-detail">Constr</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method-detail">Method</a></li>
 </ul>
 </div>
@@ -84,19 +84,6 @@ loadScripts(document, 'script');</script>
 </section>
 <section class="summary">
 <ul class="summary-list">
-<!-- ======== CONSTRUCTOR SUMMARY ======== -->
-<li>
-<section class="constructor-summary" id="constructor-summary">
-<h2>Constructor Summary</h2>
-<div class="caption"><span>Constructors</span></div>
-<div class="summary-table two-column-summary">
-<div class="table-header col-first">Constructor</div>
-<div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">ComponentVizRegistry</a>()</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
-</div>
-</section>
-</li>
 <!-- ========== METHOD SUMMARY =========== -->
 <li>
 <section class="method-summary" id="method-summary">
@@ -108,21 +95,17 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Sorts all registered components by their render order and caches their pose suppliers.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#periodic()" class="member-name-link">periodic</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#periodic()" class="member-name-link">periodic</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Evaluates all cached pose suppliers and logs the resulting array to AdvantageKit under
  <code>"ComponentViz/Poses"</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register(org.cyborgcats.componentViz.ComponentViz)" class="member-name-link">register</a><wbr>(<a href="ComponentViz.html" title="class in org.cyborgcats.componentViz">ComponentViz</a>&nbsp;viz)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Registers a <a href="ComponentViz.html" title="class in org.cyborgcats.componentViz"><code>ComponentViz</code></a> instance to be included in the next <a href="#build()"><code>build()</code></a> call.</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#register(org.cyborgcats.componentViz.ComponentViz)" class="member-name-link">register</a><wbr>(<a href="ComponentViz.html" title="class in org.cyborgcats.componentViz">ComponentViz</a>&nbsp;viz)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Registers a <a href="ComponentViz.html" title="class in org.cyborgcats.componentViz"><code>ComponentViz</code></a> instance to be included in the next <code>build()</code> call,
+ initializing the singleton registry instance on first use if necessary.</div>
 </div>
 </div>
 </div>
@@ -139,20 +122,6 @@ loadScripts(document, 'script');</script>
 </section>
 <section class="details">
 <ul class="details-list">
-<!-- ========= CONSTRUCTOR DETAIL ======== -->
-<li>
-<section class="constructor-details" id="constructor-detail">
-<h2>Constructor Details</h2>
-<ul class="member-list">
-<li>
-<section class="detail" id="&lt;init&gt;()">
-<h3>ComponentVizRegistry</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ComponentVizRegistry</span>()</div>
-</section>
-</li>
-</ul>
-</section>
-</li>
 <!-- ============ METHOD DETAIL ========== -->
 <li>
 <section class="method-details" id="method-detail">
@@ -162,19 +131,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="register(org.cyborgcats.componentViz.ComponentViz)">
 <h3>register</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">register</span><wbr><span class="parameters">(<a href="ComponentViz.html" title="class in org.cyborgcats.componentViz">ComponentViz</a>&nbsp;viz)</span></div>
-<div class="block">Registers a <a href="ComponentViz.html" title="class in org.cyborgcats.componentViz"><code>ComponentViz</code></a> instance to be included in the next <a href="#build()"><code>build()</code></a> call.</div>
+<div class="block">Registers a <a href="ComponentViz.html" title="class in org.cyborgcats.componentViz"><code>ComponentViz</code></a> instance to be included in the next <code>build()</code> call,
+ initializing the singleton registry instance on first use if necessary.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>viz</code> - the component visualization to register</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="build()">
-<h3>build</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">build</span>()</div>
-<div class="block">Sorts all registered components by their render order and caches their pose suppliers.
- Must be called once after all components are registered (e.g., in <code>robotInit</code>).</div>
 </section>
 </li>
 <li>

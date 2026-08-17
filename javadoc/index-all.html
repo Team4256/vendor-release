@@ -300,13 +300,9 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">An axis-aligned 2D bounding rectangle defined by minimum and maximum X and Y distances.</div>
 </dd>
-<dt><a href="org/cyborgcats/util/Bounds.html#%3Cinit%3E(edu.wpi.first.units.measure.Distance,edu.wpi.first.units.measure.Distance,edu.wpi.first.units.measure.Distance,edu.wpi.first.units.measure.Distance)" class="member-name-link">Bounds(Distance, Distance, Distance, Distance)</a> - Constructor for record class org.cyborgcats.util.<a href="org/cyborgcats/util/Bounds.html" title="class in org.cyborgcats.util">Bounds</a></dt>
+<dt><a href="org/cyborgcats/util/Bounds.html#%3Cinit%3E(double,double,double,double)" class="member-name-link">Bounds(double, double, double, double)</a> - Constructor for record class org.cyborgcats.util.<a href="org/cyborgcats/util/Bounds.html" title="class in org.cyborgcats.util">Bounds</a></dt>
 <dd>
 <div class="block">Creates an instance of a <code>Bounds</code> record class.</div>
-</dd>
-<dt><a href="org/cyborgcats/componentViz/ComponentVizRegistry.html#build()" class="member-name-link">build()</a> - Static method in class org.cyborgcats.componentViz.<a href="org/cyborgcats/componentViz/ComponentVizRegistry.html" title="class in org.cyborgcats.componentViz">ComponentVizRegistry</a></dt>
-<dd>
-<div class="block">Sorts all registered components by their render order and caches their pose suppliers.</div>
 </dd>
 <dt><a href="org/cyborgcats/io/IOConfiguration.html#build()" class="member-name-link">build()</a> - Method in interface org.cyborgcats.io.<a href="org/cyborgcats/io/IOConfiguration.html" title="interface in org.cyborgcats.io">IOConfiguration</a></dt>
 <dd>
@@ -366,19 +362,19 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="org/cyborgcats/componentViz/ComponentViz.html#%3Cinit%3E(java.lang.String,java.util.function.Supplier,int)" class="member-name-link">ComponentViz(String, Supplier&lt;Pose3d&gt;, int)</a> - Constructor for class org.cyborgcats.componentViz.<a href="org/cyborgcats/componentViz/ComponentViz.html" title="class in org.cyborgcats.componentViz">ComponentViz</a></dt>
 <dd>
-<div class="block">Constructs a root ComponentViz with no parent.</div>
+<div class="block">Constructs a root ComponentViz with no parent, and registers it with
+ <a href="org/cyborgcats/componentViz/ComponentVizRegistry.html" title="class in org.cyborgcats.componentViz"><code>ComponentVizRegistry</code></a> for inclusion in the next pose build.</div>
 </dd>
 <dt><a href="org/cyborgcats/componentViz/ComponentViz.html#%3Cinit%3E(java.lang.String,java.util.function.Supplier,org.cyborgcats.componentViz.ComponentViz,int)" class="member-name-link">ComponentViz(String, Supplier&lt;Pose3d&gt;, ComponentViz, int)</a> - Constructor for class org.cyborgcats.componentViz.<a href="org/cyborgcats/componentViz/ComponentViz.html" title="class in org.cyborgcats.componentViz">ComponentViz</a></dt>
 <dd>
-<div class="block">Constructs a ComponentViz with a parent for kinematic chaining.</div>
+<div class="block">Constructs a ComponentViz with a parent for kinematic chaining, and registers it with
+ <a href="org/cyborgcats/componentViz/ComponentVizRegistry.html" title="class in org.cyborgcats.componentViz"><code>ComponentVizRegistry</code></a> for inclusion in the next pose build.</div>
 </dd>
 <dt><a href="org/cyborgcats/componentViz/ComponentVizRegistry.html" class="type-name-link" title="class in org.cyborgcats.componentViz">ComponentVizRegistry</a> - Class in <a href="org/cyborgcats/componentViz/package-summary.html">org.cyborgcats.componentViz</a></dt>
 <dd>
 <div class="block">Global registry that collects <a href="org/cyborgcats/componentViz/ComponentViz.html" title="class in org.cyborgcats.componentViz"><code>ComponentViz</code></a> instances, sorts them by render order,
  and publishes their poses to AdvantageKit each loop iteration.</div>
 </dd>
-<dt><a href="org/cyborgcats/componentViz/ComponentVizRegistry.html#%3Cinit%3E()" class="member-name-link">ComponentVizRegistry()</a> - Constructor for class org.cyborgcats.componentViz.<a href="org/cyborgcats/componentViz/ComponentVizRegistry.html" title="class in org.cyborgcats.componentViz">ComponentVizRegistry</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/io/motor/MotorIO.MotorInputs.html#connected" class="member-name-link">connected</a> - Variable in class org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIO.MotorInputs.html" title="class in org.cyborgcats.io.motor">MotorIO.MotorInputs</a></dt>
 <dd>
 <div class="block">Whether the motor controller is currently responding on the bus.</div>
@@ -1179,6 +1175,12 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates a <code>Tunable&lt;Long&gt;</code> that publishes to and subscribes from the
  <code>Tunable</code> NetworkTable.</div>
 </dd>
+<dt><a href="org/cyborgcats/util/Tunable.html#ofPose3d(java.lang.String,edu.wpi.first.math.geometry.Pose3d)" class="member-name-link">ofPose3d(String, Pose3d)</a> - Static method in class org.cyborgcats.util.<a href="org/cyborgcats/util/Tunable.html" title="class in org.cyborgcats.util">Tunable</a></dt>
+<dd>
+<div class="block">Creates a <code>Tunable&lt;Pose3d&gt;</code> by composing six underlying <code>Tunable&lt;Double&gt;</code>
+ values (x/y/z/roll/pitch/yaw), each published under its own NetworkTables entry
+ nested beneath <code>name</code>.</div>
+</dd>
 <dt><a href="org/cyborgcats/util/Tunable.html#ofString(java.lang.String,java.lang.String)" class="member-name-link">ofString(String, String)</a> - Static method in class org.cyborgcats.util.<a href="org/cyborgcats/util/Tunable.html" title="class in org.cyborgcats.util">Tunable</a></dt>
 <dd>
 <div class="block">Creates a <code>Tunable&lt;String&gt;</code> that publishes to and subscribes from the
@@ -1353,7 +1355,8 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="org/cyborgcats/componentViz/ComponentVizRegistry.html#register(org.cyborgcats.componentViz.ComponentViz)" class="member-name-link">register(ComponentViz)</a> - Static method in class org.cyborgcats.componentViz.<a href="org/cyborgcats/componentViz/ComponentVizRegistry.html" title="class in org.cyborgcats.componentViz">ComponentVizRegistry</a></dt>
 <dd>
-<div class="block">Registers a <a href="org/cyborgcats/componentViz/ComponentViz.html" title="class in org.cyborgcats.componentViz"><code>ComponentViz</code></a> instance to be included in the next <a href="org/cyborgcats/componentViz/ComponentVizRegistry.html#build()"><code>ComponentVizRegistry.build()</code></a> call.</div>
+<div class="block">Registers a <a href="org/cyborgcats/componentViz/ComponentViz.html" title="class in org.cyborgcats.componentViz"><code>ComponentViz</code></a> instance to be included in the next <code>ComponentVizRegistry.build()</code> call,
+ initializing the singleton registry instance on first use if necessary.</div>
 </dd>
 <dt><a href="org/cyborgcats/io/vision/VisionCameraIO.VisionCameraInputs.html#reprojectionError" class="member-name-link">reprojectionError</a> - Variable in class org.cyborgcats.io.vision.<a href="org/cyborgcats/io/vision/VisionCameraIO.VisionCameraInputs.html" title="class in org.cyborgcats.io.vision">VisionCameraIO.VisionCameraInputs</a></dt>
 <dd>
@@ -1719,16 +1722,6 @@ loadScripts(document, 'script');</script>
 <dt><a href="org/cyborgcats/util/Range.html#toString()" class="member-name-link">toString()</a> - Method in record class org.cyborgcats.util.<a href="org/cyborgcats/util/Range.html" title="class in org.cyborgcats.util">Range</a></dt>
 <dd>
 <div class="block">Returns a string representation of this record class.</div>
-</dd>
-<dt><a href="org/cyborgcats/componentViz/ComponentViz.html#tunable(java.lang.String,int)" class="member-name-link">tunable(String, int)</a> - Static method in class org.cyborgcats.componentViz.<a href="org/cyborgcats/componentViz/ComponentViz.html" title="class in org.cyborgcats.componentViz">ComponentViz</a></dt>
-<dd>
-<div class="block">Creates a root ComponentViz whose pose is wired to live NetworkTable-tunable
- x/y/z/roll/pitch/yaw values, enabling adjustment without redeployment.</div>
-</dd>
-<dt><a href="org/cyborgcats/componentViz/ComponentViz.html#tunable(java.lang.String,org.cyborgcats.componentViz.ComponentViz,int)" class="member-name-link">tunable(String, ComponentViz, int)</a> - Static method in class org.cyborgcats.componentViz.<a href="org/cyborgcats/componentViz/ComponentViz.html" title="class in org.cyborgcats.componentViz">ComponentViz</a></dt>
-<dd>
-<div class="block">Creates a ComponentViz with a parent whose pose is wired to live NetworkTable-tunable
- x/y/z/roll/pitch/yaw values, enabling adjustment without redeployment.</div>
 </dd>
 <dt><a href="org/cyborgcats/util/Tunable.html" class="type-name-link" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="org/cyborgcats/util/Tunable.html" title="type parameter in Tunable">T</a>&gt; - Class in <a href="org/cyborgcats/util/package-summary.html">org.cyborgcats.util</a></dt>
 <dd>

@@ -186,16 +186,24 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates a <code>Tunable&lt;Long&gt;</code> that publishes to and subscribes from the
  <code>Tunable</code> NetworkTable.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#ofString(java.lang.String,java.lang.String)" class="member-name-link">ofString</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;defaultValue)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#ofPose3d(java.lang.String,edu.wpi.first.math.geometry.Pose3d)" class="member-name-link">ofPose3d</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&nbsp;defualtValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Creates a <code>Tunable&lt;Pose3d&gt;</code> by composing six underlying <code>Tunable&lt;Double&gt;</code>
+ values (x/y/z/roll/pitch/yaw), each published under its own NetworkTables entry
+ nested beneath <code>name</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#ofString(java.lang.String,java.lang.String)" class="member-name-link">ofString</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;defaultValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Creates a <code>Tunable&lt;String&gt;</code> that publishes to and subscribes from the
  <code>Tunable</code> NetworkTable.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setValue(T)" class="member-name-link">setValue</a><wbr>(<a href="Tunable.html" title="type parameter in Tunable">T</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setValue(T)" class="member-name-link">setValue</a><wbr>(<a href="Tunable.html" title="type parameter in Tunable">T</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets the current value and republishes it to NetworkTables so other clients
  (e.g.</div>
 </div>
@@ -400,6 +408,23 @@ loadScripts(document, 'script');</script>
 <dd><code>defaultValue</code> - initial default value</dd>
 <dt>Returns:</dt>
 <dd>the newly created tunable string</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="ofPose3d(java.lang.String,edu.wpi.first.math.geometry.Pose3d)">
+<h3>ofPose3d</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&gt;</span>&nbsp;<span class="element-name">ofPose3d</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&nbsp;defualtValue)</span></div>
+<div class="block">Creates a <code>Tunable&lt;Pose3d&gt;</code> by composing six underlying <code>Tunable&lt;Double&gt;</code>
+ values (x/y/z/roll/pitch/yaw), each published under its own NetworkTables entry
+ nested beneath <code>name</code>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - NetworkTable entry key prefix (under the "Tunable" table)</dd>
+<dd><code>defualtValue</code> - initial default value</dd>
+<dt>Returns:</dt>
+<dd>the newly created tunable pose</dd>
 </dl>
 </section>
 </li>
