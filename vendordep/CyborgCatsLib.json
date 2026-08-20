@@ -1,7 +1,7 @@
 {
     "fileName": "CyborgCatsLib.json",
     "name": "CyborgCatsLib",
-    "version": "048e8ed",
+    "version": "607dda8",
     "frcYear": "2026",
     "uuid": "296f44c4-6d46-4889-a371-96f869983139",
     "mavenUrls": [
@@ -12,14 +12,14 @@
         {
             "groupId": "org.cyborgcats.frc",
             "artifactId": "CyborgCatsLib-java",
-            "version": "048e8ed"
+            "version": "607dda8"
         }
     ],
     "jniDependencies": [
         {
             "groupId": "org.cyborgcats.frc",
             "artifactId": "CyborgCatsLib-cpp",
-            "version": "048e8ed",
+            "version": "607dda8",
             "skipInvalidPlatforms": true,
             "isJar": false,
             "validPlatforms": [
@@ -36,7 +36,7 @@
         {
             "groupId": "org.cyborgcats.frc",
             "artifactId": "CyborgCatsLib-cpp",
-            "version": "048e8ed",
+            "version": "607dda8",
             "libName": "vision",
             "headerClassifier": "headers",
             "sharedLibrary": false,
