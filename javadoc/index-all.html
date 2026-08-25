@@ -1662,6 +1662,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Schedules the given state on the falling edge of the condition (true → false).</div>
 </dd>
+<dt><a href="org/cyborgcats/ssm/StateTrigger.html#onFalse(org.cyborgcats.subsystem.ActionSubsystem.Action)" class="member-name-link">onFalse(ActionSubsystem.Action)</a> - Method in class org.cyborgcats.ssm.<a href="org/cyborgcats/ssm/StateTrigger.html" title="class in org.cyborgcats.ssm">StateTrigger</a></dt>
+<dd>
+<div class="block">Schedules the given action's state on the falling edge of the condition (true → false).</div>
+</dd>
 <dt><a href="org/cyborgcats/ssm/State.html#onFinish" class="member-name-link">onFinish</a> - Variable in class org.cyborgcats.ssm.<a href="org/cyborgcats/ssm/State.html" title="class in org.cyborgcats.ssm">State</a></dt>
 <dd>
 <div class="block">State scheduled when this one finishes naturally, if any.</div>
@@ -1679,9 +1683,18 @@ loadScripts(document, 'script');</script>
 <div class="block">Alternately schedules and ends the given state on successive rising edges of the condition
  (toggle behavior).</div>
 </dd>
+<dt><a href="org/cyborgcats/ssm/StateTrigger.html#onToggle(org.cyborgcats.subsystem.ActionSubsystem.Action)" class="member-name-link">onToggle(ActionSubsystem.Action)</a> - Method in class org.cyborgcats.ssm.<a href="org/cyborgcats/ssm/StateTrigger.html" title="class in org.cyborgcats.ssm">StateTrigger</a></dt>
+<dd>
+<div class="block">Alternately schedules and ends the given action's state on successive rising edges of the
+ condition (toggle behavior).</div>
+</dd>
 <dt><a href="org/cyborgcats/ssm/StateTrigger.html#onTrue(org.cyborgcats.ssm.State)" class="member-name-link">onTrue(State)</a> - Method in class org.cyborgcats.ssm.<a href="org/cyborgcats/ssm/StateTrigger.html" title="class in org.cyborgcats.ssm">StateTrigger</a></dt>
 <dd>
 <div class="block">Schedules the given state on the rising edge of the condition (false → true).</div>
+</dd>
+<dt><a href="org/cyborgcats/ssm/StateTrigger.html#onTrue(org.cyborgcats.subsystem.ActionSubsystem.Action)" class="member-name-link">onTrue(ActionSubsystem.Action)</a> - Method in class org.cyborgcats.ssm.<a href="org/cyborgcats/ssm/StateTrigger.html" title="class in org.cyborgcats.ssm">StateTrigger</a></dt>
+<dd>
+<div class="block">Schedules the given action's state on the rising edge of the condition (false → true).</div>
 </dd>
 <dt><a href="org/cyborgcats/component/package-summary.html">org.cyborgcats.component</a> - package org.cyborgcats.component</dt>
 <dd>&nbsp;</dd>
@@ -2227,6 +2240,11 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">constructs a pose2d from a translation2d using a new Rotation2d()</div>
 </dd>
+<dt><a href="org/cyborgcats/subsystem/ActionSubsystem.Action.html#toState()" class="member-name-link">toState()</a> - Method in class org.cyborgcats.subsystem.<a href="org/cyborgcats/subsystem/ActionSubsystem.Action.html" title="class in org.cyborgcats.subsystem">ActionSubsystem.Action</a></dt>
+<dd>
+<div class="block">Wraps this action in a <a href="org/cyborgcats/ssm/State.html" title="class in org.cyborgcats.ssm"><code>State</code></a> that applies it once when scheduled, requiring the
+ owning subsystem and interruptible by default.</div>
+</dd>
 <dt><a href="org/cyborgcats/component/DriveState.html#toString()" class="member-name-link">toString()</a> - Method in record class org.cyborgcats.component.<a href="org/cyborgcats/component/DriveState.html" title="class in org.cyborgcats.component">DriveState</a></dt>
 <dd>
 <div class="block">Returns a string representation of this record class.</div>
@@ -2575,6 +2593,11 @@ the order they are declared.</div>
 <dd>
 <div class="block">Schedules the given state while the condition is true and ends it when the condition
  becomes false.</div>
+</dd>
+<dt><a href="org/cyborgcats/ssm/StateTrigger.html#whileTrue(org.cyborgcats.subsystem.ActionSubsystem.Action)" class="member-name-link">whileTrue(ActionSubsystem.Action)</a> - Method in class org.cyborgcats.ssm.<a href="org/cyborgcats/ssm/StateTrigger.html" title="class in org.cyborgcats.ssm">StateTrigger</a></dt>
+<dd>
+<div class="block">Schedules the given action's state while the condition is true and ends it when the
+ condition becomes false.</div>
 </dd>
 <dt><a href="org/cyborgcats/vision/CameraResolution.html#width()" class="member-name-link">width()</a> - Method in record class org.cyborgcats.vision.<a href="org/cyborgcats/vision/CameraResolution.html" title="class in org.cyborgcats.vision">CameraResolution</a></dt>
 <dd>

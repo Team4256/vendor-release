@@ -128,6 +128,12 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Executes the underlying runnable.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../ssm/State.html" title="class in org.cyborgcats.ssm">State</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toState()" class="member-name-link">toState</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Wraps this action in a <a href="../ssm/State.html" title="class in org.cyborgcats.ssm"><code>State</code></a> that applies it once when scheduled, requiring the
+ owning subsystem and interruptible by default.</div>
+</div>
 </div>
 </div>
 </div>
@@ -190,6 +196,19 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the action name</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="toState()">
+<h3>toState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../ssm/State.html" title="class in org.cyborgcats.ssm">State</a></span>&nbsp;<span class="element-name">toState</span>()</div>
+<div class="block">Wraps this action in a <a href="../ssm/State.html" title="class in org.cyborgcats.ssm"><code>State</code></a> that applies it once when scheduled, requiring the
+ owning subsystem and interruptible by default. Lets an <a href="ActionSubsystem.Action.html" title="class in org.cyborgcats.subsystem"><code>ActionSubsystem.Action</code></a> be scheduled directly
+ by a <a href="../ssm/Scheduler.html" title="class in org.cyborgcats.ssm"><code>Scheduler</code></a> or <a href="../ssm/StateTrigger.html" title="class in org.cyborgcats.ssm"><code>StateTrigger</code></a>.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a new state that runs this action</dd>
 </dl>
 </section>
 </li>
