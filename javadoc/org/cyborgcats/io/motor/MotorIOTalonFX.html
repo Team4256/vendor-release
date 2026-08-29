@@ -110,6 +110,15 @@ implements <a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">M
 <div class="block">constructor for a talonFX MotorIO
  SuppressWarnings("removal") for the talon fx constructor using the "rio" canbus</div>
 </div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(int,com.ctre.phoenix6.configs.TalonFXConfiguration,java.lang.String,int,com.ctre.phoenix6.signals.MotorAlignmentValue)" class="member-name-link">MotorIOTalonFX</a><wbr>(int&nbsp;canID,
+ com.ctre.phoenix6.configs.TalonFXConfiguration&nbsp;cfg,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ int&nbsp;leaderID,
+ com.ctre.phoenix6.signals.MotorAlignmentValue&nbsp;alignmentValue)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">constructor for a talonFX MotorIO that follows another motor at the vendor level, instead of
+ taking its own setpoints</div>
+</div>
 </div>
 </section>
 </li>
@@ -130,40 +139,58 @@ implements <a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">M
 <div class="block">Commands the motor to hold an open-loop duty cycle.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyNetural()" class="member-name-link">applyNetural</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyFollowSetpoint(int,com.ctre.phoenix6.signals.MotorAlignmentValue)" class="member-name-link">applyFollowSetpoint</a><wbr>(int&nbsp;leaderID,
+ com.ctre.phoenix6.signals.MotorAlignmentValue&nbsp;alignmentValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">commands the motor to follow another motor at the vendor level via a CTRE <code>Follower</code>
+ control request</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyNetural()" class="member-name-link">applyNetural</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Releases the motor's output so it coasts or brakes according to its configuration.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyPositionMotionProfile(double)" class="member-name-link">applyPositionMotionProfile</a><wbr>(double&nbsp;position)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyPositionMotionProfile(double)" class="member-name-link">applyPositionMotionProfile</a><wbr>(double&nbsp;position)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Commands the motor to a motion-profiled (Motion Magic) closed-loop position.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyPositionSetpoint(double)" class="member-name-link">applyPositionSetpoint</a><wbr>(double&nbsp;position)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyPositionSetpoint(double)" class="member-name-link">applyPositionSetpoint</a><wbr>(double&nbsp;position)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Commands the motor to closed-loop control to an angular position.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyVelocityMotionProfile(double)" class="member-name-link">applyVelocityMotionProfile</a><wbr>(double&nbsp;velocity)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyVelocitySetpoint(double)" class="member-name-link">applyVelocitySetpoint</a><wbr>(double&nbsp;velocity)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyVelocityMotionProfile(double)" class="member-name-link">applyVelocityMotionProfile</a><wbr>(double&nbsp;velocity)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Commands the motor to a motion-profiled (Motion Magic) closed-loop angular velocity.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyVelocitySetpoint(double)" class="member-name-link">applyVelocitySetpoint</a><wbr>(double&nbsp;velocity)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Commands the motor to closed-loop control to an angular velocity.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyVelocityTorqueCurrent(double)" class="member-name-link">applyVelocityTorqueCurrent</a><wbr>(double&nbsp;velocity)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyVoltageSetpoint(double)" class="member-name-link">applyVoltageSetpoint</a><wbr>(double&nbsp;voltage)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyVelocityTorqueCurrent(double)" class="member-name-link">applyVelocityTorqueCurrent</a><wbr>(double&nbsp;velocity)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Commands the motor to closed-loop control to an angular velocity using torque-current
+ (FOC) control.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyVoltageSetpoint(double)" class="member-name-link">applyVoltageSetpoint</a><wbr>(double&nbsp;voltage)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Commands the motor to hold an open-loop output voltage.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the name identifying this motor, used as its AdvantageKit logging key.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isFollower()" class="member-name-link">isFollower</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Whether this motor is currently following another motor at the vendor level, and so should
+ not be given independent setpoints.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setControl(com.ctre.phoenix6.controls.ControlRequest)" class="member-name-link">setControl</a><wbr>(com.ctre.phoenix6.controls.ControlRequest&nbsp;request)</code></div>
@@ -210,6 +237,26 @@ implements <a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">M
 <dd><code>canID</code> - device ID of the motor controller</dd>
 <dd><code>cfg</code> - configuration for the motor controller</dd>
 <dd><code>name</code> - name of the motor controller</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(int,com.ctre.phoenix6.configs.TalonFXConfiguration,java.lang.String,int,com.ctre.phoenix6.signals.MotorAlignmentValue)">
+<h3>MotorIOTalonFX</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MotorIOTalonFX</span><wbr><span class="parameters">(int&nbsp;canID,
+ com.ctre.phoenix6.configs.TalonFXConfiguration&nbsp;cfg,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ int&nbsp;leaderID,
+ com.ctre.phoenix6.signals.MotorAlignmentValue&nbsp;alignmentValue)</span></div>
+<div class="block">constructor for a talonFX MotorIO that follows another motor at the vendor level, instead of
+ taking its own setpoints</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>canID</code> - device ID of the motor controller</dd>
+<dd><code>cfg</code> - configuration for the motor controller</dd>
+<dd><code>name</code> - name of the motor controller</dd>
+<dd><code>leaderID</code> - device ID of the motor this one follows</dd>
+<dd><code>alignmentValue</code> - whether this motor spins the same or opposite direction as the leader</dd>
 </dl>
 </section>
 </li>
@@ -335,9 +382,14 @@ implements <a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">M
 <section class="detail" id="applyVelocityTorqueCurrent(double)">
 <h3>applyVelocityTorqueCurrent</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyVelocityTorqueCurrent</span><wbr><span class="parameters">(double&nbsp;velocity)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="MotorIO.html#applyVelocityTorqueCurrent(double)">MotorIO</a></code></span></div>
+<div class="block">Commands the motor to closed-loop control to an angular velocity using torque-current
+ (FOC) control.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="MotorIO.html#applyVelocityTorqueCurrent(double)">applyVelocityTorqueCurrent</a></code>&nbsp;in interface&nbsp;<code><a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">MotorIO</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>velocity</code> - target angular velocity</dd>
 </dl>
 </section>
 </li>
@@ -345,9 +397,42 @@ implements <a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">M
 <section class="detail" id="applyVelocityMotionProfile(double)">
 <h3>applyVelocityMotionProfile</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyVelocityMotionProfile</span><wbr><span class="parameters">(double&nbsp;velocity)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="MotorIO.html#applyVelocityMotionProfile(double)">MotorIO</a></code></span></div>
+<div class="block">Commands the motor to a motion-profiled (Motion Magic) closed-loop angular velocity.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="MotorIO.html#applyVelocityMotionProfile(double)">applyVelocityMotionProfile</a></code>&nbsp;in interface&nbsp;<code><a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">MotorIO</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>velocity</code> - target angular velocity</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="applyFollowSetpoint(int,com.ctre.phoenix6.signals.MotorAlignmentValue)">
+<h3>applyFollowSetpoint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyFollowSetpoint</span><wbr><span class="parameters">(int&nbsp;leaderID,
+ com.ctre.phoenix6.signals.MotorAlignmentValue&nbsp;alignmentValue)</span></div>
+<div class="block">commands the motor to follow another motor at the vendor level via a CTRE <code>Follower</code>
+ control request</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>leaderID</code> - device ID of the motor to follow</dd>
+<dd><code>alignmentValue</code> - whether this motor spins the same or opposite direction as the leader</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isFollower()">
+<h3>isFollower</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isFollower</span>()</div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="MotorIO.html#isFollower()">MotorIO</a></code></span></div>
+<div class="block">Whether this motor is currently following another motor at the vendor level, and so should
+ not be given independent setpoints.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="MotorIO.html#isFollower()">isFollower</a></code>&nbsp;in interface&nbsp;<code><a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">MotorIO</a></code></dd>
+<dt>Returns:</dt>
+<dd>true if this motor is a vendor-level follower; false by default</dd>
 </dl>
 </section>
 </li>

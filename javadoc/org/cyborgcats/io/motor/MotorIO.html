@@ -78,8 +78,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">MotorIO</span></div>
 <div class="block">Hardware abstraction for a single motor. Implementations drive one motor and report its
- telemetry; follower behaviour is handled by <a href="../../component/MotorComponent.html" title="class in org.cyborgcats.component"><code>MotorComponent</code></a>
- rather than here.</div>
+ telemetry. An implementation that supports following another motor at the vendor level (e.g.
+ <a href="MotorIOTalonFX.html" title="class in org.cyborgcats.io.motor"><code>MotorIOTalonFX</code></a>) reports that via <a href="#isFollower()"><code>isFollower()</code></a>; <a href="../../component/MotorComponent.html" title="class in org.cyborgcats.component"><code>MotorComponent</code></a> uses that to avoid re-applying independent setpoints
+ to it.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -105,7 +106,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -133,7 +134,9 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#applyVelocityMotionProfile(double)" class="member-name-link">applyVelocityMotionProfile</a><wbr>(double&nbsp;velocity)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Commands the motor to a motion-profiled (Motion Magic) closed-loop angular velocity.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#applyVelocitySetpoint(double)" class="member-name-link">applyVelocitySetpoint</a><wbr>(double&nbsp;velocity)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -141,7 +144,10 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#applyVelocityTorqueCurrent(double)" class="member-name-link">applyVelocityTorqueCurrent</a><wbr>(double&nbsp;velocity)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Commands the motor to closed-loop control to an angular velocity using torque-current
+ (FOC) control.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#applyVoltageSetpoint(double)" class="member-name-link">applyVoltageSetpoint</a><wbr>(double&nbsp;voltage)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -152,14 +158,20 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Returns the name identifying this motor, used as its AdvantageKit logging key.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCurrentPosition(double)" class="member-name-link">setCurrentPosition</a><wbr>(double&nbsp;position)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">resets the current motor position to the new position</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#isFollower()" class="member-name-link">isFollower</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Whether this motor is currently following another motor at the vendor level, and so should
+ not be given independent setpoints.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#updateInputs(org.cyborgcats.io.motor.MotorIO.MotorInputs)" class="member-name-link">updateInputs</a><wbr>(<a href="MotorIO.MotorInputs.html" title="class in org.cyborgcats.io.motor">MotorIO.MotorInputs</a>&nbsp;inputs)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCurrentPosition(double)" class="member-name-link">setCurrentPosition</a><wbr>(double&nbsp;position)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">resets the current motor position to the new position</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#updateInputs(org.cyborgcats.io.motor.MotorIO.MotorInputs)" class="member-name-link">updateInputs</a><wbr>(<a href="MotorIO.MotorInputs.html" title="class in org.cyborgcats.io.motor">MotorIO.MotorInputs</a>&nbsp;inputs)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Reads the motor's current telemetry into the given inputs object.</div>
 </div>
 </div>
@@ -242,9 +254,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="applyVelocityTorqueCurrent(double)">
 <h3>applyVelocityTorqueCurrent</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">applyVelocityTorqueCurrent</span><wbr><span class="parameters">(double&nbsp;velocity)</span></div>
+<div class="block">Commands the motor to closed-loop control to an angular velocity using torque-current
+ (FOC) control.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>velocity</code> - </dd>
+<dd><code>velocity</code> - target angular velocity</dd>
 </dl>
 </section>
 </li>
@@ -252,6 +266,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="applyVelocityMotionProfile(double)">
 <h3>applyVelocityMotionProfile</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">applyVelocityMotionProfile</span><wbr><span class="parameters">(double&nbsp;velocity)</span></div>
+<div class="block">Commands the motor to a motion-profiled (Motion Magic) closed-loop angular velocity.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>velocity</code> - target angular velocity</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -273,6 +292,18 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>inputs</code> - inputs object populated in place with the latest hardware readings</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isFollower()">
+<h3>isFollower</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isFollower</span>()</div>
+<div class="block">Whether this motor is currently following another motor at the vendor level, and so should
+ not be given independent setpoints.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>true if this motor is a vendor-level follower; false by default</dd>
 </dl>
 </section>
 </li>

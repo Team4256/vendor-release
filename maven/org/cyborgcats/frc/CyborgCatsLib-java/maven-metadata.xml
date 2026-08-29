@@ -3,11 +3,11 @@
   <groupId>org.cyborgcats.frc</groupId>
   <artifactId>CyborgCatsLib-java</artifactId>
   <versioning>
-    <latest>e92a1e8</latest>
-    <release>e92a1e8</release>
+    <latest>v2026.1.0-2-g8ec43e4</latest>
+    <release>v2026.1.0-2-g8ec43e4</release>
     <versions>
-      <version>e92a1e8</version>
+      <version>v2026.1.0-2-g8ec43e4</version>
     </versions>
-    <lastUpdated>20260825040655</lastUpdated>
+    <lastUpdated>20260829163447</lastUpdated>
   </versioning>
 </metadata>

@@ -101,6 +101,16 @@ implements <a href="MotorIOConfiguration.html" title="interface in org.cyborgcat
 <div class="col-last even-row-color">
 <div class="block">Constructs a MotorIOTalonFXConfiguration.</div>
 </div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.lang.String,int,com.ctre.phoenix6.configs.TalonFXConfiguration,int,com.ctre.phoenix6.signals.MotorAlignmentValue,double)" class="member-name-link">MotorIOTalonFXConfiguration</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ int&nbsp;canID,
+ com.ctre.phoenix6.configs.TalonFXConfiguration&nbsp;conf,
+ int&nbsp;leaderID,
+ com.ctre.phoenix6.signals.MotorAlignmentValue&nbsp;alignmentValue,
+ double&nbsp;simSettlingTime)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Constructs a MotorIOTalonFXConfiguration for a motor that follows <code>leaderID</code> at the
+ vendor level, instead of taking its own setpoints.</div>
+</div>
 </div>
 </section>
 </li>
@@ -129,7 +139,8 @@ implements <a href="MotorIOConfiguration.html" title="interface in org.cyborgcat
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inverted()" class="member-name-link">inverted</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a copy of this configuration with <code>MotorOutput.Inverted</code> flipped, leaving
- everything else (including the leader's config it was built from) untouched.</div>
+ everything else (including follower state, if this configuration was built with the
+ follower constructor) untouched.</div>
 </div>
 </div>
 </div>
@@ -169,6 +180,29 @@ implements <a href="MotorIOConfiguration.html" title="interface in org.cyborgcat
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="&lt;init&gt;(java.lang.String,int,com.ctre.phoenix6.configs.TalonFXConfiguration,int,com.ctre.phoenix6.signals.MotorAlignmentValue,double)">
+<h3>MotorIOTalonFXConfiguration</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MotorIOTalonFXConfiguration</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ int&nbsp;canID,
+ com.ctre.phoenix6.configs.TalonFXConfiguration&nbsp;conf,
+ int&nbsp;leaderID,
+ com.ctre.phoenix6.signals.MotorAlignmentValue&nbsp;alignmentValue,
+ double&nbsp;simSettlingTime)</span></div>
+<div class="block">Constructs a MotorIOTalonFXConfiguration for a motor that follows <code>leaderID</code> at the
+ vendor level, instead of taking its own setpoints.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - name of the motor controller</dd>
+<dd><code>canID</code> - device ID of the TalonFX</dd>
+<dd><code>conf</code> - configuration applied to the TalonFX</dd>
+<dd><code>leaderID</code> - device ID of the motor this one follows</dd>
+<dd><code>alignmentValue</code> - whether this motor spins the same or opposite direction as the leader</dd>
+<dd><code>simSettlingTime</code> - time constant used by the simulated motor to settle at a commanded
+                        setpoint</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -182,9 +216,10 @@ implements <a href="MotorIOConfiguration.html" title="interface in org.cyborgcat
 <h3>inverted</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MotorIOTalonFXConfiguration.html" title="class in org.cyborgcats.io.motor">MotorIOTalonFXConfiguration</a></span>&nbsp;<span class="element-name">inverted</span>()</div>
 <div class="block">Returns a copy of this configuration with <code>MotorOutput.Inverted</code> flipped, leaving
- everything else (including the leader's config it was built from) untouched. Useful for a
- follower motor mounted opposite the leader, e.g. <code>new MotorIOTalonFXConfiguration(
- "Front", canID, LauncherConstants.flywheelConf, 0.1).inverted()</code>.</div>
+ everything else (including follower state, if this configuration was built with the
+ follower constructor) untouched. Useful for a motor mounted opposite another one it's
+ meant to mirror, e.g. <code>new MotorIOTalonFXConfiguration("Front", canID,
+ LauncherConstants.flywheelConf, 0.1).inverted()</code>.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new configuration identical to this one with inversion flipped</dd>

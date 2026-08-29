@@ -89,8 +89,9 @@ implements <a href="Component.html" title="interface in org.cyborgcats.component
 <div class="block">Base component for any mechanism driven by a motor, providing setpoint application and input
  logging for a leader motor and any number of followers.
 
- <p>Followers are driven by applying the same control request as the leader rather than by a
- vendor follower request.</div>
+ <p>A follower whose <a href="../io/motor/MotorIO.html#isFollower()"><code>MotorIO.isFollower()</code></a> reports true is already following the leader
+ at the vendor level, so <a href="#applySetpoint(org.cyborgcats.component.Setpoint)"><code>applySetpoint(Setpoint)</code></a> leaves it alone; any other follower is
+ instead driven by applying the same control request as the leader.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -167,7 +168,8 @@ implements <a href="Component.html" title="interface in org.cyborgcats.component
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applySetpoint(org.cyborgcats.component.Setpoint)" class="member-name-link">applySetpoint</a><wbr>(<a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a>&nbsp;setpoint)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Stores and immediately applies a new setpoint to the motor hardware.</div>
+<div class="block">Stores and immediately applies a new setpoint to the leader and to every follower that isn't
+ already following it at the vendor level (see <a href="../io/motor/MotorIO.html#isFollower()"><code>MotorIO.isFollower()</code></a>).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../ssm/State.html" title="class in org.cyborgcats.ssm">State</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applySetpointState(org.cyborgcats.component.Setpoint)" class="member-name-link">applySetpointState</a><wbr>(<a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a>&nbsp;setpoint)</code></div>
@@ -286,7 +288,8 @@ implements <a href="Component.html" title="interface in org.cyborgcats.component
 <section class="detail" id="applySetpoint(org.cyborgcats.component.Setpoint)">
 <h3>applySetpoint</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applySetpoint</span><wbr><span class="parameters">(<a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a>&nbsp;setpoint)</span></div>
-<div class="block">Stores and immediately applies a new setpoint to the motor hardware.</div>
+<div class="block">Stores and immediately applies a new setpoint to the leader and to every follower that isn't
+ already following it at the vendor level (see <a href="../io/motor/MotorIO.html#isFollower()"><code>MotorIO.isFollower()</code></a>).</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>setpoint</code> - the setpoint to apply</dd>

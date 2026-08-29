@@ -112,28 +112,36 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Motor is controlled by a duty-cycle percentage.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="#Neutral" class="member-name-link">Neutral</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#Follower" class="member-name-link">Follower</a></code></div>
 <div class="col-last odd-row-color">
+<div class="block">Motor is following another motor at the vendor level rather than taking its own setpoints.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="#Neutral" class="member-name-link">Neutral</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Motor is commanded to output nothing (coast or brake).</div>
 </div>
-<div class="col-first even-row-color"><code><a href="#Position" class="member-name-link">Position</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="#Position" class="member-name-link">Position</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Motor is controlled by a closed-loop position target.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="#PositionMotionProfile" class="member-name-link">PositionMotionProfile</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="#PositionMotionProfile" class="member-name-link">PositionMotionProfile</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Motor is controlled by a motion-profiled (Motion Magic) closed-loop position target.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="#Velocity" class="member-name-link">Velocity</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="#Velocity" class="member-name-link">Velocity</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Motor is controlled by a closed-loop velocity target.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="#VelocityMotionProfile" class="member-name-link">VelocityMotionProfile</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#VelocityTorqueCurrent" class="member-name-link">VelocityTorqueCurrent</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#Voltage" class="member-name-link">Voltage</a></code></div>
+<div class="col-first even-row-color"><code><a href="#VelocityMotionProfile" class="member-name-link">VelocityMotionProfile</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">Motor is controlled by a motion-profiled (Motion Magic) closed-loop velocity target.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="#VelocityTorqueCurrent" class="member-name-link">VelocityTorqueCurrent</a></code></div>
 <div class="col-last odd-row-color">
+<div class="block">Motor is controlled by a closed-loop velocity target using torque-current (FOC) control.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="#Voltage" class="member-name-link">Voltage</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Motor is controlled by a direct voltage command.</div>
 </div>
 </div>
@@ -227,12 +235,21 @@ the order they are declared.</div>
 <section class="detail" id="VelocityTorqueCurrent">
 <h3>VelocityTorqueCurrent</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></span>&nbsp;<span class="element-name">VelocityTorqueCurrent</span></div>
+<div class="block">Motor is controlled by a closed-loop velocity target using torque-current (FOC) control.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="VelocityMotionProfile">
 <h3>VelocityMotionProfile</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></span>&nbsp;<span class="element-name">VelocityMotionProfile</span></div>
+<div class="block">Motor is controlled by a motion-profiled (Motion Magic) closed-loop velocity target.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="Follower">
+<h3>Follower</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></span>&nbsp;<span class="element-name">Follower</span></div>
+<div class="block">Motor is following another motor at the vendor level rather than taking its own setpoints.</div>
 </section>
 </li>
 </ul>

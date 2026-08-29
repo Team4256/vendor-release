@@ -186,6 +186,11 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/io/motor/MotorIOTalonFX.html#applyDutyCycleSetpoint(double)" class="member-name-link">applyDutyCycleSetpoint(double)</a> - Method in class org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIOTalonFX.html" title="class in org.cyborgcats.io.motor">MotorIOTalonFX</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="org/cyborgcats/io/motor/MotorIOTalonFX.html#applyFollowSetpoint(int,com.ctre.phoenix6.signals.MotorAlignmentValue)" class="member-name-link">applyFollowSetpoint(int, MotorAlignmentValue)</a> - Method in class org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIOTalonFX.html" title="class in org.cyborgcats.io.motor">MotorIOTalonFX</a></dt>
+<dd>
+<div class="block">commands the motor to follow another motor at the vendor level via a CTRE <code>Follower</code>
+ control request</div>
+</dd>
 <dt><a href="org/cyborgcats/io/motor/MotorIO.html#applyNetural()" class="member-name-link">applyNetural()</a> - Method in interface org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIO.html" title="interface in org.cyborgcats.io.motor">MotorIO</a></dt>
 <dd>
 <div class="block">Releases the motor's output so it coasts or brakes according to its configuration.</div>
@@ -220,7 +225,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/component/MotorComponent.html#applySetpoint(org.cyborgcats.component.Setpoint)" class="member-name-link">applySetpoint(Setpoint)</a> - Method in class org.cyborgcats.component.<a href="org/cyborgcats/component/MotorComponent.html" title="class in org.cyborgcats.component">MotorComponent</a></dt>
 <dd>
-<div class="block">Stores and immediately applies a new setpoint to the motor hardware.</div>
+<div class="block">Stores and immediately applies a new setpoint to the leader and to every follower that isn't
+ already following it at the vendor level (see <a href="org/cyborgcats/io/motor/MotorIO.html#isFollower()"><code>MotorIO.isFollower()</code></a>).</div>
 </dd>
 <dt><a href="org/cyborgcats/component/MotorComponent.html#applySetpointState(org.cyborgcats.component.Setpoint)" class="member-name-link">applySetpointState(Setpoint)</a> - Method in class org.cyborgcats.component.<a href="org/cyborgcats/component/MotorComponent.html" title="class in org.cyborgcats.component">MotorComponent</a></dt>
 <dd>
@@ -236,7 +242,9 @@ loadScripts(document, 'script');</script>
  scheduled.</div>
 </dd>
 <dt><a href="org/cyborgcats/io/motor/MotorIO.html#applyVelocityMotionProfile(double)" class="member-name-link">applyVelocityMotionProfile(double)</a> - Method in interface org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIO.html" title="interface in org.cyborgcats.io.motor">MotorIO</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Commands the motor to a motion-profiled (Motion Magic) closed-loop angular velocity.</div>
+</dd>
 <dt><a href="org/cyborgcats/io/motor/MotorIONova.html#applyVelocityMotionProfile(double)" class="member-name-link">applyVelocityMotionProfile(double)</a> - Method in class org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIONova.html" title="class in org.cyborgcats.io.motor">MotorIONova</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/io/motor/MotorIOSim.html#applyVelocityMotionProfile(double)" class="member-name-link">applyVelocityMotionProfile(double)</a> - Method in class org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIOSim.html" title="class in org.cyborgcats.io.motor">MotorIOSim</a></dt>
@@ -254,7 +262,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="org/cyborgcats/io/motor/MotorIOTalonFX.html#applyVelocitySetpoint(double)" class="member-name-link">applyVelocitySetpoint(double)</a> - Method in class org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIOTalonFX.html" title="class in org.cyborgcats.io.motor">MotorIOTalonFX</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/io/motor/MotorIO.html#applyVelocityTorqueCurrent(double)" class="member-name-link">applyVelocityTorqueCurrent(double)</a> - Method in interface org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIO.html" title="interface in org.cyborgcats.io.motor">MotorIO</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Commands the motor to closed-loop control to an angular velocity using torque-current
+ (FOC) control.</div>
+</dd>
 <dt><a href="org/cyborgcats/io/motor/MotorIONova.html#applyVelocityTorqueCurrent(double)" class="member-name-link">applyVelocityTorqueCurrent(double)</a> - Method in class org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIONova.html" title="class in org.cyborgcats.io.motor">MotorIONova</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/io/motor/MotorIOSim.html#applyVelocityTorqueCurrent(double)" class="member-name-link">applyVelocityTorqueCurrent(double)</a> - Method in class org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIOSim.html" title="class in org.cyborgcats.io.motor">MotorIOSim</a></dt>
@@ -894,6 +905,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Control strategies this shooter can select between while running.</div>
 </dd>
+<dt><a href="org/cyborgcats/component/Setpoint.Mode.html#Follower" class="member-name-link">Follower</a> - Enum constant in enum class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></dt>
+<dd>
+<div class="block">Motor is following another motor at the vendor level rather than taking its own setpoints.</div>
+</dd>
 <dt><a href="org/cyborgcats/component/MotorComponent.html#followerInputs" class="member-name-link">followerInputs</a> - Variable in class org.cyborgcats.component.<a href="org/cyborgcats/component/MotorComponent.html" title="class in org.cyborgcats.component">MotorComponent</a></dt>
 <dd>
 <div class="block">Most recently logged inputs read from each follower, parallel to <a href="org/cyborgcats/component/MotorComponent.html#followers"><code>MotorComponent.followers</code></a>.</div>
@@ -1306,7 +1321,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="org/cyborgcats/io/motor/MotorIOTalonFXConfiguration.html#inverted()" class="member-name-link">inverted()</a> - Method in class org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIOTalonFXConfiguration.html" title="class in org.cyborgcats.io.motor">MotorIOTalonFXConfiguration</a></dt>
 <dd>
 <div class="block">Returns a copy of this configuration with <code>MotorOutput.Inverted</code> flipped, leaving
- everything else (including the leader's config it was built from) untouched.</div>
+ everything else (including follower state, if this configuration was built with the
+ follower constructor) untouched.</div>
 </dd>
 <dt><a href="org/cyborgcats/io/IOConfiguration.html" class="type-name-link" title="interface in org.cyborgcats.io">IOConfiguration</a>&lt;<a href="org/cyborgcats/io/IOConfiguration.html" title="type parameter in IOConfiguration">T</a>&gt; - Interface in <a href="org/cyborgcats/io/package-summary.html">org.cyborgcats.io</a></dt>
 <dd>
@@ -1321,6 +1337,13 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns whether this state's step has completed.</div>
 </dd>
+<dt><a href="org/cyborgcats/io/motor/MotorIO.html#isFollower()" class="member-name-link">isFollower()</a> - Method in interface org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIO.html" title="interface in org.cyborgcats.io.motor">MotorIO</a></dt>
+<dd>
+<div class="block">Whether this motor is currently following another motor at the vendor level, and so should
+ not be given independent setpoints.</div>
+</dd>
+<dt><a href="org/cyborgcats/io/motor/MotorIOTalonFX.html#isFollower()" class="member-name-link">isFollower()</a> - Method in class org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIOTalonFX.html" title="class in org.cyborgcats.io.motor">MotorIOTalonFX</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/ssm/State.html#isInterruptible()" class="member-name-link">isInterruptible()</a> - Method in class org.cyborgcats.ssm.<a href="org/cyborgcats/ssm/State.html" title="class in org.cyborgcats.ssm">State</a></dt>
 <dd>
 <div class="block">Returns whether this state may be interrupted by a conflicting state.</div>
@@ -1484,9 +1507,13 @@ loadScripts(document, 'script');</script>
 <div class="block">Shared shape for configs that build a <a href="org/cyborgcats/io/motor/MotorIO.html" title="interface in org.cyborgcats.io.motor"><code>MotorIO</code></a>.</div>
 </dd>
 <dt><a href="org/cyborgcats/io/motor/MotorIONova.html" class="type-name-link" title="class in org.cyborgcats.io.motor">MotorIONova</a> - Class in <a href="org/cyborgcats/io/motor/package-summary.html">org.cyborgcats.io.motor</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Hardware abstraction for a single Thrifty Nova motor controller.</div>
+</dd>
 <dt><a href="org/cyborgcats/io/motor/MotorIONova.html#%3Cinit%3E(java.lang.String,int,int,com.thrifty.core.Motor.MotorType,com.thrifty.nova.NovaConfigBatch)" class="member-name-link">MotorIONova(String, int, int, Motor.MotorType, NovaConfigBatch)</a> - Constructor for class org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIONova.html" title="class in org.cyborgcats.io.motor">MotorIONova</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">constructor for a Nova MotorIO</div>
+</dd>
 <dt><a href="org/cyborgcats/io/motor/MotorIONovaConfiguration.html" class="type-name-link" title="class in org.cyborgcats.io.motor">MotorIONovaConfiguration</a> - Class in <a href="org/cyborgcats/io/motor/package-summary.html">org.cyborgcats.io.motor</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/cyborgcats/io/motor/MotorIONovaConfiguration.html#%3Cinit%3E(java.lang.String,int,int,com.thrifty.core.Motor.MotorType,com.thrifty.nova.NovaConfigBatch,double)" class="member-name-link">MotorIONovaConfiguration(String, int, int, Motor.MotorType, NovaConfigBatch, double)</a> - Constructor for class org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIONovaConfiguration.html" title="class in org.cyborgcats.io.motor">MotorIONovaConfiguration</a></dt>
@@ -1512,6 +1539,11 @@ loadScripts(document, 'script');</script>
 <div class="block">constructor for a talonFX MotorIO
  SuppressWarnings("removal") for the talon fx constructor using the "rio" canbus</div>
 </dd>
+<dt><a href="org/cyborgcats/io/motor/MotorIOTalonFX.html#%3Cinit%3E(int,com.ctre.phoenix6.configs.TalonFXConfiguration,java.lang.String,int,com.ctre.phoenix6.signals.MotorAlignmentValue)" class="member-name-link">MotorIOTalonFX(int, TalonFXConfiguration, String, int, MotorAlignmentValue)</a> - Constructor for class org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIOTalonFX.html" title="class in org.cyborgcats.io.motor">MotorIOTalonFX</a></dt>
+<dd>
+<div class="block">constructor for a talonFX MotorIO that follows another motor at the vendor level, instead of
+ taking its own setpoints</div>
+</dd>
 <dt><a href="org/cyborgcats/io/motor/MotorIOTalonFXConfiguration.html" class="type-name-link" title="class in org.cyborgcats.io.motor">MotorIOTalonFXConfiguration</a> - Class in <a href="org/cyborgcats/io/motor/package-summary.html">org.cyborgcats.io.motor</a></dt>
 <dd>
 <div class="block">Configuration for a TalonFX-backed <a href="org/cyborgcats/io/motor/MotorIO.html" title="interface in org.cyborgcats.io.motor"><code>MotorIO</code></a>.</div>
@@ -1519,6 +1551,11 @@ loadScripts(document, 'script');</script>
 <dt><a href="org/cyborgcats/io/motor/MotorIOTalonFXConfiguration.html#%3Cinit%3E(java.lang.String,int,com.ctre.phoenix6.configs.TalonFXConfiguration,double)" class="member-name-link">MotorIOTalonFXConfiguration(String, int, TalonFXConfiguration, double)</a> - Constructor for class org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIOTalonFXConfiguration.html" title="class in org.cyborgcats.io.motor">MotorIOTalonFXConfiguration</a></dt>
 <dd>
 <div class="block">Constructs a MotorIOTalonFXConfiguration.</div>
+</dd>
+<dt><a href="org/cyborgcats/io/motor/MotorIOTalonFXConfiguration.html#%3Cinit%3E(java.lang.String,int,com.ctre.phoenix6.configs.TalonFXConfiguration,int,com.ctre.phoenix6.signals.MotorAlignmentValue,double)" class="member-name-link">MotorIOTalonFXConfiguration(String, int, TalonFXConfiguration, int, MotorAlignmentValue, double)</a> - Constructor for class org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIOTalonFXConfiguration.html" title="class in org.cyborgcats.io.motor">MotorIOTalonFXConfiguration</a></dt>
+<dd>
+<div class="block">Constructs a MotorIOTalonFXConfiguration for a motor that follows <code>leaderID</code> at the
+ vendor level, instead of taking its own setpoints.</div>
 </dd>
 <dt><a href="org/cyborgcats/io/motor/MotorIO.MotorInputs.html#motorVoltage" class="member-name-link">motorVoltage</a> - Variable in class org.cyborgcats.io.motor.<a href="org/cyborgcats/io/motor/MotorIO.MotorInputs.html" title="class in org.cyborgcats.io.motor">MotorIO.MotorInputs</a></dt>
 <dd>
@@ -2479,9 +2516,13 @@ the order they are declared.</div>
 <div class="block">Constructs a VelocityComponent.</div>
 </dd>
 <dt><a href="org/cyborgcats/component/Setpoint.Mode.html#VelocityMotionProfile" class="member-name-link">VelocityMotionProfile</a> - Enum constant in enum class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Motor is controlled by a motion-profiled (Motion Magic) closed-loop velocity target.</div>
+</dd>
 <dt><a href="org/cyborgcats/component/Setpoint.Mode.html#VelocityTorqueCurrent" class="member-name-link">VelocityTorqueCurrent</a> - Enum constant in enum class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Motor is controlled by a closed-loop velocity target using torque-current (FOC) control.</div>
+</dd>
 <dt><a href="org/cyborgcats/component/Turret.TurretOutput.html#virtualTarget()" class="member-name-link">virtualTarget()</a> - Method in record class org.cyborgcats.component.<a href="org/cyborgcats/component/Turret.TurretOutput.html" title="class in org.cyborgcats.component">Turret.TurretOutput</a></dt>
 <dd>
 <div class="block">Returns the value of the <a href="./org/cyborgcats/component/Turret.TurretOutput.html#param-virtualTarget"><code>virtualTarget</code></a> record component.</div>
@@ -2658,9 +2699,13 @@ the order they are declared.</div>
 <div class="block">Creates a velocity-control setpoint.</div>
 </dd>
 <dt><a href="org/cyborgcats/component/Setpoint.html#withVelocityMotionProfile(double)" class="member-name-link">withVelocityMotionProfile(double)</a> - Static method in class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Creates a motion-profiled (Motion Magic) velocity-control setpoint.</div>
+</dd>
 <dt><a href="org/cyborgcats/component/Setpoint.html#withVelocityTorqueCurrent(double)" class="member-name-link">withVelocityTorqueCurrent(double)</a> - Static method in class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Creates a velocity-control setpoint using torque-current (FOC) control.</div>
+</dd>
 <dt><a href="org/cyborgcats/component/Setpoint.html#withVoltage(double)" class="member-name-link">withVoltage(double)</a> - Static method in class org.cyborgcats.component.<a href="org/cyborgcats/component/Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></dt>
 <dd>
 <div class="block">Creates a voltage-control setpoint.</div>
