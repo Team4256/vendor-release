@@ -3,11 +3,11 @@
   <groupId>org.cyborgcats.frc</groupId>
   <artifactId>CyborgCatsLib-cpp</artifactId>
   <versioning>
-    <latest>v2026.1.0-2-g8ec43e4</latest>
-    <release>v2026.1.0-2-g8ec43e4</release>
+    <latest>v2026.1.1</latest>
+    <release>v2026.1.1</release>
     <versions>
-      <version>v2026.1.0-2-g8ec43e4</version>
+      <version>v2026.1.1</version>
     </versions>
-    <lastUpdated>20260829163447</lastUpdated>
+    <lastUpdated>20260829172339</lastUpdated>
   </versioning>
 </metadata>
