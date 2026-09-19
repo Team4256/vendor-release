@@ -106,13 +106,14 @@ implements <a href="VisionCameraIO.html" title="interface in org.cyborgcats.io.v
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,org.cyborgcats.vision.CameraMatrix,org.cyborgcats.vision.DistortionCoefficients,org.cyborgcats.vision.CameraResolution,org.cyborgcats.vision.VisionStdDevs,org.cyborgcats.vision.VisionStdDevs,java.util.function.Supplier)" class="member-name-link">VisionCameraIOAtlas</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,org.cyborgcats.vision.CameraMatrix,org.cyborgcats.vision.DistortionCoefficients,org.cyborgcats.vision.CameraResolution,org.cyborgcats.vision.VisionStdDevs,org.cyborgcats.vision.VisionStdDevs,java.util.function.Supplier,double)" class="member-name-link">VisionCameraIOAtlas</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="../../vision/CameraMatrix.html" title="class in org.cyborgcats.vision">CameraMatrix</a>&nbsp;matrix,
  <a href="../../vision/DistortionCoefficients.html" title="class in org.cyborgcats.vision">DistortionCoefficients</a>&nbsp;distCoeffs,
  <a href="../../vision/CameraResolution.html" title="class in org.cyborgcats.vision">CameraResolution</a>&nbsp;resolution,
  <a href="../../vision/VisionStdDevs.html" title="class in org.cyborgcats.vision">VisionStdDevs</a>&nbsp;singleTagDevs,
  <a href="../../vision/VisionStdDevs.html" title="class in org.cyborgcats.vision">VisionStdDevs</a>&nbsp;multiTagDevs,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform3d</a>&gt;&nbsp;robotToCamera)</code></div>
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform3d</a>&gt;&nbsp;robotToCamera,
+ double&nbsp;ambiguityThreshold)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -157,7 +158,7 @@ implements <a href="VisionCameraIO.html" title="interface in org.cyborgcats.io.v
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(java.lang.String,org.cyborgcats.vision.CameraMatrix,org.cyborgcats.vision.DistortionCoefficients,org.cyborgcats.vision.CameraResolution,org.cyborgcats.vision.VisionStdDevs,org.cyborgcats.vision.VisionStdDevs,java.util.function.Supplier)">
+<section class="detail" id="&lt;init&gt;(java.lang.String,org.cyborgcats.vision.CameraMatrix,org.cyborgcats.vision.DistortionCoefficients,org.cyborgcats.vision.CameraResolution,org.cyborgcats.vision.VisionStdDevs,org.cyborgcats.vision.VisionStdDevs,java.util.function.Supplier,double)">
 <h3>VisionCameraIOAtlas</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">VisionCameraIOAtlas</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
  <a href="../../vision/CameraMatrix.html" title="class in org.cyborgcats.vision">CameraMatrix</a>&nbsp;matrix,
@@ -165,7 +166,8 @@ implements <a href="VisionCameraIO.html" title="interface in org.cyborgcats.io.v
  <a href="../../vision/CameraResolution.html" title="class in org.cyborgcats.vision">CameraResolution</a>&nbsp;resolution,
  <a href="../../vision/VisionStdDevs.html" title="class in org.cyborgcats.vision">VisionStdDevs</a>&nbsp;singleTagDevs,
  <a href="../../vision/VisionStdDevs.html" title="class in org.cyborgcats.vision">VisionStdDevs</a>&nbsp;multiTagDevs,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform3d</a>&gt;&nbsp;robotToCamera)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform3d</a>&gt;&nbsp;robotToCamera,
+ double&nbsp;ambiguityThreshold)</span></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>name</code> - camera name; must match the table Atlas publishes under (its
@@ -176,6 +178,9 @@ implements <a href="VisionCameraIO.html" title="interface in org.cyborgcats.io.v
 <dd><code>singleTagDevs</code> - standard deviations to use when a single tag contributes to an estimate</dd>
 <dd><code>multiTagDevs</code> - standard deviations to use when multiple tags contribute to an estimate</dd>
 <dd><code>robotToCamera</code> - supplier returning the transform from robot origin to camera lens</dd>
+<dd><code>ambiguityThreshold</code> - minimum <a href="../../vision/AprilTagEstimate.html#ambiguity()"><code>AprilTagEstimate.ambiguity()</code></a> at or above which a
+                           single-tag estimate is discarded as too ambiguous to trust; ignored
+                           for multi-tag estimates</dd>
 </dl>
 </section>
 </li>

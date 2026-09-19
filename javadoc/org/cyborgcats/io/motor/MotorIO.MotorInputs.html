@@ -100,20 +100,30 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">
 <div class="block">Whether the motor controller is currently responding on the bus.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="../../component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></code></div>
-<div class="col-second even-row-color"><code><a href="#mode" class="member-name-link">mode</a></code></div>
+<div class="col-first even-row-color"><code>double</code></div>
+<div class="col-second even-row-color"><code><a href="#energy" class="member-name-link">energy</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">Energy drawn from the supply over the motor's whole lifetime, in joules.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="../../component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#mode" class="member-name-link">mode</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Control mode the motor is currently running in.</div>
 </div>
-<div class="col-first odd-row-color"><code>double</code></div>
-<div class="col-second odd-row-color"><code><a href="#motorVoltage" class="member-name-link">motorVoltage</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>double</code></div>
+<div class="col-second even-row-color"><code><a href="#motorVoltage" class="member-name-link">motorVoltage</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Voltage applied to the motor windings.</div>
 </div>
-<div class="col-first even-row-color"><code>double</code></div>
-<div class="col-second even-row-color"><code><a href="#position" class="member-name-link">position</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>double</code></div>
+<div class="col-second odd-row-color"><code><a href="#position" class="member-name-link">position</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Measured rotor position.</div>
+</div>
+<div class="col-first even-row-color"><code>double</code></div>
+<div class="col-second even-row-color"><code><a href="#power" class="member-name-link">power</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">Instantaneous power drawn from the supply, in watts.</div>
 </div>
 <div class="col-first odd-row-color"><code>double</code></div>
 <div class="col-second odd-row-color"><code><a href="#setpoint" class="member-name-link">setpoint</a></code></div>
@@ -254,6 +264,20 @@ loadScripts(document, 'script');</script>
 <h3>connected</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">connected</span></div>
 <div class="block">Whether the motor controller is currently responding on the bus.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="power">
+<h3>power</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">power</span></div>
+<div class="block">Instantaneous power drawn from the supply, in watts.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="energy">
+<h3>energy</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">energy</span></div>
+<div class="block">Energy drawn from the supply over the motor's whole lifetime, in joules.</div>
 </section>
 </li>
 </ul>

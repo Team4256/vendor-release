@@ -202,43 +202,53 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block"><a href="org/cyborgcats/io/sensor/encoder/EncoderIO.html" title="interface in org.cyborgcats.io.sensor.encoder"><code>EncoderIO</code></a> implementation for simulation; reports a stationary, connected encoder.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/util/EnergyTracker.html" title="class in org.cyborgcats.util">EnergyTracker</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
-<div class="block">Singleton that accumulates per-subsystem power and energy consumption estimates and logs
- them to AdvantageKit each loop iteration.</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="org/cyborgcats/energy/EnergyIO.html" title="interface in org.cyborgcats.energy">EnergyIO</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Hardware interface for any device whose electrical draw can be sampled, allowing an
+ <a href="org/cyborgcats/energy/EnergyTracker.html" title="class in org.cyborgcats.energy"><code>EnergyTracker</code></a> to integrate its power consumption over time.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="org/cyborgcats/util/EnergyTracker.EnergyIO.html" title="interface in org.cyborgcats.util">EnergyTracker.EnergyIO</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
-<div class="block">Interface implemented by subsystems or motor components that wish to contribute to energy
- tracking.</div>
-</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/util/EnergyTracker.EnergyObject.html" title="class in org.cyborgcats.util">EnergyTracker.EnergyObject</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
-<div class="block">Pairs a tracked object with the energy it has accumulated so far.</div>
-</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/util/EqualsUtil.html" title="class in org.cyborgcats.util">EqualsUtil</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/energy/EnergyRegister.html" title="class in org.cyborgcats.energy">EnergyRegister</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Global registry that collects <a href="org/cyborgcats/energy/EnergyTracker.html" title="class in org.cyborgcats.energy"><code>EnergyTracker</code></a> instances, integrates each of them once per
+ loop iteration, and publishes the robot's combined power and energy draw to AdvantageKit.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/energy/EnergyTracker.html" title="class in org.cyborgcats.energy">EnergyTracker</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Integrates a single <a href="org/cyborgcats/energy/EnergyIO.html" title="interface in org.cyborgcats.energy"><code>EnergyIO</code></a> device's power draw over time to track the total energy
+ it has consumed.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/energy/EnergyTracker.Energy.html" title="class in org.cyborgcats.energy">EnergyTracker.Energy</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
+<div class="block">A single energy sample for one device.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/util/EqualsUtil.html" title="class in org.cyborgcats.util">EqualsUtil</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Utility class providing floating-point comparison helpers.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/field/FieldElement.html" title="class in org.cyborgcats.field">FieldElement</a>&lt;<a href="org/cyborgcats/field/FieldElement.html" title="type parameter in FieldElement">T</a>&gt;</div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/field/FieldElement.html" title="class in org.cyborgcats.field">FieldElement</a>&lt;<a href="org/cyborgcats/field/FieldElement.html" title="type parameter in FieldElement">T</a>&gt;</div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">A field constant defined once from the blue-alliance perspective that transparently mirrors
  itself to the red side via <a href="org/cyborgcats/field/AllianceUtil.html" title="class in org.cyborgcats.field"><code>AllianceUtil</code></a> on every read, and self-registers with
  <a href="org/cyborgcats/field/FieldElementRegistry.html" title="class in org.cyborgcats.field"><code>FieldElementRegistry</code></a> so it can be logged automatically each loop.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/field/FieldElementRegistry.html" title="class in org.cyborgcats.field">FieldElementRegistry</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/field/FieldElementRegistry.html" title="class in org.cyborgcats.field">FieldElementRegistry</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Global registry that collects <a href="org/cyborgcats/field/FieldElement.html" title="class in org.cyborgcats.field"><code>FieldElement</code></a> instances and publishes their current
  alliance-corrected values to AdvantageKit every loop iteration.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/component/Flywheel.html" title="class in org.cyborgcats.component">Flywheel</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/component/Flywheel.html" title="class in org.cyborgcats.component">Flywheel</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Extension of <a href="org/cyborgcats/component/VelocityComponent.html" title="class in org.cyborgcats.component"><code>VelocityComponent</code></a> for flywheel-style shooters that blends open-loop spin-up
  with closed-loop velocity holding.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="org/cyborgcats/component/Flywheel.ControlType.html" title="enum class in org.cyborgcats.component">Flywheel.ControlType</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="org/cyborgcats/component/Flywheel.ControlType.html" title="enum class in org.cyborgcats.component">Flywheel.ControlType</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab3">
 <div class="block">Control strategies this shooter can select between while running.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/util/GeomentryUtil.html" title="class in org.cyborgcats.util">GeomentryUtil</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Utility methods for converting between WPILib geometry types
+ (rotations, poses, and transforms).</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/component/Gyro.html" title="class in org.cyborgcats.component">Gyro</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
@@ -299,12 +309,6 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Shared shape for configs that build a <a href="org/cyborgcats/io/motor/MotorIO.html" title="interface in org.cyborgcats.io.motor"><code>MotorIO</code></a>.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/io/motor/MotorIONova.html" title="class in org.cyborgcats.io.motor">MotorIONova</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
-<div class="block">Hardware abstraction for a single Thrifty Nova motor controller.</div>
-</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/io/motor/MotorIONovaConfiguration.html" title="class in org.cyborgcats.io.motor">MotorIONovaConfiguration</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/io/motor/MotorIOSim.html" title="class in org.cyborgcats.io.motor">MotorIOSim</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Motor IO implementation that simulates a brushless motor with trapezoidal motion profiling.</div>
@@ -385,14 +389,14 @@ loadScripts(document, 'script');</script>
 <div class="block">Position component for a turret, adding absolute-position resolution from a pair of encoders and
  aiming helpers that compensate for robot motion.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/component/Turret.TurretInputs.html" title="class in org.cyborgcats.component">Turret.TurretInputs</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
-<div class="block">Pre-filter turret setpoint, logged alongside the motor inputs rather than as an output.</div>
-</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/component/Turret.TurretOutput.html" title="class in org.cyborgcats.component">Turret.TurretOutput</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="org/cyborgcats/component/Turret.TargetSolution.html" title="class in org.cyborgcats.component">Turret.TargetSolution</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
 <div class="block">Aiming solution for a single target, pairing the turret setpoint with the shot distance that
  downstream mechanisms (hood angle, flywheel speed) interpolate against.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/component/Turret.TurretInputs.html" title="class in org.cyborgcats.component">Turret.TurretInputs</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Pre-filter turret setpoint, logged alongside the motor inputs rather than as an output.</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/cyborgcats/component/VelocityComponent.html" title="class in org.cyborgcats.component">VelocityComponent</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">

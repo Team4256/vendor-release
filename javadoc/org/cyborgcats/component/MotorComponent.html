@@ -176,20 +176,25 @@ implements <a href="Component.html" title="interface in org.cyborgcats.component
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Creates a one-shot <a href="../ssm/State.html" title="class in org.cyborgcats.ssm"><code>State</code></a> that applies the given setpoint when scheduled.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../io/motor/MotorIO.MotorInputs.html" title="class in org.cyborgcats.io.motor">MotorIO.MotorInputs</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInputs()" class="member-name-link">getInputs</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCurrentSetpoint()" class="member-name-link">getCurrentSetpoint</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">returns the current setpoint applied to the motor component</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../io/motor/MotorIO.MotorInputs.html" title="class in org.cyborgcats.io.motor">MotorIO.MotorInputs</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInputs()" class="member-name-link">getInputs</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Refreshes and returns the leader's inputs, logging the leader and every follower as a side
  effect.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCurrentPosition(double)" class="member-name-link">setCurrentPosition</a><wbr>(double&nbsp;position)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCurrentPosition(double)" class="member-name-link">setCurrentPosition</a><wbr>(double&nbsp;position)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">resets the leader motor and all the followers position to a new one</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateInputs()" class="member-name-link">updateInputs</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateInputs()" class="member-name-link">updateInputs</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Reads the latest inputs from the leader and every follower, then publishes each of them to
  AdvantageKit under that motor's <a href="../io/motor/MotorIO.html#getName()"><code>MotorIO.getName()</code></a>.</div>
 </div>
@@ -341,6 +346,17 @@ implements <a href="Component.html" title="interface in org.cyborgcats.component
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>position</code> - new position to set the motors to</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCurrentSetpoint()">
+<h3>getCurrentSetpoint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></span>&nbsp;<span class="element-name">getCurrentSetpoint</span>()</div>
+<div class="block">returns the current setpoint applied to the motor component</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the curretn setpoint</dd>
 </dl>
 </section>
 </li>

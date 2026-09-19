@@ -219,7 +219,12 @@ implements <a href="MotorIOConfiguration.html" title="interface in org.cyborgcat
  everything else (including follower state, if this configuration was built with the
  follower constructor) untouched. Useful for a motor mounted opposite another one it's
  meant to mirror, e.g. <code>new MotorIOTalonFXConfiguration("Front", canID,
- LauncherConstants.flywheelConf, 0.1).inverted()</code>.</div>
+ LauncherConstants.flywheelConf, 0.1).inverted()</code>.
+
+ <p>This has no effect on the direction of a follower: while following, a TalonFX ignores its
+ own <code>MotorOutput.Inverted</code> and matches or opposes the leader's configured invert
+ according to its <code>MotorAlignmentValue</code>. To reverse a follower, construct it with the
+ opposite alignment value instead.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new configuration identical to this one with inversion flipped</dd>

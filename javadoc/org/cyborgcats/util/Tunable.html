@@ -186,24 +186,80 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates a <code>Tunable&lt;Long&gt;</code> that publishes to and subscribes from the
  <code>Tunable</code> NetworkTable.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#ofPose3d(java.lang.String,edu.wpi.first.math.geometry.Pose3d)" class="member-name-link">ofPose3d</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&nbsp;defualtValue)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose2d</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#ofPose2d(java.lang.String,edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">ofPose2d</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose2d</a>&nbsp;defualtValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Creates a <code>Tunable&lt;Pose2d&gt;</code> by composing three underlying <code>Tunable&lt;Double&gt;</code>
+ values (x/y/degrees), each published under its own NetworkTables entry
+ nested beneath <code>name</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#ofPose3d(java.lang.String,edu.wpi.first.math.geometry.Pose3d)" class="member-name-link">ofPose3d</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&nbsp;defualtValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Creates a <code>Tunable&lt;Pose3d&gt;</code> by composing six underlying <code>Tunable&lt;Double&gt;</code>
  values (x/y/z/roll/pitch/yaw), each published under its own NetworkTables entry
  nested beneath <code>name</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#ofString(java.lang.String,java.lang.String)" class="member-name-link">ofString</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;defaultValue)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Rotation2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Rotation2d</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#ofRotation2d(java.lang.String,edu.wpi.first.math.geometry.Rotation2d)" class="member-name-link">ofRotation2d</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Rotation2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Rotation2d</a>&nbsp;defualtValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Creates a <code>Tunable&lt;Rotation2d&gt;</code> by wrapping a single underlying
+ <code>Tunable&lt;Double&gt;</code> value (degrees), published under its own NetworkTables
+ entry nested beneath <code>name</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Rotation3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Rotation3d</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#ofRotation3d(java.lang.String,edu.wpi.first.math.geometry.Rotation3d)" class="member-name-link">ofRotation3d</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Rotation3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Rotation3d</a>&nbsp;defualtValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Creates a <code>Tunable&lt;Rotation3d&gt;</code> by composing three underlying
+ <code>Tunable&lt;Double&gt;</code> values (roll/pitch/yaw), each published under its own
+ NetworkTables entry nested beneath <code>name</code>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#ofString(java.lang.String,java.lang.String)" class="member-name-link">ofString</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;defaultValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Creates a <code>Tunable&lt;String&gt;</code> that publishes to and subscribes from the
  <code>Tunable</code> NetworkTable.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setValue(T)" class="member-name-link">setValue</a><wbr>(<a href="Tunable.html" title="type parameter in Tunable">T</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform2d</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#ofTransform2d(java.lang.String,edu.wpi.first.math.geometry.Transform2d)" class="member-name-link">ofTransform2d</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform2d</a>&nbsp;defualtValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Creates a <code>Tunable&lt;Transform2d&gt;</code> by composing three underlying
+ <code>Tunable&lt;Double&gt;</code> values (x/y/degrees), each published under its own
+ NetworkTables entry nested beneath <code>name</code>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform3d</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#ofTransform3d(java.lang.String,edu.wpi.first.math.geometry.Transform3d)" class="member-name-link">ofTransform3d</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform3d</a>&nbsp;defualtValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Creates a <code>Tunable&lt;Transform3d&gt;</code> by composing six underlying <code>Tunable&lt;Double&gt;</code>
+ values (x/y/z/roll/pitch/yaw), each published under its own NetworkTables entry
+ nested beneath <code>name</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Translation2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Translation2d</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#ofTranslation2d(java.lang.String,edu.wpi.first.math.geometry.Translation2d)" class="member-name-link">ofTranslation2d</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Translation2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Translation2d</a>&nbsp;defualtValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Creates a <code>Tunable&lt;Translation2d&gt;</code> by composing two underlying
+ <code>Tunable&lt;Double&gt;</code> values (x/y), each published under its own NetworkTables
+ entry nested beneath <code>name</code>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Translation3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Translation3d</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#ofTranslation3d(java.lang.String,edu.wpi.first.math.geometry.Translation3d)" class="member-name-link">ofTranslation3d</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Translation3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Translation3d</a>&nbsp;defualtValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Creates a <code>Tunable&lt;Translation3d&gt;</code> by composing three underlying
+ <code>Tunable&lt;Double&gt;</code> values (x/y/z), each published under its own NetworkTables
+ entry nested beneath <code>name</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setValue(T)" class="member-name-link">setValue</a><wbr>(<a href="Tunable.html" title="type parameter in Tunable">T</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets the current value and republishes it to NetworkTables so other clients
  (e.g.</div>
 </div>
@@ -412,6 +468,91 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="ofTranslation2d(java.lang.String,edu.wpi.first.math.geometry.Translation2d)">
+<h3>ofTranslation2d</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Translation2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Translation2d</a>&gt;</span>&nbsp;<span class="element-name">ofTranslation2d</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Translation2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Translation2d</a>&nbsp;defualtValue)</span></div>
+<div class="block">Creates a <code>Tunable&lt;Translation2d&gt;</code> by composing two underlying
+ <code>Tunable&lt;Double&gt;</code> values (x/y), each published under its own NetworkTables
+ entry nested beneath <code>name</code>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - NetworkTable entry key prefix (under the "Tunable" table)</dd>
+<dd><code>defualtValue</code> - initial default value</dd>
+<dt>Returns:</dt>
+<dd>the newly created tunable translation</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="ofTranslation3d(java.lang.String,edu.wpi.first.math.geometry.Translation3d)">
+<h3>ofTranslation3d</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Translation3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Translation3d</a>&gt;</span>&nbsp;<span class="element-name">ofTranslation3d</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Translation3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Translation3d</a>&nbsp;defualtValue)</span></div>
+<div class="block">Creates a <code>Tunable&lt;Translation3d&gt;</code> by composing three underlying
+ <code>Tunable&lt;Double&gt;</code> values (x/y/z), each published under its own NetworkTables
+ entry nested beneath <code>name</code>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - NetworkTable entry key prefix (under the "Tunable" table)</dd>
+<dd><code>defualtValue</code> - initial default value</dd>
+<dt>Returns:</dt>
+<dd>the newly created tunable translation</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="ofRotation2d(java.lang.String,edu.wpi.first.math.geometry.Rotation2d)">
+<h3>ofRotation2d</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Rotation2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Rotation2d</a>&gt;</span>&nbsp;<span class="element-name">ofRotation2d</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Rotation2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Rotation2d</a>&nbsp;defualtValue)</span></div>
+<div class="block">Creates a <code>Tunable&lt;Rotation2d&gt;</code> by wrapping a single underlying
+ <code>Tunable&lt;Double&gt;</code> value (degrees), published under its own NetworkTables
+ entry nested beneath <code>name</code>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - NetworkTable entry key prefix (under the "Tunable" table)</dd>
+<dd><code>defualtValue</code> - initial default value</dd>
+<dt>Returns:</dt>
+<dd>the newly created tunable rotation</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="ofRotation3d(java.lang.String,edu.wpi.first.math.geometry.Rotation3d)">
+<h3>ofRotation3d</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Rotation3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Rotation3d</a>&gt;</span>&nbsp;<span class="element-name">ofRotation3d</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Rotation3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Rotation3d</a>&nbsp;defualtValue)</span></div>
+<div class="block">Creates a <code>Tunable&lt;Rotation3d&gt;</code> by composing three underlying
+ <code>Tunable&lt;Double&gt;</code> values (roll/pitch/yaw), each published under its own
+ NetworkTables entry nested beneath <code>name</code>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - NetworkTable entry key prefix (under the "Tunable" table)</dd>
+<dd><code>defualtValue</code> - initial default value</dd>
+<dt>Returns:</dt>
+<dd>the newly created tunable rotation</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="ofPose2d(java.lang.String,edu.wpi.first.math.geometry.Pose2d)">
+<h3>ofPose2d</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose2d</a>&gt;</span>&nbsp;<span class="element-name">ofPose2d</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose2d</a>&nbsp;defualtValue)</span></div>
+<div class="block">Creates a <code>Tunable&lt;Pose2d&gt;</code> by composing three underlying <code>Tunable&lt;Double&gt;</code>
+ values (x/y/degrees), each published under its own NetworkTables entry
+ nested beneath <code>name</code>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - NetworkTable entry key prefix (under the "Tunable" table)</dd>
+<dd><code>defualtValue</code> - initial default value</dd>
+<dt>Returns:</dt>
+<dd>the newly created tunable pose</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="ofPose3d(java.lang.String,edu.wpi.first.math.geometry.Pose3d)">
 <h3>ofPose3d</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose3d</a>&gt;</span>&nbsp;<span class="element-name">ofPose3d</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
@@ -425,6 +566,40 @@ loadScripts(document, 'script');</script>
 <dd><code>defualtValue</code> - initial default value</dd>
 <dt>Returns:</dt>
 <dd>the newly created tunable pose</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="ofTransform2d(java.lang.String,edu.wpi.first.math.geometry.Transform2d)">
+<h3>ofTransform2d</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform2d</a>&gt;</span>&nbsp;<span class="element-name">ofTransform2d</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform2d</a>&nbsp;defualtValue)</span></div>
+<div class="block">Creates a <code>Tunable&lt;Transform2d&gt;</code> by composing three underlying
+ <code>Tunable&lt;Double&gt;</code> values (x/y/degrees), each published under its own
+ NetworkTables entry nested beneath <code>name</code>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - NetworkTable entry key prefix (under the "Tunable" table)</dd>
+<dd><code>defualtValue</code> - initial default value</dd>
+<dt>Returns:</dt>
+<dd>the newly created tunable transform</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="ofTransform3d(java.lang.String,edu.wpi.first.math.geometry.Transform3d)">
+<h3>ofTransform3d</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Tunable.html" title="class in org.cyborgcats.util">Tunable</a>&lt;<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform3d</a>&gt;</span>&nbsp;<span class="element-name">ofTransform3d</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform3d</a>&nbsp;defualtValue)</span></div>
+<div class="block">Creates a <code>Tunable&lt;Transform3d&gt;</code> by composing six underlying <code>Tunable&lt;Double&gt;</code>
+ values (x/y/z/roll/pitch/yaw), each published under its own NetworkTables entry
+ nested beneath <code>name</code>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - NetworkTable entry key prefix (under the "Tunable" table)</dd>
+<dd><code>defualtValue</code> - initial default value</dd>
+<dt>Returns:</dt>
+<dd>the newly created tunable transform</dd>
 </dl>
 </section>
 </li>
