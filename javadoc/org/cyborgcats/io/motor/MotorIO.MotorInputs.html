@@ -90,7 +90,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>double</code></div>
+<div class="col-first even-row-color"><code>@org.jsi.annotations.Units.rot_s2 double</code></div>
 <div class="col-second even-row-color"><code><a href="#acceleration" class="member-name-link">acceleration</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">Measured rotor acceleration.</div>
@@ -100,7 +100,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">
 <div class="block">Whether the motor controller is currently responding on the bus.</div>
 </div>
-<div class="col-first even-row-color"><code>double</code></div>
+<div class="col-first even-row-color"><code>@org.jsi.annotations.Units.J double</code></div>
 <div class="col-second even-row-color"><code><a href="#energy" class="member-name-link">energy</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">Energy drawn from the supply over the motor's whole lifetime, in joules.</div>
@@ -110,17 +110,17 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">
 <div class="block">Control mode the motor is currently running in.</div>
 </div>
-<div class="col-first even-row-color"><code>double</code></div>
+<div class="col-first even-row-color"><code>@org.jsi.annotations.Units.V double</code></div>
 <div class="col-second even-row-color"><code><a href="#motorVoltage" class="member-name-link">motorVoltage</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">Voltage applied to the motor windings.</div>
 </div>
-<div class="col-first odd-row-color"><code>double</code></div>
+<div class="col-first odd-row-color"><code>@org.jsi.annotations.Units.rot double</code></div>
 <div class="col-second odd-row-color"><code><a href="#position" class="member-name-link">position</a></code></div>
 <div class="col-last odd-row-color">
 <div class="block">Measured rotor position.</div>
 </div>
-<div class="col-first even-row-color"><code>double</code></div>
+<div class="col-first even-row-color"><code>@org.jsi.annotations.Units.W double</code></div>
 <div class="col-second even-row-color"><code><a href="#power" class="member-name-link">power</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">Instantaneous power drawn from the supply, in watts.</div>
@@ -130,17 +130,17 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">
 <div class="block">Active setpoint in the base units of the current <a href="#mode"><code>mode</code></a>.</div>
 </div>
-<div class="col-first even-row-color"><code>double</code></div>
+<div class="col-first even-row-color"><code>@org.jsi.annotations.Units.A double</code></div>
 <div class="col-second even-row-color"><code><a href="#statorCurrent" class="member-name-link">statorCurrent</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">Current through the motor windings.</div>
 </div>
-<div class="col-first odd-row-color"><code>double</code></div>
+<div class="col-first odd-row-color"><code>@org.jsi.annotations.Units.A double</code></div>
 <div class="col-second odd-row-color"><code><a href="#supplyCurrent" class="member-name-link">supplyCurrent</a></code></div>
 <div class="col-last odd-row-color">
 <div class="block">Current drawn from the bus by the motor controller.</div>
 </div>
-<div class="col-first even-row-color"><code>double</code></div>
+<div class="col-first even-row-color"><code>@org.jsi.annotations.Units.V double</code></div>
 <div class="col-second even-row-color"><code><a href="#supplyVoltage" class="member-name-link">supplyVoltage</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">Bus voltage supplied to the motor controller.</div>
@@ -150,7 +150,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">
 <div class="block">Motor controller temperature.</div>
 </div>
-<div class="col-first even-row-color"><code>double</code></div>
+<div class="col-first even-row-color"><code>@org.jsi.annotations.Units.rot_s double</code></div>
 <div class="col-second even-row-color"><code><a href="#velocity" class="member-name-link">velocity</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">Measured rotor velocity.</div>
@@ -192,49 +192,49 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="motorVoltage">
 <h3>motorVoltage</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">motorVoltage</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.V double</span>&nbsp;<span class="element-name">motorVoltage</span></div>
 <div class="block">Voltage applied to the motor windings.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="supplyVoltage">
 <h3>supplyVoltage</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">supplyVoltage</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.V double</span>&nbsp;<span class="element-name">supplyVoltage</span></div>
 <div class="block">Bus voltage supplied to the motor controller.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="supplyCurrent">
 <h3>supplyCurrent</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">supplyCurrent</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.A double</span>&nbsp;<span class="element-name">supplyCurrent</span></div>
 <div class="block">Current drawn from the bus by the motor controller.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="statorCurrent">
 <h3>statorCurrent</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">statorCurrent</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.A double</span>&nbsp;<span class="element-name">statorCurrent</span></div>
 <div class="block">Current through the motor windings.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="position">
 <h3>position</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">position</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.rot double</span>&nbsp;<span class="element-name">position</span></div>
 <div class="block">Measured rotor position.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="velocity">
 <h3>velocity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">velocity</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.rot_s double</span>&nbsp;<span class="element-name">velocity</span></div>
 <div class="block">Measured rotor velocity.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="acceleration">
 <h3>acceleration</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">acceleration</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.rot_s2 double</span>&nbsp;<span class="element-name">acceleration</span></div>
 <div class="block">Measured rotor acceleration.</div>
 </section>
 </li>
@@ -269,14 +269,14 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="power">
 <h3>power</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">power</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.W double</span>&nbsp;<span class="element-name">power</span></div>
 <div class="block">Instantaneous power drawn from the supply, in watts.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="energy">
 <h3>energy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">energy</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.J double</span>&nbsp;<span class="element-name">energy</span></div>
 <div class="block">Energy drawn from the supply over the motor's whole lifetime, in joules.</div>
 </section>
 </li>

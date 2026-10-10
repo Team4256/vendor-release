@@ -103,13 +103,13 @@ implements <a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">M
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(double,double,java.lang.String)" class="member-name-link">MotorIOSim</a><wbr>(double&nbsp;settlingTime,
- double&nbsp;currentLimit,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(double,double,java.lang.String)" class="member-name-link">MotorIOSim</a><wbr>(@org.jsi.annotations.Units.s double&nbsp;settlingTime,
+ @org.jsi.annotations.Units.A double&nbsp;currentLimit,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
 <div class="col-last even-row-color">
 <div class="block">class constructor for a simulated motor</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(double,java.lang.String)" class="member-name-link">MotorIOSim</a><wbr>(double&nbsp;settlingTime,
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(double,java.lang.String)" class="member-name-link">MotorIOSim</a><wbr>(@org.jsi.annotations.Units.s double&nbsp;settlingTime,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">class constructor for a simulated motor using default current limits</div>
@@ -139,33 +139,33 @@ implements <a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">M
 <div class="block">Releases the motor's output so it coasts or brakes according to its configuration.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyPositionMotionProfile(double)" class="member-name-link">applyPositionMotionProfile</a><wbr>(double&nbsp;position)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyPositionMotionProfile(double)" class="member-name-link">applyPositionMotionProfile</a><wbr>(@org.jsi.annotations.Units.rot double&nbsp;position)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Commands the motor to a motion-profiled (Motion Magic) closed-loop position.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyPositionSetpoint(double)" class="member-name-link">applyPositionSetpoint</a><wbr>(double&nbsp;position)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyPositionSetpoint(double)" class="member-name-link">applyPositionSetpoint</a><wbr>(@org.jsi.annotations.Units.rot double&nbsp;position)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Commands the motor to closed-loop control to an angular position.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyVelocityMotionProfile(double)" class="member-name-link">applyVelocityMotionProfile</a><wbr>(double&nbsp;velocity)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyVelocityMotionProfile(double)" class="member-name-link">applyVelocityMotionProfile</a><wbr>(@org.jsi.annotations.Units.rot_s double&nbsp;velocity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Commands the motor to a motion-profiled (Motion Magic) closed-loop angular velocity.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyVelocitySetpoint(double)" class="member-name-link">applyVelocitySetpoint</a><wbr>(double&nbsp;v)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyVelocitySetpoint(double)" class="member-name-link">applyVelocitySetpoint</a><wbr>(@org.jsi.annotations.Units.rot_s double&nbsp;v)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Commands the motor to closed-loop control to an angular velocity.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyVelocityTorqueCurrent(double)" class="member-name-link">applyVelocityTorqueCurrent</a><wbr>(double&nbsp;velocity)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyVelocityTorqueCurrent(double)" class="member-name-link">applyVelocityTorqueCurrent</a><wbr>(@org.jsi.annotations.Units.rot_s double&nbsp;velocity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Commands the motor to closed-loop control to an angular velocity using torque-current
  (FOC) control.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyVoltageSetpoint(double)" class="member-name-link">applyVoltageSetpoint</a><wbr>(double&nbsp;v)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applyVoltageSetpoint(double)" class="member-name-link">applyVoltageSetpoint</a><wbr>(@org.jsi.annotations.Units.V double&nbsp;v)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Commands the motor to hold an open-loop output voltage.</div>
 </div>
@@ -174,18 +174,18 @@ implements <a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">M
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the name identifying this motor, used as its AdvantageKit logging key.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@org.jsi.annotations.Units.A double</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSupplyCurrent()" class="member-name-link">getSupplyCurrent</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the current currently drawn by the device from its supply.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@org.jsi.annotations.Units.V double</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSupplyVoltage()" class="member-name-link">getSupplyVoltage</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the voltage currently supplied to the device.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCurrentPosition(double)" class="member-name-link">setCurrentPosition</a><wbr>(double&nbsp;position)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCurrentPosition(double)" class="member-name-link">setCurrentPosition</a><wbr>(@org.jsi.annotations.Units.rot double&nbsp;position)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">resets the current motor position to the new position</div>
 </div>
@@ -217,7 +217,7 @@ implements <a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">M
 <li>
 <section class="detail" id="&lt;init&gt;(double,java.lang.String)">
 <h3>MotorIOSim</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MotorIOSim</span><wbr><span class="parameters">(double&nbsp;settlingTime,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MotorIOSim</span><wbr><span class="parameters">(@org.jsi.annotations.Units.s double&nbsp;settlingTime,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <div class="block">class constructor for a simulated motor using default current limits</div>
 <dl class="notes">
@@ -232,8 +232,8 @@ implements <a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">M
 <li>
 <section class="detail" id="&lt;init&gt;(double,double,java.lang.String)">
 <h3>MotorIOSim</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MotorIOSim</span><wbr><span class="parameters">(double&nbsp;settlingTime,
- double&nbsp;currentLimit,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MotorIOSim</span><wbr><span class="parameters">(@org.jsi.annotations.Units.s double&nbsp;settlingTime,
+ @org.jsi.annotations.Units.A double&nbsp;currentLimit,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <div class="block">class constructor for a simulated motor</div>
 <dl class="notes">
@@ -287,7 +287,7 @@ implements <a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">M
 <li>
 <section class="detail" id="setCurrentPosition(double)">
 <h3>setCurrentPosition</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCurrentPosition</span><wbr><span class="parameters">(double&nbsp;position)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCurrentPosition</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot double&nbsp;position)</span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="MotorIO.html#setCurrentPosition(double)">MotorIO</a></code></span></div>
 <div class="block">resets the current motor position to the new position</div>
 <dl class="notes">
@@ -313,7 +313,7 @@ implements <a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">M
 <li>
 <section class="detail" id="applyVoltageSetpoint(double)">
 <h3>applyVoltageSetpoint</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyVoltageSetpoint</span><wbr><span class="parameters">(double&nbsp;v)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyVoltageSetpoint</span><wbr><span class="parameters">(@org.jsi.annotations.Units.V double&nbsp;v)</span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="MotorIO.html#applyVoltageSetpoint(double)">MotorIO</a></code></span></div>
 <div class="block">Commands the motor to hold an open-loop output voltage.</div>
 <dl class="notes">
@@ -327,7 +327,7 @@ implements <a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">M
 <li>
 <section class="detail" id="applyVelocitySetpoint(double)">
 <h3>applyVelocitySetpoint</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyVelocitySetpoint</span><wbr><span class="parameters">(double&nbsp;v)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyVelocitySetpoint</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot_s double&nbsp;v)</span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="MotorIO.html#applyVelocitySetpoint(double)">MotorIO</a></code></span></div>
 <div class="block">Commands the motor to closed-loop control to an angular velocity.</div>
 <dl class="notes">
@@ -341,7 +341,7 @@ implements <a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">M
 <li>
 <section class="detail" id="applyPositionSetpoint(double)">
 <h3>applyPositionSetpoint</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyPositionSetpoint</span><wbr><span class="parameters">(double&nbsp;position)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyPositionSetpoint</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot double&nbsp;position)</span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="MotorIO.html#applyPositionSetpoint(double)">MotorIO</a></code></span></div>
 <div class="block">Commands the motor to closed-loop control to an angular position.</div>
 <dl class="notes">
@@ -369,7 +369,7 @@ implements <a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">M
 <li>
 <section class="detail" id="applyPositionMotionProfile(double)">
 <h3>applyPositionMotionProfile</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyPositionMotionProfile</span><wbr><span class="parameters">(double&nbsp;position)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyPositionMotionProfile</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot double&nbsp;position)</span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="MotorIO.html#applyPositionMotionProfile(double)">MotorIO</a></code></span></div>
 <div class="block">Commands the motor to a motion-profiled (Motion Magic) closed-loop position.</div>
 <dl class="notes">
@@ -383,7 +383,7 @@ implements <a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">M
 <li>
 <section class="detail" id="applyVelocityTorqueCurrent(double)">
 <h3>applyVelocityTorqueCurrent</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyVelocityTorqueCurrent</span><wbr><span class="parameters">(double&nbsp;velocity)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyVelocityTorqueCurrent</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot_s double&nbsp;velocity)</span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="MotorIO.html#applyVelocityTorqueCurrent(double)">MotorIO</a></code></span></div>
 <div class="block">Commands the motor to closed-loop control to an angular velocity using torque-current
  (FOC) control.</div>
@@ -398,7 +398,7 @@ implements <a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">M
 <li>
 <section class="detail" id="applyVelocityMotionProfile(double)">
 <h3>applyVelocityMotionProfile</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyVelocityMotionProfile</span><wbr><span class="parameters">(double&nbsp;velocity)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyVelocityMotionProfile</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot_s double&nbsp;velocity)</span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="MotorIO.html#applyVelocityMotionProfile(double)">MotorIO</a></code></span></div>
 <div class="block">Commands the motor to a motion-profiled (Motion Magic) closed-loop angular velocity.</div>
 <dl class="notes">
@@ -412,7 +412,7 @@ implements <a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">M
 <li>
 <section class="detail" id="getSupplyVoltage()">
 <h3>getSupplyVoltage</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getSupplyVoltage</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.V double</span>&nbsp;<span class="element-name">getSupplyVoltage</span>()</div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../energy/EnergyIO.html#getSupplyVoltage()">EnergyIO</a></code></span></div>
 <div class="block">Returns the voltage currently supplied to the device.</div>
 <dl class="notes">
@@ -426,7 +426,7 @@ implements <a href="MotorIO.html" title="interface in org.cyborgcats.io.motor">M
 <li>
 <section class="detail" id="getSupplyCurrent()">
 <h3>getSupplyCurrent</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getSupplyCurrent</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.A double</span>&nbsp;<span class="element-name">getSupplyCurrent</span>()</div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../../energy/EnergyIO.html#getSupplyCurrent()">EnergyIO</a></code></span></div>
 <div class="block">Returns the current currently drawn by the device from its supply.</div>
 <dl class="notes">

@@ -87,7 +87,7 @@ loadScripts(document, 'script');</script>
 <dd><a href="Turret.html" title="class in org.cyborgcats.component">Turret</a></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">Turret.TargetSolution</span>(<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose2d</a>&nbsp;virtualTarget, double&nbsp;distanceMeters)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">Turret.TargetSolution</span>(<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose2d</a>&nbsp;virtualTarget, @org.jsi.annotations.Units.m double&nbsp;distanceMeters)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 <div class="block">Aiming solution for a single target, pairing the turret setpoint with the shot distance that
  downstream mechanisms (hood angle, flywheel speed) interpolate against.</div>
@@ -103,7 +103,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(edu.wpi.first.math.geometry.Pose2d,double)" class="member-name-link">TargetSolution</a><wbr>(<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose2d</a>&nbsp;virtualTarget,
- double&nbsp;distanceMeters)</code></div>
+ @org.jsi.annotations.Units.m double&nbsp;distanceMeters)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>TargetSolution</code> record class.</div>
 </div>
@@ -121,7 +121,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@org.jsi.annotations.Units.m double</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#distanceMeters()" class="member-name-link">distanceMeters</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <a href="#param-distanceMeters"><code>distanceMeters</code></a> record component.</div>
@@ -167,7 +167,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(edu.wpi.first.math.geometry.Pose2d,double)">
 <h3>TargetSolution</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">TargetSolution</span><wbr><span class="parameters">(<a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Pose2d</a>&nbsp;virtualTarget,
- double&nbsp;distanceMeters)</span></div>
+ @org.jsi.annotations.Units.m double&nbsp;distanceMeters)</span></div>
 <div class="block">Creates an instance of a <code>TargetSolution</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -239,7 +239,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="distanceMeters()">
 <h3>distanceMeters</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">distanceMeters</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.m double</span>&nbsp;<span class="element-name">distanceMeters</span>()</div>
 <div class="block">Returns the value of the <a href="#param-distanceMeters"><code>distanceMeters</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>

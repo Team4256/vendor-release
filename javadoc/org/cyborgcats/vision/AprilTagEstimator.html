@@ -120,15 +120,15 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="AprilTagEstimate.html" title="class in org.cyborgcats.vision">AprilTagEstimate</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTagEstimatePNP(org.cyborgcats.vision.AprilTagDetections,double)" class="member-name-link">getTagEstimatePNP</a><wbr>(<a href="AprilTagDetections.html" title="class in org.cyborgcats.vision">AprilTagDetections</a>&nbsp;detections,
- double&nbsp;timestamp)</code></div>
+ @org.jsi.annotations.Units.s double&nbsp;timestamp)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Solves for camera pose via PnP using the detected tag corners.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="AprilTagEstimate.html" title="class in org.cyborgcats.vision">AprilTagEstimate</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTagEstimateTrig(org.cyborgcats.vision.AprilTagDetections,edu.wpi.first.math.geometry.Transform3d,double,double)" class="member-name-link">getTagEstimateTrig</a><wbr>(<a href="AprilTagDetections.html" title="class in org.cyborgcats.vision">AprilTagDetections</a>&nbsp;detections,
  <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform3d</a>&nbsp;cameraToRobot,
- double&nbsp;gyroHeadingRadians,
- double&nbsp;timestamp)</code></div>
+ @org.jsi.annotations.Units.rad double&nbsp;gyroHeadingRadians,
+ @org.jsi.annotations.Units.s double&nbsp;timestamp)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Solves for camera pose using the trigonometric (single-tag, gyro-assisted) solve.</div>
 </div>
@@ -177,7 +177,7 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 <section class="detail" id="getTagEstimatePNP(org.cyborgcats.vision.AprilTagDetections,double)">
 <h3>getTagEstimatePNP</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="AprilTagEstimate.html" title="class in org.cyborgcats.vision">AprilTagEstimate</a>&gt;</span>&nbsp;<span class="element-name">getTagEstimatePNP</span><wbr><span class="parameters">(<a href="AprilTagDetections.html" title="class in org.cyborgcats.vision">AprilTagDetections</a>&nbsp;detections,
- double&nbsp;timestamp)</span></div>
+ @org.jsi.annotations.Units.s double&nbsp;timestamp)</span></div>
 <div class="block">Solves for camera pose via PnP using the detected tag corners.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -193,8 +193,8 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 <h3>getTagEstimateTrig</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="AprilTagEstimate.html" title="class in org.cyborgcats.vision">AprilTagEstimate</a>&gt;</span>&nbsp;<span class="element-name">getTagEstimateTrig</span><wbr><span class="parameters">(<a href="AprilTagDetections.html" title="class in org.cyborgcats.vision">AprilTagDetections</a>&nbsp;detections,
  <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform3d</a>&nbsp;cameraToRobot,
- double&nbsp;gyroHeadingRadians,
- double&nbsp;timestamp)</span></div>
+ @org.jsi.annotations.Units.rad double&nbsp;gyroHeadingRadians,
+ @org.jsi.annotations.Units.s double&nbsp;timestamp)</span></div>
 <div class="block">Solves for camera pose using the trigonometric (single-tag, gyro-assisted) solve.</div>
 <dl class="notes">
 <dt>Parameters:</dt>

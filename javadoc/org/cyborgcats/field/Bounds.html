@@ -84,7 +84,7 @@ loadScripts(document, 'script');</script>
 <dd><code><span id="param-maxY">maxY</span></code> - top boundary</dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">Bounds</span>(double&nbsp;minX, double&nbsp;maxX, double&nbsp;minY, double&nbsp;maxY)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">Bounds</span>(@org.jsi.annotations.Units.m double&nbsp;minX, @org.jsi.annotations.Units.m double&nbsp;maxX, @org.jsi.annotations.Units.m double&nbsp;minY, @org.jsi.annotations.Units.m double&nbsp;maxY)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 <div class="block">An axis-aligned 2D bounding rectangle defined by minimum and maximum X and Y distances.</div>
 </section>
@@ -98,10 +98,10 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(double,double,double,double)" class="member-name-link">Bounds</a><wbr>(double&nbsp;minX,
- double&nbsp;maxX,
- double&nbsp;minY,
- double&nbsp;maxY)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(double,double,double,double)" class="member-name-link">Bounds</a><wbr>(@org.jsi.annotations.Units.m double&nbsp;minX,
+ @org.jsi.annotations.Units.m double&nbsp;maxX,
+ @org.jsi.annotations.Units.m double&nbsp;minY,
+ @org.jsi.annotations.Units.m double&nbsp;maxY)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Bounds</code> record class.</div>
 </div>
@@ -151,22 +151,22 @@ loadScripts(document, 'script');</script>
 <div class="block">Logs the bounding region outline as an array of <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Pose2d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link"><code>Pose2d</code></a>
  values to AdvantageKit under the given key.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@org.jsi.annotations.Units.m double</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#maxX()" class="member-name-link">maxX</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <a href="#param-maxX"><code>maxX</code></a> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@org.jsi.annotations.Units.m double</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#maxY()" class="member-name-link">maxY</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <a href="#param-maxY"><code>maxY</code></a> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@org.jsi.annotations.Units.m double</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#minX()" class="member-name-link">minX</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <a href="#param-minX"><code>minX</code></a> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@org.jsi.annotations.Units.m double</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#minY()" class="member-name-link">minY</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <a href="#param-minY"><code>minY</code></a> record component.</div>
@@ -202,10 +202,10 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="&lt;init&gt;(double,double,double,double)">
 <h3>Bounds</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Bounds</span><wbr><span class="parameters">(double&nbsp;minX,
- double&nbsp;maxX,
- double&nbsp;minY,
- double&nbsp;maxY)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Bounds</span><wbr><span class="parameters">(@org.jsi.annotations.Units.m double&nbsp;minX,
+ @org.jsi.annotations.Units.m double&nbsp;maxX,
+ @org.jsi.annotations.Units.m double&nbsp;minY,
+ @org.jsi.annotations.Units.m double&nbsp;maxY)</span></div>
 <div class="block">Creates an instance of a <code>Bounds</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -332,7 +332,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="minX()">
 <h3>minX</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">minX</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.m double</span>&nbsp;<span class="element-name">minX</span>()</div>
 <div class="block">Returns the value of the <a href="#param-minX"><code>minX</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -343,7 +343,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="maxX()">
 <h3>maxX</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">maxX</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.m double</span>&nbsp;<span class="element-name">maxX</span>()</div>
 <div class="block">Returns the value of the <a href="#param-maxX"><code>maxX</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -354,7 +354,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="minY()">
 <h3>minY</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">minY</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.m double</span>&nbsp;<span class="element-name">minY</span>()</div>
 <div class="block">Returns the value of the <a href="#param-minY"><code>minY</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -365,7 +365,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="maxY()">
 <h3>maxY</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">maxY</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.m double</span>&nbsp;<span class="element-name">maxY</span>()</div>
 <div class="block">Returns the value of the <a href="#param-maxY"><code>maxY</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>

@@ -100,7 +100,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>protected final double</code></div>
+<div class="col-first even-row-color"><code>protected final @org.jsi.annotations.Units.rot_s double</code></div>
 <div class="col-second even-row-color"><code><a href="#threshold" class="member-name-link">threshold</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">Velocity tolerance used to determine whether the component is at a target speed.</div>
@@ -120,8 +120,8 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,double,double,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)" class="member-name-link">VelocityComponent</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- double&nbsp;threshold,
- double&nbsp;debounceTime,
+ @org.jsi.annotations.Units.rot_s double&nbsp;threshold,
+ @org.jsi.annotations.Units.s double&nbsp;debounceTime,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>&nbsp;leader,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>...&nbsp;followers)</code></div>
 <div class="col-last even-row-color">
@@ -148,7 +148,7 @@ loadScripts(document, 'script');</script>
  setpoint's velocity for the configured debounce time.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#atSetpoint(double)" class="member-name-link">atSetpoint</a><wbr>(double&nbsp;threshold)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#atSetpoint(double)" class="member-name-link">atSetpoint</a><wbr>(@org.jsi.annotations.Units.rot_s double&nbsp;threshold)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns <code>true</code> when the motor has been within the custom threshold of the most recently
  applied setpoint's velocity for the configured debounce time.</div>
@@ -161,20 +161,20 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nearSetpoint(org.cyborgcats.component.Setpoint,double)" class="member-name-link">nearSetpoint</a><wbr>(<a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a>&nbsp;setpoint,
- double&nbsp;threshold)</code></div>
+ @org.jsi.annotations.Units.rot_s double&nbsp;threshold)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns <code>true</code> when the motor has been within the custom threshold of the given setpoint's
  velocity for the configured debounce time.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nearVelocity(double)" class="member-name-link">nearVelocity</a><wbr>(double&nbsp;velocity)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nearVelocity(double)" class="member-name-link">nearVelocity</a><wbr>(@org.jsi.annotations.Units.rot_s double&nbsp;velocity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns <code>true</code> when the motor has been within threshold of the given velocity for the
  configured debounce time.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nearVelocity(double,double)" class="member-name-link">nearVelocity</a><wbr>(double&nbsp;velocity,
- double&nbsp;threshold)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nearVelocity(double,double)" class="member-name-link">nearVelocity</a><wbr>(@org.jsi.annotations.Units.rot_s double&nbsp;velocity,
+ @org.jsi.annotations.Units.rot_s double&nbsp;threshold)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns <code>true</code> when the motor has been within the custom threshold of the given velocity
  for the configured debounce time.</div>
@@ -202,7 +202,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="threshold">
 <h3>threshold</h3>
-<div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">threshold</span></div>
+<div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.rot_s double</span>&nbsp;<span class="element-name">threshold</span></div>
 <div class="block">Velocity tolerance used to determine whether the component is at a target speed.</div>
 </section>
 </li>
@@ -218,8 +218,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(java.lang.String,double,double,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)">
 <h3>VelocityComponent</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">VelocityComponent</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- double&nbsp;threshold,
- double&nbsp;debounceTime,
+ @org.jsi.annotations.Units.rot_s double&nbsp;threshold,
+ @org.jsi.annotations.Units.s double&nbsp;debounceTime,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>&nbsp;leader,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>...&nbsp;followers)</span></div>
 <div class="block">Constructs a VelocityComponent.</div>
@@ -246,7 +246,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="nearVelocity(double)">
 <h3>nearVelocity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">nearVelocity</span><wbr><span class="parameters">(double&nbsp;velocity)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">nearVelocity</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot_s double&nbsp;velocity)</span></div>
 <div class="block">Returns <code>true</code> when the motor has been within threshold of the given velocity for the
  configured debounce time.</div>
 <dl class="notes">
@@ -260,8 +260,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="nearVelocity(double,double)">
 <h3>nearVelocity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">nearVelocity</span><wbr><span class="parameters">(double&nbsp;velocity,
- double&nbsp;threshold)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">nearVelocity</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot_s double&nbsp;velocity,
+ @org.jsi.annotations.Units.rot_s double&nbsp;threshold)</span></div>
 <div class="block">Returns <code>true</code> when the motor has been within the custom threshold of the given velocity
  for the configured debounce time.</div>
 <dl class="notes">
@@ -291,7 +291,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="nearSetpoint(org.cyborgcats.component.Setpoint,double)">
 <h3>nearSetpoint</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">nearSetpoint</span><wbr><span class="parameters">(<a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a>&nbsp;setpoint,
- double&nbsp;threshold)</span></div>
+ @org.jsi.annotations.Units.rot_s double&nbsp;threshold)</span></div>
 <div class="block">Returns <code>true</code> when the motor has been within the custom threshold of the given setpoint's
  velocity for the configured debounce time.</div>
 <dl class="notes">
@@ -318,7 +318,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="atSetpoint(double)">
 <h3>atSetpoint</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">atSetpoint</span><wbr><span class="parameters">(double&nbsp;threshold)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">atSetpoint</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot_s double&nbsp;threshold)</span></div>
 <div class="block">Returns <code>true</code> when the motor has been within the custom threshold of the most recently
  applied setpoint's velocity for the configured debounce time.</div>
 <dl class="notes">

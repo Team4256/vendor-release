@@ -165,33 +165,33 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates a setpoint for the given mode, dispatching to the matching <code>with*</code> factory.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withPosition(double)" class="member-name-link">withPosition</a><wbr>(double&nbsp;position)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withPosition(double)" class="member-name-link">withPosition</a><wbr>(@org.jsi.annotations.Units.rot double&nbsp;position)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Creates a position-control setpoint targeting an angular position.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withPositionMotionProfile(double)" class="member-name-link">withPositionMotionProfile</a><wbr>(double&nbsp;position)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withPositionMotionProfile(double)" class="member-name-link">withPositionMotionProfile</a><wbr>(@org.jsi.annotations.Units.rot double&nbsp;position)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Creates a motion-profiled (Motion Magic) position-control setpoint targeting an angular
  position.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withVelocity(double)" class="member-name-link">withVelocity</a><wbr>(double&nbsp;velocity)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withVelocity(double)" class="member-name-link">withVelocity</a><wbr>(@org.jsi.annotations.Units.rot_s double&nbsp;velocity)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Creates a velocity-control setpoint.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withVelocityMotionProfile(double)" class="member-name-link">withVelocityMotionProfile</a><wbr>(double&nbsp;velocity)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withVelocityMotionProfile(double)" class="member-name-link">withVelocityMotionProfile</a><wbr>(@org.jsi.annotations.Units.rot_s double&nbsp;velocity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Creates a motion-profiled (Motion Magic) velocity-control setpoint.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withVelocityTorqueCurrent(double)" class="member-name-link">withVelocityTorqueCurrent</a><wbr>(double&nbsp;velocity)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withVelocityTorqueCurrent(double)" class="member-name-link">withVelocityTorqueCurrent</a><wbr>(@org.jsi.annotations.Units.rot_s double&nbsp;velocity)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Creates a velocity-control setpoint using torque-current (FOC) control.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withVoltage(double)" class="member-name-link">withVoltage</a><wbr>(double&nbsp;volts)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withVoltage(double)" class="member-name-link">withVoltage</a><wbr>(@org.jsi.annotations.Units.V double&nbsp;volts)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Creates a voltage-control setpoint.</div>
 </div>
@@ -249,7 +249,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withVoltage(double)">
 <h3>withVoltage</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></span>&nbsp;<span class="element-name">withVoltage</span><wbr><span class="parameters">(double&nbsp;volts)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></span>&nbsp;<span class="element-name">withVoltage</span><wbr><span class="parameters">(@org.jsi.annotations.Units.V double&nbsp;volts)</span></div>
 <div class="block">Creates a voltage-control setpoint.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -275,7 +275,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withVelocity(double)">
 <h3>withVelocity</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></span>&nbsp;<span class="element-name">withVelocity</span><wbr><span class="parameters">(double&nbsp;velocity)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></span>&nbsp;<span class="element-name">withVelocity</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot_s double&nbsp;velocity)</span></div>
 <div class="block">Creates a velocity-control setpoint.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -288,7 +288,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withPosition(double)">
 <h3>withPosition</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></span>&nbsp;<span class="element-name">withPosition</span><wbr><span class="parameters">(double&nbsp;position)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></span>&nbsp;<span class="element-name">withPosition</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot double&nbsp;position)</span></div>
 <div class="block">Creates a position-control setpoint targeting an angular position.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -301,7 +301,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withPositionMotionProfile(double)">
 <h3>withPositionMotionProfile</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></span>&nbsp;<span class="element-name">withPositionMotionProfile</span><wbr><span class="parameters">(double&nbsp;position)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></span>&nbsp;<span class="element-name">withPositionMotionProfile</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot double&nbsp;position)</span></div>
 <div class="block">Creates a motion-profiled (Motion Magic) position-control setpoint targeting an angular
  position.</div>
 <dl class="notes">
@@ -315,7 +315,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withVelocityTorqueCurrent(double)">
 <h3>withVelocityTorqueCurrent</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></span>&nbsp;<span class="element-name">withVelocityTorqueCurrent</span><wbr><span class="parameters">(double&nbsp;velocity)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></span>&nbsp;<span class="element-name">withVelocityTorqueCurrent</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot_s double&nbsp;velocity)</span></div>
 <div class="block">Creates a velocity-control setpoint using torque-current (FOC) control.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -328,7 +328,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="withVelocityMotionProfile(double)">
 <h3>withVelocityMotionProfile</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></span>&nbsp;<span class="element-name">withVelocityMotionProfile</span><wbr><span class="parameters">(double&nbsp;velocity)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Setpoint.html" title="class in org.cyborgcats.component">Setpoint</a></span>&nbsp;<span class="element-name">withVelocityMotionProfile</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot_s double&nbsp;velocity)</span></div>
 <div class="block">Creates a motion-profiled (Motion Magic) velocity-control setpoint.</div>
 <dl class="notes">
 <dt>Parameters:</dt>

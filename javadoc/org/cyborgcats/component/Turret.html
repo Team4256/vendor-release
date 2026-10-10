@@ -144,12 +144,12 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,double,double,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.util.Range,double,int,double,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Transform3d,org.cyborgcats.io.motor.MotorIOConfiguration)" class="member-name-link">Turret</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- double&nbsp;threshold,
- double&nbsp;debounceTime,
+ @org.jsi.annotations.Units.rot double&nbsp;threshold,
+ @org.jsi.annotations.Units.s double&nbsp;debounceTime,
  <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;encoderOneConf,
  <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;encoderTwoConf,
  <a href="../util/Range.html" title="class in org.cyborgcats.util">Range</a>&nbsp;range,
- double&nbsp;tolerance,
+ @org.jsi.annotations.Units.rot double&nbsp;tolerance,
  int&nbsp;turretToothCount,
  double&nbsp;k,
  <a href="DriveState.html" title="class in org.cyborgcats.component">DriveState</a>&nbsp;driveState,
@@ -209,11 +209,11 @@ loadScripts(document, 'script');</script>
 <div class="block">Updates the gain of the low-pass filter applied to the turret setpoint.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#solveChineaseRemainderTherom(double,double,int,int,double,int)" class="member-name-link">solveChineaseRemainderTherom</a><wbr>(double&nbsp;a,
- double&nbsp;b,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#solveChineaseRemainderTherom(double,double,int,int,double,int)" class="member-name-link">solveChineaseRemainderTherom</a><wbr>(@org.jsi.annotations.Units.rot double&nbsp;a,
+ @org.jsi.annotations.Units.rot double&nbsp;b,
  int&nbsp;e1ToothCount,
  int&nbsp;e2ToothCount,
- double&nbsp;tolerance,
+ @org.jsi.annotations.Units.rot double&nbsp;tolerance,
  int&nbsp;turretToothCount)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Attempts to find the unique absolute turret position (in rotations) that satisfies the
@@ -224,9 +224,9 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Reads and logs the turret motor inputs along with both encoders.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#wrap(double,double,org.cyborgcats.util.Range)" class="member-name-link">wrap</a><wbr>(double&nbsp;targetRotations,
- double&nbsp;currentPosition,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static @org.jsi.annotations.Units.rot double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#wrap(double,double,org.cyborgcats.util.Range)" class="member-name-link">wrap</a><wbr>(@org.jsi.annotations.Units.rot double&nbsp;targetRotations,
+ @org.jsi.annotations.Units.rot double&nbsp;currentPosition,
  <a href="../util/Range.html" title="class in org.cyborgcats.util">Range</a>&nbsp;range)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Wraps a target angle (in rotations) into <code>range</code> by adding or subtracting whole turns,
@@ -259,12 +259,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(java.lang.String,double,double,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.util.Range,double,int,double,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Transform3d,org.cyborgcats.io.motor.MotorIOConfiguration)">
 <h3>Turret</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Turret</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- double&nbsp;threshold,
- double&nbsp;debounceTime,
+ @org.jsi.annotations.Units.rot double&nbsp;threshold,
+ @org.jsi.annotations.Units.s double&nbsp;debounceTime,
  <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;encoderOneConf,
  <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;encoderTwoConf,
  <a href="../util/Range.html" title="class in org.cyborgcats.util">Range</a>&nbsp;range,
- double&nbsp;tolerance,
+ @org.jsi.annotations.Units.rot double&nbsp;tolerance,
  int&nbsp;turretToothCount,
  double&nbsp;k,
  <a href="DriveState.html" title="class in org.cyborgcats.component">DriveState</a>&nbsp;driveState,
@@ -413,11 +413,11 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="solveChineaseRemainderTherom(double,double,int,int,double,int)">
 <h3>solveChineaseRemainderTherom</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;</span>&nbsp;<span class="element-name">solveChineaseRemainderTherom</span><wbr><span class="parameters">(double&nbsp;a,
- double&nbsp;b,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;</span>&nbsp;<span class="element-name">solveChineaseRemainderTherom</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot double&nbsp;a,
+ @org.jsi.annotations.Units.rot double&nbsp;b,
  int&nbsp;e1ToothCount,
  int&nbsp;e2ToothCount,
- double&nbsp;tolerance,
+ @org.jsi.annotations.Units.rot double&nbsp;tolerance,
  int&nbsp;turretToothCount)</span></div>
 <div class="block">Attempts to find the unique absolute turret position (in rotations) that satisfies the
  readings from two encoders with different tooth counts relative to the turret gear.
@@ -444,8 +444,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="wrap(double,double,org.cyborgcats.util.Range)">
 <h3>wrap</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">wrap</span><wbr><span class="parameters">(double&nbsp;targetRotations,
- double&nbsp;currentPosition,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.rot double</span>&nbsp;<span class="element-name">wrap</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot double&nbsp;targetRotations,
+ @org.jsi.annotations.Units.rot double&nbsp;currentPosition,
  <a href="../util/Range.html" title="class in org.cyborgcats.util">Range</a>&nbsp;range)</span></div>
 <div class="block">Wraps a target angle (in rotations) into <code>range</code> by adding or subtracting whole turns,
  picking whichever in-range candidate is closest to <code>currentPosition</code>.

@@ -111,23 +111,23 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VisionStdDevs.html" title="class in org.cyborgcats.vision">VisionStdDevs</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#add(double,double,double,double)" class="member-name-link">add</a><wbr>(double&nbsp;tagArea,
- double&nbsp;x,
- double&nbsp;y,
- double&nbsp;rot)</code></div>
+ @org.jsi.annotations.Units.m double&nbsp;x,
+ @org.jsi.annotations.Units.m double&nbsp;y,
+ @org.jsi.annotations.Units.rad double&nbsp;rot)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Registers a standard deviation breakpoint at the given tag area.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VisionStdDevs.html" title="class in org.cyborgcats.vision">VisionStdDevs</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addRotation(double,double)" class="member-name-link">addRotation</a><wbr>(double&nbsp;tagArea,
- double&nbsp;rot)</code></div>
+ @org.jsi.annotations.Units.rad double&nbsp;rot)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Registers a rotation standard deviation breakpoint at the given tag area, leaving the
  translation breakpoints at that tag area untouched.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VisionStdDevs.html" title="class in org.cyborgcats.vision">VisionStdDevs</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTranslation(double,double,double)" class="member-name-link">addTranslation</a><wbr>(double&nbsp;tagArea,
- double&nbsp;x,
- double&nbsp;y)</code></div>
+ @org.jsi.annotations.Units.m double&nbsp;x,
+ @org.jsi.annotations.Units.m double&nbsp;y)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Registers a translation standard deviation breakpoint at the given tag area, leaving the
  rotation breakpoints at that tag area untouched.</div>
@@ -171,9 +171,9 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="add(double,double,double,double)">
 <h3>add</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VisionStdDevs.html" title="class in org.cyborgcats.vision">VisionStdDevs</a></span>&nbsp;<span class="element-name">add</span><wbr><span class="parameters">(double&nbsp;tagArea,
- double&nbsp;x,
- double&nbsp;y,
- double&nbsp;rot)</span></div>
+ @org.jsi.annotations.Units.m double&nbsp;x,
+ @org.jsi.annotations.Units.m double&nbsp;y,
+ @org.jsi.annotations.Units.rad double&nbsp;rot)</span></div>
 <div class="block">Registers a standard deviation breakpoint at the given tag area.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -190,8 +190,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="addTranslation(double,double,double)">
 <h3>addTranslation</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VisionStdDevs.html" title="class in org.cyborgcats.vision">VisionStdDevs</a></span>&nbsp;<span class="element-name">addTranslation</span><wbr><span class="parameters">(double&nbsp;tagArea,
- double&nbsp;x,
- double&nbsp;y)</span></div>
+ @org.jsi.annotations.Units.m double&nbsp;x,
+ @org.jsi.annotations.Units.m double&nbsp;y)</span></div>
 <div class="block">Registers a translation standard deviation breakpoint at the given tag area, leaving the
  rotation breakpoints at that tag area untouched.</div>
 <dl class="notes">
@@ -208,7 +208,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="addRotation(double,double)">
 <h3>addRotation</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VisionStdDevs.html" title="class in org.cyborgcats.vision">VisionStdDevs</a></span>&nbsp;<span class="element-name">addRotation</span><wbr><span class="parameters">(double&nbsp;tagArea,
- double&nbsp;rot)</span></div>
+ @org.jsi.annotations.Units.rad double&nbsp;rot)</span></div>
 <div class="block">Registers a rotation standard deviation breakpoint at the given tag area, leaving the
  translation breakpoints at that tag area untouched.</div>
 <dl class="notes">

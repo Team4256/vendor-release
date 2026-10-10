@@ -79,12 +79,12 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Record Components:</dt>
 <dd><code><span id="param-fx">fx</span></code> - focal length in the x direction</dd>
-<dd><code><span id="param-fy">fy</span></code> - focal length in the y direction</dd>
-<dd><code><span id="param-cx">cx</span></code> - principal point x coordinate</dd>
+<dd><code><span id="param-cx">cx</span></code> - focal length in the y direction</dd>
+<dd><code><span id="param-fy">fy</span></code> - principal point x coordinate</dd>
 <dd><code><span id="param-cy">cy</span></code> - principal point y coordinate</dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">CameraMatrix</span>(double&nbsp;fx, double&nbsp;fy, double&nbsp;cx, double&nbsp;cy)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">CameraMatrix</span>(double&nbsp;fx, double&nbsp;cx, double&nbsp;fy, double&nbsp;cy)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 <div class="block">Pinhole camera intrinsics: focal lengths and principal point, in pixels. Skew is assumed zero.</div>
 </section>
@@ -99,8 +99,8 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(double,double,double,double)" class="member-name-link">CameraMatrix</a><wbr>(double&nbsp;fx,
- double&nbsp;fy,
  double&nbsp;cx,
+ double&nbsp;fy,
  double&nbsp;cy)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>CameraMatrix</code> record class.</div>
@@ -178,15 +178,15 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(double,double,double,double)">
 <h3>CameraMatrix</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CameraMatrix</span><wbr><span class="parameters">(double&nbsp;fx,
- double&nbsp;fy,
  double&nbsp;cx,
+ double&nbsp;fy,
  double&nbsp;cy)</span></div>
 <div class="block">Creates an instance of a <code>CameraMatrix</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>fx</code> - the value for the <a href="#param-fx"><code>fx</code></a> record component</dd>
-<dd><code>fy</code> - the value for the <a href="#param-fy"><code>fy</code></a> record component</dd>
 <dd><code>cx</code> - the value for the <a href="#param-cx"><code>cx</code></a> record component</dd>
+<dd><code>fy</code> - the value for the <a href="#param-fy"><code>fy</code></a> record component</dd>
 <dd><code>cy</code> - the value for the <a href="#param-cy"><code>cy</code></a> record component</dd>
 </dl>
 </section>
@@ -262,17 +262,6 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="fy()">
-<h3>fy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">fy</span>()</div>
-<div class="block">Returns the value of the <a href="#param-fy"><code>fy</code></a> record component.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the value of the <a href="#param-fy"><code>fy</code></a> record component</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="cx()">
 <h3>cx</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">cx</span>()</div>
@@ -280,6 +269,17 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <a href="#param-cx"><code>cx</code></a> record component</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="fy()">
+<h3>fy</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">fy</span>()</div>
+<div class="block">Returns the value of the <a href="#param-fy"><code>fy</code></a> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <a href="#param-fy"><code>fy</code></a> record component</dd>
 </dl>
 </section>
 </li>

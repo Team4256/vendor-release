@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <dd><a href="EnergyTracker.html" title="class in org.cyborgcats.energy">EnergyTracker</a></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">EnergyTracker.Energy</span>(double&nbsp;power, double&nbsp;totalEnergy)
+<div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">EnergyTracker.Energy</span>(@org.jsi.annotations.Units.W double&nbsp;power, @org.jsi.annotations.Units.J double&nbsp;totalEnergy)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 <div class="block">A single energy sample for one device.</div>
 </section>
@@ -100,8 +100,8 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(double,double)" class="member-name-link">Energy</a><wbr>(double&nbsp;power,
- double&nbsp;totalEnergy)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(double,double)" class="member-name-link">Energy</a><wbr>(@org.jsi.annotations.Units.W double&nbsp;power,
+ @org.jsi.annotations.Units.J double&nbsp;totalEnergy)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Energy</code> record class.</div>
 </div>
@@ -129,7 +129,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@org.jsi.annotations.Units.W double</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#power()" class="member-name-link">power</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <a href="#param-power"><code>power</code></a> record component.</div>
@@ -139,7 +139,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@org.jsi.annotations.Units.J double</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalEnergy()" class="member-name-link">totalEnergy</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <a href="#param-totalEnergy"><code>totalEnergy</code></a> record component.</div>
@@ -164,8 +164,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="&lt;init&gt;(double,double)">
 <h3>Energy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Energy</span><wbr><span class="parameters">(double&nbsp;power,
- double&nbsp;totalEnergy)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Energy</span><wbr><span class="parameters">(@org.jsi.annotations.Units.W double&nbsp;power,
+ @org.jsi.annotations.Units.J double&nbsp;totalEnergy)</span></div>
 <div class="block">Creates an instance of a <code>Energy</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -226,7 +226,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="power()">
 <h3>power</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">power</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.W double</span>&nbsp;<span class="element-name">power</span>()</div>
 <div class="block">Returns the value of the <a href="#param-power"><code>power</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -237,7 +237,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="totalEnergy()">
 <h3>totalEnergy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">totalEnergy</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.J double</span>&nbsp;<span class="element-name">totalEnergy</span>()</div>
 <div class="block">Returns the value of the <a href="#param-totalEnergy"><code>totalEnergy</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>

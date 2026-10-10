@@ -156,9 +156,9 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../component/Flywheel.html" title="class in org.cyborgcats.component">Flywheel</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#flywheel(java.lang.String,double,double,double,org.cyborgcats.component.Setpoint.Mode,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)" class="member-name-link">flywheel</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- double&nbsp;threshold,
- double&nbsp;bangbangThreshold,
- double&nbsp;debounceTime,
+ @org.jsi.annotations.Units.rot_s double&nbsp;threshold,
+ @org.jsi.annotations.Units.rot_s double&nbsp;bangbangThreshold,
+ @org.jsi.annotations.Units.s double&nbsp;debounceTime,
  <a href="../component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a>&nbsp;mode,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>&nbsp;leader,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>...&nbsp;followers)</code></div>
@@ -194,8 +194,8 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../component/PositionComponent.html" title="class in org.cyborgcats.component">PositionComponent</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#positionComponent(java.lang.String,double,double,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)" class="member-name-link">positionComponent</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- double&nbsp;threshold,
- double&nbsp;debounceTime,
+ @org.jsi.annotations.Units.rot double&nbsp;threshold,
+ @org.jsi.annotations.Units.s double&nbsp;debounceTime,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>&nbsp;leader,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>...&nbsp;followers)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -208,12 +208,12 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../component/Turret.html" title="class in org.cyborgcats.component">Turret</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#turret(java.lang.String,double,double,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.util.Range,double,int,double,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Transform3d,org.cyborgcats.io.motor.MotorIOConfiguration)" class="member-name-link">turret</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- double&nbsp;threshold,
- double&nbsp;debounceTime,
+ @org.jsi.annotations.Units.rot double&nbsp;threshold,
+ @org.jsi.annotations.Units.s double&nbsp;debounceTime,
  <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;encoderOneConf,
  <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;encoderTwoConf,
  <a href="../util/Range.html" title="class in org.cyborgcats.util">Range</a>&nbsp;range,
- double&nbsp;tolerance,
+ @org.jsi.annotations.Units.rot double&nbsp;tolerance,
  int&nbsp;turretToothCount,
  double&nbsp;k,
  <a href="../component/DriveState.html" title="class in org.cyborgcats.component">DriveState</a>&nbsp;driveState,
@@ -224,8 +224,8 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../component/VelocityComponent.html" title="class in org.cyborgcats.component">VelocityComponent</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#velocityComponent(java.lang.String,double,double,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)" class="member-name-link">velocityComponent</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- double&nbsp;threshold,
- double&nbsp;debounceTime,
+ @org.jsi.annotations.Units.rot_s double&nbsp;threshold,
+ @org.jsi.annotations.Units.s double&nbsp;debounceTime,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>&nbsp;leader,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>...&nbsp;followers)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -392,8 +392,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="positionComponent(java.lang.String,double,double,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)">
 <h3>positionComponent</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../component/PositionComponent.html" title="class in org.cyborgcats.component">PositionComponent</a></span>&nbsp;<span class="element-name">positionComponent</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- double&nbsp;threshold,
- double&nbsp;debounceTime,
+ @org.jsi.annotations.Units.rot double&nbsp;threshold,
+ @org.jsi.annotations.Units.s double&nbsp;debounceTime,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>&nbsp;leader,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>...&nbsp;followers)</span></div>
 <div class="block">Builds a <a href="../component/PositionComponent.html" title="class in org.cyborgcats.component"><code>PositionComponent</code></a> and registers it with this subsystem.</div>
@@ -416,8 +416,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="velocityComponent(java.lang.String,double,double,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)">
 <h3>velocityComponent</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../component/VelocityComponent.html" title="class in org.cyborgcats.component">VelocityComponent</a></span>&nbsp;<span class="element-name">velocityComponent</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- double&nbsp;threshold,
- double&nbsp;debounceTime,
+ @org.jsi.annotations.Units.rot_s double&nbsp;threshold,
+ @org.jsi.annotations.Units.s double&nbsp;debounceTime,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>&nbsp;leader,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>...&nbsp;followers)</span></div>
 <div class="block">Builds a <a href="../component/VelocityComponent.html" title="class in org.cyborgcats.component"><code>VelocityComponent</code></a> and registers it with this subsystem.</div>
@@ -440,12 +440,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="turret(java.lang.String,double,double,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.io.sensor.encoder.EncoderIOConfiguration,org.cyborgcats.util.Range,double,int,double,org.cyborgcats.component.DriveState,edu.wpi.first.math.geometry.Transform3d,org.cyborgcats.io.motor.MotorIOConfiguration)">
 <h3>turret</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../component/Turret.html" title="class in org.cyborgcats.component">Turret</a></span>&nbsp;<span class="element-name">turret</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- double&nbsp;threshold,
- double&nbsp;debounceTime,
+ @org.jsi.annotations.Units.rot double&nbsp;threshold,
+ @org.jsi.annotations.Units.s double&nbsp;debounceTime,
  <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;encoderOneConf,
  <a href="../io/sensor/encoder/EncoderIOConfiguration.html" title="interface in org.cyborgcats.io.sensor.encoder">EncoderIOConfiguration</a>&nbsp;encoderTwoConf,
  <a href="../util/Range.html" title="class in org.cyborgcats.util">Range</a>&nbsp;range,
- double&nbsp;tolerance,
+ @org.jsi.annotations.Units.rot double&nbsp;tolerance,
  int&nbsp;turretToothCount,
  double&nbsp;k,
  <a href="../component/DriveState.html" title="class in org.cyborgcats.component">DriveState</a>&nbsp;driveState,
@@ -480,9 +480,9 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="flywheel(java.lang.String,double,double,double,org.cyborgcats.component.Setpoint.Mode,org.cyborgcats.io.motor.MotorIOConfiguration,org.cyborgcats.io.motor.MotorIOConfiguration...)">
 <h3>flywheel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../component/Flywheel.html" title="class in org.cyborgcats.component">Flywheel</a></span>&nbsp;<span class="element-name">flywheel</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- double&nbsp;threshold,
- double&nbsp;bangbangThreshold,
- double&nbsp;debounceTime,
+ @org.jsi.annotations.Units.rot_s double&nbsp;threshold,
+ @org.jsi.annotations.Units.rot_s double&nbsp;bangbangThreshold,
+ @org.jsi.annotations.Units.s double&nbsp;debounceTime,
  <a href="../component/Setpoint.Mode.html" title="enum class in org.cyborgcats.component">Setpoint.Mode</a>&nbsp;mode,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>&nbsp;leader,
  <a href="../io/motor/MotorIOConfiguration.html" title="interface in org.cyborgcats.io.motor">MotorIOConfiguration</a>...&nbsp;followers)</span></div>

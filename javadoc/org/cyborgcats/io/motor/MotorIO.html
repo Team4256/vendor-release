@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="MotorIOSim.html" title="class in org.cyborgcats.io.motor">MotorIOSim</a></code>, <code><a href="MotorIOTalonFX.html" title="class in org.cyborgcats.io.motor">MotorIOTalonFX</a></code></dd>
+<dd><code><a href="MotorIONova.html" title="class in org.cyborgcats.io.motor">MotorIONova</a></code>, <code><a href="MotorIOSim.html" title="class in org.cyborgcats.io.motor">MotorIOSim</a></code>, <code><a href="MotorIOTalonFX.html" title="class in org.cyborgcats.io.motor">MotorIOTalonFX</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">MotorIO</span></div>
@@ -123,33 +123,33 @@ loadScripts(document, 'script');</script>
 <div class="block">Releases the motor's output so it coasts or brakes according to its configuration.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#applyPositionMotionProfile(double)" class="member-name-link">applyPositionMotionProfile</a><wbr>(double&nbsp;position)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#applyPositionMotionProfile(double)" class="member-name-link">applyPositionMotionProfile</a><wbr>(@org.jsi.annotations.Units.rot double&nbsp;position)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Commands the motor to a motion-profiled (Motion Magic) closed-loop position.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#applyPositionSetpoint(double)" class="member-name-link">applyPositionSetpoint</a><wbr>(double&nbsp;position)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#applyPositionSetpoint(double)" class="member-name-link">applyPositionSetpoint</a><wbr>(@org.jsi.annotations.Units.rot double&nbsp;position)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Commands the motor to closed-loop control to an angular position.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#applyVelocityMotionProfile(double)" class="member-name-link">applyVelocityMotionProfile</a><wbr>(double&nbsp;velocity)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#applyVelocityMotionProfile(double)" class="member-name-link">applyVelocityMotionProfile</a><wbr>(@org.jsi.annotations.Units.rot_s double&nbsp;velocity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Commands the motor to a motion-profiled (Motion Magic) closed-loop angular velocity.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#applyVelocitySetpoint(double)" class="member-name-link">applyVelocitySetpoint</a><wbr>(double&nbsp;velocity)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#applyVelocitySetpoint(double)" class="member-name-link">applyVelocitySetpoint</a><wbr>(@org.jsi.annotations.Units.rot_s double&nbsp;velocity)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Commands the motor to closed-loop control to an angular velocity.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#applyVelocityTorqueCurrent(double)" class="member-name-link">applyVelocityTorqueCurrent</a><wbr>(double&nbsp;velocity)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#applyVelocityTorqueCurrent(double)" class="member-name-link">applyVelocityTorqueCurrent</a><wbr>(@org.jsi.annotations.Units.rot_s double&nbsp;velocity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Commands the motor to closed-loop control to an angular velocity using torque-current
  (FOC) control.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#applyVoltageSetpoint(double)" class="member-name-link">applyVoltageSetpoint</a><wbr>(double&nbsp;voltage)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#applyVoltageSetpoint(double)" class="member-name-link">applyVoltageSetpoint</a><wbr>(@org.jsi.annotations.Units.V double&nbsp;voltage)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Commands the motor to hold an open-loop output voltage.</div>
 </div>
@@ -165,7 +165,7 @@ loadScripts(document, 'script');</script>
  not be given independent setpoints.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCurrentPosition(double)" class="member-name-link">setCurrentPosition</a><wbr>(double&nbsp;position)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCurrentPosition(double)" class="member-name-link">setCurrentPosition</a><wbr>(@org.jsi.annotations.Units.rot double&nbsp;position)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">resets the current motor position to the new position</div>
 </div>
@@ -198,7 +198,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="applyVoltageSetpoint(double)">
 <h3>applyVoltageSetpoint</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">applyVoltageSetpoint</span><wbr><span class="parameters">(double&nbsp;voltage)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">applyVoltageSetpoint</span><wbr><span class="parameters">(@org.jsi.annotations.Units.V double&nbsp;voltage)</span></div>
 <div class="block">Commands the motor to hold an open-loop output voltage.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -220,7 +220,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="applyVelocitySetpoint(double)">
 <h3>applyVelocitySetpoint</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">applyVelocitySetpoint</span><wbr><span class="parameters">(double&nbsp;velocity)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">applyVelocitySetpoint</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot_s double&nbsp;velocity)</span></div>
 <div class="block">Commands the motor to closed-loop control to an angular velocity.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -231,7 +231,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="applyPositionSetpoint(double)">
 <h3>applyPositionSetpoint</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">applyPositionSetpoint</span><wbr><span class="parameters">(double&nbsp;position)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">applyPositionSetpoint</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot double&nbsp;position)</span></div>
 <div class="block">Commands the motor to closed-loop control to an angular position.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -242,7 +242,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="applyPositionMotionProfile(double)">
 <h3>applyPositionMotionProfile</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">applyPositionMotionProfile</span><wbr><span class="parameters">(double&nbsp;position)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">applyPositionMotionProfile</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot double&nbsp;position)</span></div>
 <div class="block">Commands the motor to a motion-profiled (Motion Magic) closed-loop position.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -253,7 +253,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="applyVelocityTorqueCurrent(double)">
 <h3>applyVelocityTorqueCurrent</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">applyVelocityTorqueCurrent</span><wbr><span class="parameters">(double&nbsp;velocity)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">applyVelocityTorqueCurrent</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot_s double&nbsp;velocity)</span></div>
 <div class="block">Commands the motor to closed-loop control to an angular velocity using torque-current
  (FOC) control.</div>
 <dl class="notes">
@@ -265,7 +265,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="applyVelocityMotionProfile(double)">
 <h3>applyVelocityMotionProfile</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">applyVelocityMotionProfile</span><wbr><span class="parameters">(double&nbsp;velocity)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">applyVelocityMotionProfile</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot_s double&nbsp;velocity)</span></div>
 <div class="block">Commands the motor to a motion-profiled (Motion Magic) closed-loop angular velocity.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -276,7 +276,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="setCurrentPosition(double)">
 <h3>setCurrentPosition</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCurrentPosition</span><wbr><span class="parameters">(double&nbsp;position)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCurrentPosition</span><wbr><span class="parameters">(@org.jsi.annotations.Units.rot double&nbsp;position)</span></div>
 <div class="block">resets the current motor position to the new position</div>
 <dl class="notes">
 <dt>Parameters:</dt>

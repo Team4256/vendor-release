@@ -90,7 +90,7 @@ loadScripts(document, 'script');</script>
 <dd><code><span id="param-altError">altError</span></code> - reprojection error of the alternate pose candidate</dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">AprilTagTarget</span>(<a href="AprilTag.html" title="class in org.cyborgcats.vision">AprilTag</a>&nbsp;aprilTag, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;org.opencv.core.Point&gt;&nbsp;corners, double&nbsp;yaw, double&nbsp;pitch, double&nbsp;area, double&nbsp;skew, <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform3d</a>&nbsp;bestCameraToTag, <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform3d</a>&nbsp;altCameraToTag, double&nbsp;bestError, double&nbsp;altError)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">AprilTagTarget</span>(<a href="AprilTag.html" title="class in org.cyborgcats.vision">AprilTag</a>&nbsp;aprilTag, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;org.opencv.core.Point&gt;&nbsp;corners, @org.jsi.annotations.Units.rad double&nbsp;yaw, @org.jsi.annotations.Units.rad double&nbsp;pitch, double&nbsp;area, @org.jsi.annotations.Units.rad double&nbsp;skew, <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform3d</a>&nbsp;bestCameraToTag, <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform3d</a>&nbsp;altCameraToTag, double&nbsp;bestError, double&nbsp;altError)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 <div class="block">Per-tag detail for a single AprilTag that contributed to an <a href="AprilTagEstimate.html" title="class in org.cyborgcats.vision"><code>AprilTagEstimate</code></a>: its
  known field pose, detected image corners, angular offsets, and both pose-solve candidates for
@@ -108,10 +108,10 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(org.cyborgcats.vision.AprilTag,java.util.ArrayList,double,double,double,double,edu.wpi.first.math.geometry.Transform3d,edu.wpi.first.math.geometry.Transform3d,double,double)" class="member-name-link">AprilTagTarget</a><wbr>(<a href="AprilTag.html" title="class in org.cyborgcats.vision">AprilTag</a>&nbsp;aprilTag,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;org.opencv.core.Point&gt;&nbsp;corners,
- double&nbsp;yaw,
- double&nbsp;pitch,
+ @org.jsi.annotations.Units.rad double&nbsp;yaw,
+ @org.jsi.annotations.Units.rad double&nbsp;pitch,
  double&nbsp;area,
- double&nbsp;skew,
+ @org.jsi.annotations.Units.rad double&nbsp;skew,
  <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform3d</a>&nbsp;bestCameraToTag,
  <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform3d</a>&nbsp;altCameraToTag,
  double&nbsp;bestError,
@@ -184,12 +184,12 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@org.jsi.annotations.Units.rad double</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pitch()" class="member-name-link">pitch</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <a href="#param-pitch"><code>pitch</code></a> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@org.jsi.annotations.Units.rad double</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#skew()" class="member-name-link">skew</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <a href="#param-skew"><code>skew</code></a> record component.</div>
@@ -199,7 +199,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@org.jsi.annotations.Units.rad double</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#yaw()" class="member-name-link">yaw</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <a href="#param-yaw"><code>yaw</code></a> record component.</div>
@@ -226,10 +226,10 @@ loadScripts(document, 'script');</script>
 <h3>AprilTagTarget</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">AprilTagTarget</span><wbr><span class="parameters">(<a href="AprilTag.html" title="class in org.cyborgcats.vision">AprilTag</a>&nbsp;aprilTag,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;org.opencv.core.Point&gt;&nbsp;corners,
- double&nbsp;yaw,
- double&nbsp;pitch,
+ @org.jsi.annotations.Units.rad double&nbsp;yaw,
+ @org.jsi.annotations.Units.rad double&nbsp;pitch,
  double&nbsp;area,
- double&nbsp;skew,
+ @org.jsi.annotations.Units.rad double&nbsp;skew,
  <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform3d</a>&nbsp;bestCameraToTag,
  <a href="https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/geometry/Transform3d.html" title="class or interface in edu.wpi.first.math.geometry" class="external-link">Transform3d</a>&nbsp;altCameraToTag,
  double&nbsp;bestError,
@@ -339,7 +339,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="yaw()">
 <h3>yaw</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">yaw</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.rad double</span>&nbsp;<span class="element-name">yaw</span>()</div>
 <div class="block">Returns the value of the <a href="#param-yaw"><code>yaw</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -350,7 +350,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="pitch()">
 <h3>pitch</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">pitch</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.rad double</span>&nbsp;<span class="element-name">pitch</span>()</div>
 <div class="block">Returns the value of the <a href="#param-pitch"><code>pitch</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -372,7 +372,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="skew()">
 <h3>skew</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">skew</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@org.jsi.annotations.Units.rad double</span>&nbsp;<span class="element-name">skew</span>()</div>
 <div class="block">Returns the value of the <a href="#param-skew"><code>skew</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
